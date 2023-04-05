@@ -1,6 +1,7 @@
 import { formatDate } from "@/util";
+import { Shop } from "./model";
 
-export default function MytiView({ shops }: { shops: any[] }) {
+export default function MytiView({ shops }: { shops: Shop[] }) {
   return (
     <div className="">
       {shops.map((shop) => (
@@ -12,7 +13,7 @@ export default function MytiView({ shops }: { shops: any[] }) {
               </h2>
               <h3 className="text-base m-0 font-bold text-slate-500 leading-4 shop-hidden">
                 <a
-                  href={shop.directions_url}
+                  href="#"
                   target="_blank"
                   className="text-teal-700 leading-5 font-bold cursor-pointer"
                 >

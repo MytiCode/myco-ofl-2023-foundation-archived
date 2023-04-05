@@ -1,6 +1,7 @@
 import { formatDate } from "@/util";
+import { Order } from "./model";
 
-export default function ByOrderView({ orders }: { orders: any[] }) {
+export default function ByOrderView({ orders }: { orders: Order[] }) {
   return (
     <div className="">
       {orders.map((order) => (
@@ -15,7 +16,7 @@ export default function ByOrderView({ orders }: { orders: any[] }) {
               </h2>
               <h3 className="text-base m-0 font-bold text-slate-500 leading-4 shop-hidden">
                 <a
-                  href={order.directions_url}
+                  href="#"
                   target="_blank"
                   className="text-teal-700 leading-5 font-bold cursor-pointer"
                 >

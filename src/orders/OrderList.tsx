@@ -1,7 +1,11 @@
 import { useState } from "react";
-import { shops, orders } from '@/data/pilot2-dummy-orders.json';
+import data from '@/data/pilot2-dummy-orders.json';
 import MytiView from "./MytiView";
 import ByOrderView from "./ByOrderView";
+import { Order, Shop } from "./model";
+
+const shops = data.shops as unknown as Shop[];
+const orders = data.orders as unknown as Order[];
 
 const availableViews = [
   { id: 'by-shop', label: 'By Shop' },
