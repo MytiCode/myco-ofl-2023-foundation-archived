@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import mytiLogo from '../../public/myti-logo.png'
 import aliveImage from '../../public/its-alive.gif'
+import { OrderList } from '@/orders/OrderList'
 
 export default function Home() {
   return (
@@ -13,17 +14,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="p-12 flex flex-col items-center"> 
+        <div className="flex items-center mb-4">
           <Image
             src={mytiLogo}
             alt="Myti"
             priority
-            className="my-4"
+            className="pr-4"
+            height="75"
           />
-          <Image
-            src={aliveImage}
-            alt="It's Alive!!!!!"
-            priority
-          />
+          <p className="text-3xl">MyCo</p>
+        </div>
+          <OrderList />
       </main>
     </>
   )
