@@ -9,7 +9,16 @@ export type LineItem = {
   shipping_address1: string;
   shipping_address2?: string;
   shipping_zip: string;
-  order_number: string; // should only be on order
+  /**
+   * TODO: This is not a line item field
+   * It was on line item b/c in the By-Shop view (MytiView)
+   * There was no concept of orders
+   * Which is going to evolve into the pickup view
+   * Perhaps we just represent this as a shop having orders
+   * But the orders only have the line items from that shop
+   * Or else we put an order property on the line item with this but... probably better to keep order.line_items
+   */
+  order_number: string;
   created_at: string;
   qty: number;
 };
