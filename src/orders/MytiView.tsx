@@ -58,7 +58,7 @@ export default function MytiView({ shops }: { shops: Shop[] }) {
               </tr>
             </thead>
             <tbody>
-              {shop.line_items.map((li: any) => (
+              {shop.line_items.map((li) => (
                 <tr key={li.line_item_id}>
                   <td className="border-b border-slate-100 py-4 p-2 text-slate-500">
                     <a href={li.image_src} target="_blank">

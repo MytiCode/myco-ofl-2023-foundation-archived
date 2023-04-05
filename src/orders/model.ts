@@ -1,3 +1,8 @@
+/**
+ * How do we structure api calls knowing we need shop data?
+ * Just return { orders, shops } probably for now
+ * No reason to stand up a separate shops api just for this 1 use case yet
+ */
 export type LineItem = {
   line_item_id: number;
   /**
@@ -26,10 +31,20 @@ export type LineItem = {
   handle: string;
   sku: string;
   line_item_updated_at: string;
+  // Doesn't really belong here...
+  // In both views we are ending up needing to know the line items order and shop info
+  shop_name: string;
+
+  /**
+   * All the shipping fields are order fields, not line item fields
+   */
+  shipping_first_name: string;
   shipping_last_name: string;
   shipping_address1: string;
   shipping_address2?: string;
+  shipping_city: string;
   shipping_zip: string;
+
   /**
    * TODO: This is not a line item field
    * It was on line item b/c in the By-Shop view (MytiView)
@@ -40,8 +55,12 @@ export type LineItem = {
    * Or else we put an order property on the line item with this but... probably better to keep order.line_items
    */
   order_number: string;
+
   created_at: string;
+
+  // Where does the qty fulfilled go?
   qty: number;
+
   /**
    * If we're going to filter in the client we will likely need status(es) here and on order
    * What statuses?
@@ -79,6 +98,14 @@ export type Shop = {
   address2?: string;
   city: string;
   zip: string;
+
+  /**
+   * This relationship doesn't really make sense
+   * We need some way to key from line item to shop
+   * Should probably treat shop as a side-loaded separate resource
+   * Line items could have a shop id that we use to look up the shop
+   * Maybe for the view we end up copying shop onto line item to make the rendeirng convenient
+   */
   line_items: LineItem[];
 };
 

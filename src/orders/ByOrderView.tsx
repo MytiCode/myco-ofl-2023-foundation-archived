@@ -60,7 +60,7 @@ export default function ByOrderView({ orders }: { orders: Order[] }) {
               </tr>
             </thead>
             <tbody>
-              {order.line_items.map((li: any) => (
+              {order.line_items.map((li) => (
                 <tr key={li.line_item_id}>
                   <td className="border-b border-slate-100 py-4 p-2 text-slate-500">
                     <a href={li.image_src} target="_blank">
