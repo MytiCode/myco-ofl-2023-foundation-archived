@@ -1,5 +1,4 @@
 import { formatDate } from "@/util";
-import { Order } from "./model";
 import { OrderViewModel } from "./OrderList";
 
 export default function ByOrderView({ orders }: { orders: OrderViewModel[] }) {
