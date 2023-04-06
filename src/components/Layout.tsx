@@ -9,8 +9,8 @@ interface LayoutProps {
 }
 
 const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/pickup-sheets', label: 'Pickup Sheets' },
+  { href: '/', testID: 'nav-home', label: 'Home' },
+  { href: '/pickup-sheets', testID: 'nav-pickup-sheets', label: 'Pickup Sheets' },
 ];
 
 export default function Layout({ title, children }: LayoutProps) {
@@ -39,6 +39,7 @@ export default function Layout({ title, children }: LayoutProps) {
               key={navItem.label}
               href={navItem.href}
               className="text-link mr-2"
+              data-testid={navItem.testID}
             >
               {navItem.label}
             </Link>
