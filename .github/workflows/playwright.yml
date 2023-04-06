@@ -20,7 +20,7 @@ jobs:
     - name: Run app
       run: npm run start
       env:
-        port: 3000
+        PORT: 3000
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v3
