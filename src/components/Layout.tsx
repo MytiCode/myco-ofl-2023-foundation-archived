@@ -1,17 +1,12 @@
 import Head from "next/head"
 import Image from 'next/image'
 import mytiLogo from '../../public/myti-logo.png'
-import Link from 'next/link'
+import Nav from "./Nav"
 
 interface LayoutProps {
   title?: string
   children: React.ReactNode
 }
-
-const navItems = [
-  { href: '/', testID: 'nav-home', label: 'Home' },
-  { href: '/pickup-sheets', testID: 'nav-pickup-sheets', label: 'Pickup Sheets' },
-];
 
 export default function Layout({ title, children }: LayoutProps) {
   return (
@@ -33,18 +28,7 @@ export default function Layout({ title, children }: LayoutProps) {
           />
           <p className="text-3xl">MyCo</p>
         </div>
-        <nav className="flex">
-          {navItems.map(navItem => (
-            <Link
-              key={navItem.label}
-              href={navItem.href}
-              className="text-link mr-2"
-              data-testid={navItem.testID}
-            >
-              {navItem.label}
-            </Link>
-          ))}
-        </nav>
+        <Nav />
         {children}
       </main>
     </>
