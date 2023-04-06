@@ -1,7 +1,8 @@
 import { formatDate } from "@/util";
-import { Shop } from "./model";
+import React from "react";
+import { ShopViewModel } from "./OrderList";
 
-export default function MytiView({ shops }: { shops: Shop[] }) {
+export default function MytiView({ shops }: { shops: ShopViewModel[] }) {
   return (
     <div className="">
       {shops.map((shop) => (
@@ -58,73 +59,77 @@ export default function MytiView({ shops }: { shops: Shop[] }) {
               </tr>
             </thead>
             <tbody>
-              {shop.line_items.map((li) => (
-                <tr key={li.line_item_id}>
-                  <td className="border-b border-slate-100 py-4 p-2 text-slate-500">
-                    <a href={li.image_src} target="_blank">
-                      <img src={li.image_src} alt={li.name} className="border" />
-                    </a>
-                  </td>
-                  <td className="border-b border-slate-100 py-4 p-2 text-slate-500 align-top leading-4">
-                    <a
-                      href={`https://shop.myti.com/products/${li.handle}`}
-                      target="_blank"
-                      className="text-base font-bold leading-5 text-teal-700 mb-0 block"
-                    >
-                      {li.name}
-                    </a>
-                    <div className="text-slate-400 ">
-                      <p className="my-0 leading-5">
-                        {Boolean(li.sku) && (
-                          <span className="mr-4">
-                            <strong className="text-slate-500">SKU:</strong>{" "}
-                            {li.sku}
-                          </span>
-                        )}
-                        <span className="shop-hidden">
-                          <strong className="text-slate-500">Updated:</strong>{" "}
-                          {formatDate(li.line_item_updated_at)}
-                        </span>
-                      </p>
-                      <p className="my-0 leading-5 shop-hidden">
-                        <span>
-                          <strong className="text-slate-500">
-                            Line Item ID:
-                          </strong>{" "}
-                          {li.line_item_id}
-                        </span>
-                      </p>
-                      <p className="my-0 leading-5 shop-hidden">
-                        <strong className="text-slate-500">
-                          {li.shipping_first_name} {li.shipping_last_name}{" "}
-                        </strong>
-                        <span className="font-normal text-slate-400">
-                          {li.shipping_address1}
-                          {li.shipping_address2
-                            ? ` ${li.shipping_address2}`
-                            : ""}
-                          , {li.shipping_city}, VT {li.shipping_zip}
-                        </span>
-                      </p>
-                      <p className="my-0 leading-5">
-                        <span className="text-slate-500 font-bold">
-                          Order {li.order_number}
-                        </span>{" "}
-                        <span className="text-slate-400">
-                          {formatDate(li.created_at)}
-                        </span>
-                      </p>
-                    </div>
-                  </td>
-                  <td className="text-right border-b border-slate-100 py-4 p-2 text-slate-500 text-2xl align-top">
-                    <div className="flex justify-end">
-                      <div className="border w-12 shop-hidden" />
-                      <span className="font-normal mx-2 shop-hidden">/</span>
-                      {li.qty}
-                    </div>
-                  </td>
-                  {/* <pre>{JSON.stringify(li, null, 2)}</pre> */}
-                </tr>
+              {shop.orders.map(order => (
+                <React.Fragment key={order.orderId}>
+                  {order.lineItems.map((li) => (
+                    <tr key={li.lineItemId}>
+                      <td className="border-b border-slate-100 py-4 p-2 text-slate-500">
+                        <a href={li.imageSrc} target="_blank">
+                          <img src={li.imageSrc} alt={li.title} className="border" />
+                        </a>
+                      </td>
+                      <td className="border-b border-slate-100 py-4 p-2 text-slate-500 align-top leading-4">
+                        <a
+                          href="#"
+                          target="_blank"
+                          className="text-base font-bold leading-5 text-teal-700 mb-0 block"
+                        >
+                          {li.title}
+                        </a>
+                        <div className="text-slate-400 ">
+                          <p className="my-0 leading-5">
+                            {Boolean(li.sku) && (
+                              <span className="mr-4">
+                                <strong className="text-slate-500">SKU:</strong>{" "}
+                                {li.sku}
+                              </span>
+                            )}
+                            <span className="shop-hidden">
+                              <strong className="text-slate-500">Updated:</strong>{" "}
+                              {formatDate(li.updatedAt)}
+                            </span>
+                          </p>
+                          <p className="my-0 leading-5 shop-hidden">
+                            <span>
+                              <strong className="text-slate-500">
+                                Line Item ID:
+                              </strong>{" "}
+                              {li.lineItemId}
+                            </span>
+                          </p>
+                          <p className="my-0 leading-5 shop-hidden">
+                            <strong className="text-slate-500">
+                              {order.shippingAddress.firstName} {order.shippingAddress.lastName}{" "}
+                            </strong>
+                            <span className="font-normal text-slate-400">
+                              {order.shippingAddress.address1}
+                              {order.shippingAddress.address2
+                                ? ` ${order.shippingAddress.address2}`
+                                : ""}
+                              , {order.shippingAddress.city}, VT {order.shippingAddress.zip}
+                            </span>
+                          </p>
+                          <p className="my-0 leading-5">
+                            <span className="text-slate-500 font-bold">
+                              Order {order.orderNumber}
+                            </span>{" "}
+                            <span className="text-slate-400">
+                              {formatDate(order.createdAt)}
+                            </span>
+                          </p>
+                        </div>
+                      </td>
+                      <td className="text-right border-b border-slate-100 py-4 p-2 text-slate-500 text-2xl align-top">
+                        <div className="flex justify-end">
+                          <div className="border w-12 shop-hidden" />
+                          <span className="font-normal mx-2 shop-hidden">/</span>
+                          {li.qty}
+                        </div>
+                      </td>
+                      {/* <pre>{JSON.stringify(li, null, 2)}</pre> */}
+                    </tr>
+                ))}
+                </React.Fragment>
               ))}
             </tbody>
           </table>
