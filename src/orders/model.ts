@@ -1,123 +1,114 @@
-/**
- * How do we structure api calls knowing we need shop data?
- * Just return { orders, shops } probably for now
- * No reason to stand up a separate shops api just for this 1 use case yet
- */
+export type OrderContact = {
+  email: string;
+  phone: string;
+};
+
+// This is the value returned from the api when calling for orders
+// Accept: application/vnd+myti.order+v2.json
+export type Order = {
+  /** The globally unique order id number used by Myti to identify the order */
+  orderId: number;
+
+  // Should be the myti order number
+  orderNumber: string; // e.g. the Myti Order # '#1234-1'
+
+  /**
+   * The mailing address associated with the payment method. This address is an optional field
+   * on orders that do not require a payment method. Missing from payload when there is no billing
+   * address.
+   */
+  billingAddress: CustomerAddress | null;
+
+  // Drop for now, when we solve easy routes we'll have to sort this out
+  // Which is this sprint, this spritn is logistics tech is ready
+  // deliveryInstruction: string;
+
+  /**
+   * The mailing address to where the order will be shipped. This address is optional and will not be available on
+   * orders that do not require shipping. Missing from payload when there is no shipping address.
+   */
+  shippingAddress: CustomerAddress;
+
+  contact: OrderContact;
+
+  /** The date and time (ISO 8601) when the order was created. */
+  createdAt: string;
+
+  // TODO(xisforxerxes): @localization We may need to grab duties from orders if we ever aim to support selling
+  // outside the US.
+
+  /**
+   * The current total price of the order in the shop currency. The value of this field reflects order edits,
+   * returns and refunds.
+   *
+   * TODO(xisforxerxes): @localization This may be insufficient if we ever aim to support selling outside the US.
+   */
+  // these will be number.toFixed(2) * 100 (10.50 -> 1050)
+  price: number;
+  subtotal: number;
+  tax: number;
+
+  // still need to figure out statusr elated stuff, possibly all on the line item
+
+  /** A list of line item objects, each containing information about an item in the order. */
+  lineItems: LineItem[];
+};
+
+export type CustomerAddress = {
+  firstName: string;
+  lastName: string;
+  address1: string;
+  address2: string;
+  city: string;
+  state: string;
+  stateCode: string;
+  zip: string;
+};
+
 export type LineItem = {
-  line_item_id: number;
-  /**
-   * image_src... sigh
-   * This is a product field (collection of images)
-   * Could be the default product image
-   * But there can also be variant-specific images
-   * Which would be more accurate picture of the item ordered
-   * None of these are on line item
-   * And also the url can end up disappearing if the product is archived
-   * And we need to handle resizing
-   * I think we should just a single image_src property which is our most representative image
-   * For now it might just be the default product image or maybe its the variant
-   * Also likely inclkudes a query string already to ensure the image isnt too massive (this makes the sheet PDFs really big)
-   * Eventually we may want to ensure this url remains live even if the product is archived
-   * Though we mostly think that problem will go away with FlxP cos we wont archive the product, just hide it due to low qty, still need to investigate
-   * Basically there is a bunch of complexity here and id like to keep the client dumb for now at least
-   */
-  image_src: string;
-  name: string;
-  /**
-   * Handle is only used to link to the product page on shop.myti
-   * Its not technically a line item field (its a product field)
-   * Probably better off to embed a product url or something than bleed handle here
-   */
-  handle: string;
-  sku: string;
-  line_item_updated_at: string;
-  // Doesn't really belong here...
-  // In both views we are ending up needing to know the line items order and shop info
-  shop_name: string;
+  // We might not want this...
+  orderId: number;
+
+  /** The globally unique line item id number used by the API to lookup/reference a given line item. */
+  lineItemId: number;
 
   /**
-   * All the shipping fields are order fields, not line item fields
+   * The price of the item before discounts have been applied in the shop currency.
+   *
+   * TODO(xisforxerxes): @localization This may be insufficient if we ever aim to support selling outside the US,
+   * i.e. when shop_currency != presentment_currency. We would need to also capture presentment values from the
+   * price_set.
    */
-  shipping_first_name: string;
-  shipping_last_name: string;
-  shipping_address1: string;
-  shipping_address2?: string;
-  shipping_city: string;
-  shipping_zip: string;
+  price: string;
 
-  /**
-   * TODO: This is not a line item field
-   * It was on line item b/c in the By-Shop view (MytiView)
-   * There was no concept of orders
-   * Which is going to evolve into the pickup view
-   * Perhaps we just represent this as a shop having orders
-   * But the orders only have the line items from that shop
-   * Or else we put an order property on the line item with this but... probably better to keep order.line_items
-   */
-  order_number: string;
+  imageSrc: string;
 
-  created_at: string;
-
-  // Where does the qty fulfilled go?
+  /** The quantity of the item purchased in the order. */
   qty: number;
 
-  /**
-   * If we're going to filter in the client we will likely need status(es) here and on order
-   * What statuses?
-   * Single status?
-   * Status history?
-   * Separate status for
-   * Order level stauts and line item status?
-   * Line Item statuses:
-   *  Unfulfilled
-   *  Ready for Pickup (fulfilled)
-   *  Partially Ready for Pickup (partially fulfilled)
-   *  At Myti Depot (no way to get into this status right now, prob other internal statuses in the future, like QA'd or something)
-   *  Delivered
-   *  Cancelled?
-   * Order Statuses:
-   *  Unfulfilled
-   *  Ready for Pickup (fulfilled)
-   *  Partially Ready for Pickup (partially fulfilled)
-   *  At Myti Depot (no way to get into this status right now, prob other internal statuses in the future, like QA'd or something)
-   *  Delivered
-   *  Cancelled?
-   *  Are these always calculated based line item status?
-   * Do we separate fulfillment status from delivery status?
-   *  When does fulfillment status end and delivery status begin?
-   *  Ready for Pickup (or partially ready) would be the terminal fulfillment status
-   *      Though maybe cancelled in the future
-   *  Delivery status then starts with 'Picked Up' or something
-   * Seems like a single status enum is the way to go, fulfillment -> delivery is a pipeline of statuses
-   */
+  /** The item sku. */
+  sku: string;
+
+  /** The title of the product. */
+  // We want this to be most descriptive title that ideally includes product + variant/options
+  // e.g. Hat Red Large
+  // Ryan thinks this is variantTitle, not title or name
+  title: string;
+
+  /** The name of the item's supplier. */
+  shopId: number;
+
+  // TODO: Fulfillment related stuff
+  updatedAt: string;
 };
 
 export type Shop = {
+  shopId: number;
   name: string;
   address1: string;
   address2?: string;
   city: string;
+  state: string;
+  stateCode: string;
   zip: string;
-
-  /**
-   * This relationship doesn't really make sense
-   * We need some way to key from line item to shop
-   * Should probably treat shop as a side-loaded separate resource
-   * Line items could have a shop id that we use to look up the shop
-   * Maybe for the view we end up copying shop onto line item to make the rendeirng convenient
-   */
-  line_items: LineItem[];
-};
-
-export type Order = {
-  id: number;
-  order_number: string;
-  line_items: LineItem[];
-  created_at: string;
-  shipping_address1: string;
-  shipping_address2: string;
-  shipping_city: string;
-  shipping_first_name: string;
-  shipping_last_name: string;
-  shipping_zip: string;
 };

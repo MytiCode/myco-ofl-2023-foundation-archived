@@ -1,17 +1,18 @@
 import { formatDate } from "@/util";
 import { Order } from "./model";
+import { OrderViewModel } from "./OrderList";
 
-export default function ByOrderView({ orders }: { orders: Order[] }) {
+export default function ByOrderView({ orders }: { orders: OrderViewModel[] }) {
   return (
     <div className="">
       {orders.map((order) => (
-        <div key={order.id} className="p-6 my-4 break-after-page">
+        <div key={order.orderId} className="p-6 my-4 break-after-page">
           <div className="mb-6 flex">
             <div>
               <h2 className="text-2xl font-bold my-0 mb-2 leading-4">
-                <span className="text-slate-500">{order.order_number}</span>
+                <span className="text-slate-500">{order.orderNumber}</span>
                 <span className="ml-2">
-                  {order.shipping_first_name} {order.shipping_last_name}
+                  {order.shippingAddress.firstName} {order.shippingAddress.lastName}
                 </span>
               </h2>
               <h3 className="text-base m-0 font-bold text-slate-500 leading-4 shop-hidden">
@@ -20,13 +21,13 @@ export default function ByOrderView({ orders }: { orders: Order[] }) {
                   target="_blank"
                   className="text-teal-700 leading-5 font-bold cursor-pointer"
                 >
-                  {order.shipping_address1}
-                  {order.shipping_address2 ? ` ${order.shipping_address2}` : ""}
-                  , {order.shipping_city}, VT {order.shipping_zip}
+                  {order.shippingAddress.address1}
+                  {order.shippingAddress.address2 ? ` ${order.shippingAddress.address2}` : ""}
+                  , {order.shippingAddress.city}, VT {order.shippingAddress.zip}
                   <br />
                 </a>
                 <span className="text-slate-400 leading-6">
-                  {formatDate(order.created_at)}
+                  {formatDate(order.createdAt)}
                 </span>
               </h3>
             </div>
@@ -60,25 +61,25 @@ export default function ByOrderView({ orders }: { orders: Order[] }) {
               </tr>
             </thead>
             <tbody>
-              {order.line_items.map((li) => (
-                <tr key={li.line_item_id}>
+              {order.lineItems.map((li) => (
+                <tr key={li.lineItemId}>
                   <td className="border-b border-slate-100 py-4 p-2 text-slate-500">
-                    <a href={li.image_src} target="_blank">
-                      <img src={li.image_src} alt={li.name} className="border" />
+                    <a href={li.imageSrc} target="_blank">
+                      <img src={li.imageSrc} alt={li.title} className="border" />
                     </a>
                   </td>
                   <td className="border-b border-slate-100 py-4 p-2 text-slate-500 align-top leading-4">
                     <a
-                      href={`https://shop.myti.com/products/${li.handle}`}
+                      href="#TODO"
                       target="_blank"
                       className="text-base font-bold leading-5 text-teal-700 mb-0 block"
                     >
-                      {li.name}
+                      {li.title}
                     </a>
                     <div className="text-slate-400 ">
                       <p className="my-0 text-base leading-6 shop-hidden">
                         <strong className="text-slate-500">
-                          {li.shop_name}
+                          {'TODO: Shop Name'}
                         </strong>
                       </p>
                       <p className="my-0 leading-5">
@@ -90,7 +91,7 @@ export default function ByOrderView({ orders }: { orders: Order[] }) {
                         )}
                         <span className="shop-hidden">
                           <strong className="text-slate-500">Updated:</strong>{" "}
-                          {formatDate(li.line_item_updated_at)}
+                          {formatDate(li.updatedAt)}
                         </span>
                       </p>
                       <p className="my-0 leading-5 shop-hidden">
@@ -98,7 +99,7 @@ export default function ByOrderView({ orders }: { orders: Order[] }) {
                           <strong className="text-slate-500">
                             Line Item ID:
                           </strong>{" "}
-                          {li.line_item_id}
+                          {li.lineItemId}
                         </span>
                       </p>
                     </div>
