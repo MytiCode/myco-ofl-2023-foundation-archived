@@ -1,8 +1,10 @@
 import { test, expect } from "@playwright/test";
 
-test("has title", async ({ page }) => {
+test("Can navigate to pickup sheets", async ({ page }) => {
+  // TODO: Move to process.env.BASE_URL or something
   await page.goto("http://localhost:3000/");
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/MyCo/);
+  await page.getByRole("link", { name: "Pickup Sheets" }).click();
+
+  await expect(page).toHaveTitle(/Pickup Sheets/);
 });
