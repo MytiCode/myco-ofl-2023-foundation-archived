@@ -17,14 +17,10 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Build App
-      run: npm run build
-    - name: Run app
-      run: npm run start
-      env:
-        PORT: 3000
     - name: Run Playwright tests
-      run: npx playwright test
+      run: npm run e2e
+      env:
+        CI: 1
     - uses: actions/upload-artifact@v3
       if: always()
       with:
