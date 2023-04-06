@@ -120,7 +120,7 @@ const shopNameToId = shops.reduce(
   new Map<string, number>()
 );
 
-function transformLineItem(lineItem: any): LineItem {
+function transformLineItem(lineItem: any, order: any): LineItem {
   const shopId = shopNameToId.get(lineItem.shop_name);
   assert(
     typeof shopId === "number",
@@ -128,6 +128,7 @@ function transformLineItem(lineItem: any): LineItem {
   );
 
   return {
+    orderId: order.order_id, // shouldn't even be needed but we changed the model..
     lineItemId: lineItem.id,
     title: lineItem.name,
     price: lineItem.price,
@@ -135,6 +136,7 @@ function transformLineItem(lineItem: any): LineItem {
     shopId,
     sku: lineItem.sku,
     qty: lineItem.qty,
+    updatedAt: lineItem.line_item_updated_at,
   };
 }
 
@@ -171,7 +173,7 @@ function transformOrder(order: any): Order {
     price: order.price,
     tax: order.tax,
     subtotal: order.price - order.tax,
-    lineItems: order.line_items.map(transformLineItem),
+    lineItems: order.line_items.map((li: any) => transformLineItem(li, order)),
   };
 }
 
