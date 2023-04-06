@@ -52,6 +52,8 @@ export type Order = {
 
   /** A list of line item objects, each containing information about an item in the order. */
   lineItems: LineItem[];
+
+  status: "placed" | "cancelled" | "out-for-delivery" | "delivered";
 };
 
 export type CustomerAddress = {
@@ -100,6 +102,10 @@ export type LineItem = {
 
   // TODO: Fulfillment related stuff
   updatedAt: string;
+
+  fulfillmentStatus: "unfulfilled" | "fulfilled";
+
+  qtyFulfilled: number;
 };
 
 export type Shop = {

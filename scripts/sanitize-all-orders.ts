@@ -136,7 +136,9 @@ function transformLineItem(lineItem: any, order: any): LineItem {
     shopId,
     sku: lineItem.sku,
     qty: lineItem.qty,
+    qtyFulfilled: lineItem.qty,
     updatedAt: lineItem.line_item_updated_at,
+    fulfillmentStatus: "unfulfilled", // TODO: No really
   };
 }
 
@@ -144,6 +146,7 @@ function transformOrder(order: any): Order {
   return {
     orderId: order.id,
     orderNumber: order.order_number,
+    status: "placed", // TODO: no ... Really
     billingAddress: null,
     // billingAddress: {
     //   address1: order.billing_address1,

@@ -3,6 +3,7 @@
     {
       "orderId": 4517105533097,
       "orderNumber": "#1226",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -28,7 +29,9 @@
           "shopId": 4,
           "sku": "114658",
           "qty": 1,
-          "updatedAt": "2022-06-06T17:13:12.340004"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-06-06T17:13:12.340004",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11352135434409,
@@ -38,13 +41,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-06-06T17:13:28.318593"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-06-06T17:13:28.318593",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4517119885481,
       "orderNumber": "#1227",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -70,7 +76,9 @@
           "shopId": 4,
           "sku": "351558",
           "qty": 1,
-          "updatedAt": "2022-06-06T17:13:12.353355"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-06-06T17:13:12.353355",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11352166727849,
@@ -80,7 +88,9 @@
           "shopId": 4,
           "sku": "208616",
           "qty": 1,
-          "updatedAt": "2022-06-06T17:13:12.350233"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-06-06T17:13:12.350233",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11352166793385,
@@ -90,13 +100,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-06-06T17:13:28.310366"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-06-06T17:13:28.310366",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662086664361,
       "orderNumber": "#1509",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -122,13 +135,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T13:33:18.044091"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T13:33:18.044091",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662361194665,
       "orderNumber": "#1510",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -154,7 +170,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:29:25.03889"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:29:25.03889",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640118182057,
@@ -164,13 +182,16 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.635004"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.635004",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662382821545,
       "orderNumber": "#1511",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -196,7 +217,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:29:25.040775"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:29:25.040775",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640157700265,
@@ -206,13 +229,16 @@
           "shopId": 4,
           "sku": "457687",
           "qty": 1,
-          "updatedAt": "2022-09-19T15:58:00.720296"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T15:58:00.720296",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662399828137,
       "orderNumber": "#1512",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -238,13 +264,16 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.641285"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.641285",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662406348969,
       "orderNumber": "#1513",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -270,7 +299,9 @@
           "shopId": 4,
           "sku": "151595",
           "qty": 1,
-          "updatedAt": "2022-09-19T16:02:43.901279"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:02:43.901279",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640210653353,
@@ -280,13 +311,16 @@
           "shopId": 11,
           "sku": "161-026",
           "qty": 1,
-          "updatedAt": "2022-09-19T13:27:29.199705"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T13:27:29.199705",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662406840489,
       "orderNumber": "#1514",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -312,7 +346,9 @@
           "shopId": 4,
           "sku": "153317",
           "qty": 1,
-          "updatedAt": "2022-09-19T12:00:12.997988"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T12:00:12.997988",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640211538089,
@@ -322,7 +358,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T13:23:19.692995"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T13:23:19.692995",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640211636393,
@@ -332,7 +370,9 @@
           "shopId": 4,
           "sku": "301287",
           "qty": 1,
-          "updatedAt": "2022-09-19T12:00:13.017694"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T12:00:13.017694",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640211570857,
@@ -342,13 +382,16 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.636145"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.636145",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662407495849,
       "orderNumber": "#1515",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -374,7 +417,9 @@
           "shopId": 4,
           "sku": "151590",
           "qty": 1,
-          "updatedAt": "2022-09-19T16:21:18.408604"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:21:18.408604",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640212652201,
@@ -384,13 +429,16 @@
           "shopId": 8,
           "sku": "BEC75194",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:28:35.844947"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:28:35.844947",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662411296937,
       "orderNumber": "#1516",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -416,7 +464,9 @@
           "shopId": 8,
           "sku": "FUZ00677",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:28:35.847918"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:28:35.847918",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640220090537,
@@ -426,7 +476,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:29:25.046539"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:29:25.046539",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640220123305,
@@ -436,7 +488,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:29:25.048568"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:29:25.048568",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640220188841,
@@ -446,7 +500,9 @@
           "shopId": 8,
           "sku": "FUS13918",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:28:35.84644"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:28:35.84644",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640220156073,
@@ -456,13 +512,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:29:25.050454"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:29:25.050454",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662427517097,
       "orderNumber": "#1517",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -488,7 +547,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 2,
-          "updatedAt": "2022-09-19T17:29:25.051873"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-19T17:29:25.051873",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640251547817,
@@ -498,7 +559,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:29:25.053584"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:29:25.053584",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640251580585,
@@ -508,7 +571,9 @@
           "shopId": 4,
           "sku": "146312",
           "qty": 2,
-          "updatedAt": "2022-09-19T16:02:43.904542"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-19T16:02:43.904542",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640251482281,
@@ -518,13 +583,16 @@
           "shopId": 4,
           "sku": "152539",
           "qty": 1,
-          "updatedAt": "2022-09-19T16:02:43.902999"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:02:43.902999",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662428860585,
       "orderNumber": "#1518",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -550,7 +618,9 @@
           "shopId": 4,
           "sku": "153412",
           "qty": 1,
-          "updatedAt": "2022-09-19T16:10:28.347107"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:10:28.347107",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640254070953,
@@ -560,13 +630,16 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:34.504933"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:34.504933",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662433644713,
       "orderNumber": "#1519",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -592,7 +665,9 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:08.333475"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:08.333475",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640263409833,
@@ -602,13 +677,16 @@
           "shopId": 11,
           "sku": "130-046",
           "qty": 1,
-          "updatedAt": "2022-09-19T13:27:29.203905"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T13:27:29.203905",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662436855977,
       "orderNumber": "#1520",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -634,7 +712,9 @@
           "shopId": 1,
           "sku": "",
           "qty": 2,
-          "updatedAt": "2022-09-19T19:52:57.619878"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-19T19:52:57.619878",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640269635753,
@@ -644,7 +724,9 @@
           "shopId": 4,
           "sku": "184132",
           "qty": 1,
-          "updatedAt": "2022-09-20T15:59:11.377797"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T15:59:11.377797",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640269668521,
@@ -654,7 +736,9 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:08.334886"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:08.334886",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640269602985,
@@ -664,7 +748,9 @@
           "shopId": 4,
           "sku": "146312",
           "qty": 1,
-          "updatedAt": "2022-09-20T15:59:11.375471"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T15:59:11.375471",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640269734057,
@@ -674,13 +760,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T13:28:32.699002"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T13:28:32.699002",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662454550697,
       "orderNumber": "#1521",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -706,7 +795,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T13:22:46.894879"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T13:22:46.894879",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640303255721,
@@ -716,7 +807,9 @@
           "shopId": 12,
           "sku": "9906",
           "qty": 1,
-          "updatedAt": "2022-09-19T13:00:11.603551"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T13:00:11.603551",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640303222953,
@@ -726,13 +819,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T13:22:46.896474"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T13:22:46.896474",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662460416169,
       "orderNumber": "#1522",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -758,7 +854,9 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:08.324123"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:08.324123",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640314560681,
@@ -768,7 +866,9 @@
           "shopId": 8,
           "sku": "OMH10150",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:28:35.827167"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:28:35.827167",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640314626217,
@@ -778,13 +878,16 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:08.325775"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:08.325775",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662464479401,
       "orderNumber": "#1523",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -810,7 +913,9 @@
           "shopId": 12,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T13:00:11.689507"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T13:00:11.689507",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640322162857,
@@ -820,7 +925,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:29:25.022743"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:29:25.022743",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640322195625,
@@ -830,7 +937,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:29:25.025792"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:29:25.025792",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640322130089,
@@ -840,7 +949,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:29:25.02015"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:29:25.02015",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640322261161,
@@ -850,13 +961,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:29:25.027178"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:29:25.027178",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662465724585,
       "orderNumber": "#1524",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -882,7 +996,9 @@
           "shopId": 8,
           "sku": "BEC75480",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:28:35.830037"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:28:35.830037",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640324685993,
@@ -892,13 +1008,16 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:08.327566"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:08.327566",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662472540329,
       "orderNumber": "#1525",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -924,7 +1043,9 @@
           "shopId": 8,
           "sku": "HIM00766",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:28:35.82869"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:28:35.82869",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640340611241,
@@ -934,7 +1055,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:29:25.024381"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:29:25.024381",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640340545705,
@@ -944,7 +1067,9 @@
           "shopId": 4,
           "sku": "153416",
           "qty": 1,
-          "updatedAt": "2022-09-19T16:21:18.4049"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:21:18.4049",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640340578473,
@@ -954,7 +1079,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:29:25.030113"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:29:25.030113",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640340480169,
@@ -964,7 +1091,9 @@
           "shopId": 4,
           "sku": "153838",
           "qty": 1,
-          "updatedAt": "2022-09-19T16:21:18.402904"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:21:18.402904",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640340512937,
@@ -974,13 +1103,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T13:21:53.151589"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T13:21:53.151589",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662474178729,
       "orderNumber": "#1526",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1006,7 +1138,9 @@
           "shopId": 4,
           "sku": "342556",
           "qty": 1,
-          "updatedAt": "2022-09-19T18:16:03.124612"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T18:16:03.124612",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640343330985,
@@ -1016,13 +1150,16 @@
           "shopId": 4,
           "sku": "342440",
           "qty": 1,
-          "updatedAt": "2022-09-19T18:16:03.122866"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T18:16:03.122866",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662491873449,
       "orderNumber": "#1527",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1048,7 +1185,9 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.638699"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.638699",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640375017641,
@@ -1058,13 +1197,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 2,
-          "updatedAt": "2022-09-19T17:29:25.031611"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-19T17:29:25.031611",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662498361513,
       "orderNumber": "#1528",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1090,7 +1232,9 @@
           "shopId": 8,
           "sku": "BEC75194",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:28:35.831487"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:28:35.831487",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640387141801,
@@ -1100,13 +1244,16 @@
           "shopId": 8,
           "sku": "OMH10150",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:28:35.833199"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:28:35.833199",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662501474473,
       "orderNumber": "#1529",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1132,7 +1279,9 @@
           "shopId": 4,
           "sku": "153857",
           "qty": 1,
-          "updatedAt": "2022-09-19T16:10:28.345122"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:10:28.345122",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640393466025,
@@ -1142,13 +1291,16 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:08.329211"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:08.329211",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662503047337,
       "orderNumber": "#1530",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1174,13 +1326,16 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:08.330681"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:08.330681",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662509469865,
       "orderNumber": "#1531",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1206,7 +1361,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T14:18:01.360329"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T14:18:01.360329",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640409653417,
@@ -1216,7 +1373,9 @@
           "shopId": 4,
           "sku": "446773",
           "qty": 1,
-          "updatedAt": "2022-09-19T15:58:00.716191"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T15:58:00.716191",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640409751721,
@@ -1226,7 +1385,9 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.633888"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.633888",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640409718953,
@@ -1236,13 +1397,16 @@
           "shopId": 4,
           "sku": "106769",
           "qty": 1,
-          "updatedAt": "2022-09-19T15:58:00.718849"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T15:58:00.718849",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662513926313,
       "orderNumber": "#1532",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1268,7 +1432,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T14:18:01.362438"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T14:18:01.362438",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640419352745,
@@ -1278,7 +1444,9 @@
           "shopId": 8,
           "sku": "BEC75194",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:28:35.8357"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:28:35.8357",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640419254441,
@@ -1288,7 +1456,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:29:25.032838"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:29:25.032838",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640419319977,
@@ -1298,13 +1468,16 @@
           "shopId": 8,
           "sku": "GRN04124",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:28:35.834489"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:28:35.834489",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662517104809,
       "orderNumber": "#1533",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1330,7 +1503,9 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:34.497515"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:34.497515",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640425578665,
@@ -1340,13 +1515,16 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:34.498725"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:34.498725",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662523134121,
       "orderNumber": "#1534",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1372,7 +1550,9 @@
           "shopId": 13,
           "sku": "ABJBP00155",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:55:43.294595"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:55:43.294595",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640437670057,
@@ -1382,7 +1562,9 @@
           "shopId": 1,
           "sku": "",
           "qty": 2,
-          "updatedAt": "2022-09-19T19:52:57.617416"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-19T19:52:57.617416",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640437768361,
@@ -1392,7 +1574,9 @@
           "shopId": 1,
           "sku": "",
           "qty": 2,
-          "updatedAt": "2022-09-19T19:52:57.61867"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-19T19:52:57.61867",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640437801129,
@@ -1402,7 +1586,9 @@
           "shopId": 7,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T21:05:42.106138"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T21:05:42.106138",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640437735593,
@@ -1412,13 +1598,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:29:25.034372"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:29:25.034372",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662527721641,
       "orderNumber": "#1535",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1444,7 +1633,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T14:58:54.638614"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T14:58:54.638614",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640446419113,
@@ -1454,7 +1645,9 @@
           "shopId": 10,
           "sku": "SWW28HLRP",
           "qty": 4,
-          "updatedAt": "2022-09-19T22:20:15.583632"
+          "qtyFulfilled": 4,
+          "updatedAt": "2022-09-19T22:20:15.583632",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640446386345,
@@ -1464,7 +1657,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T15:08:54.375939"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T15:08:54.375939",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640446320809,
@@ -1474,13 +1669,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T15:08:54.374078"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T15:08:54.374078",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662532866217,
       "orderNumber": "#1536",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1506,13 +1704,16 @@
           "shopId": 13,
           "sku": "GWP16489PK",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:55:43.296189"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:55:43.296189",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662535880873,
       "orderNumber": "#1537",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1538,7 +1739,9 @@
           "shopId": 4,
           "sku": "184064",
           "qty": 1,
-          "updatedAt": "2022-09-19T15:00:13.176975"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T15:00:13.176975",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640464900265,
@@ -1548,13 +1751,16 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:34.499977"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:34.499977",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662539780265,
       "orderNumber": "#1538",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1580,7 +1786,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:29:25.037096"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:29:25.037096",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640472076457,
@@ -1590,7 +1798,9 @@
           "shopId": 4,
           "sku": "275557",
           "qty": 1,
-          "updatedAt": "2022-09-19T15:00:13.217119"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T15:00:13.217119",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640472043689,
@@ -1600,7 +1810,9 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:08.332022"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:08.332022",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640472141993,
@@ -1610,13 +1822,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T15:08:54.377831"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T15:08:54.377831",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662543745193,
       "orderNumber": "#1539",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1642,7 +1857,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T15:11:03.438247"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T15:11:03.438247",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640480170153,
@@ -1652,7 +1869,9 @@
           "shopId": 7,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T21:05:42.10809"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T21:05:42.10809",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640480333993,
@@ -1662,13 +1881,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T15:11:03.439676"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T15:11:03.439676",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662544826537,
       "orderNumber": "#1540",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1694,7 +1916,9 @@
           "shopId": 8,
           "sku": "FUS13918",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:28:35.839369"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:28:35.839369",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640482594985,
@@ -1704,7 +1928,9 @@
           "shopId": 7,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T21:05:42.110036"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T21:05:42.110036",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640482562217,
@@ -1714,13 +1940,16 @@
           "shopId": 4,
           "sku": "211944",
           "qty": 1,
-          "updatedAt": "2022-09-19T15:00:13.320861"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T15:00:13.320861",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662550954153,
       "orderNumber": "#1541",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1746,13 +1975,16 @@
           "shopId": 4,
           "sku": "275519",
           "qty": 1,
-          "updatedAt": "2022-09-19T15:00:13.362718"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T15:00:13.362718",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662551019689,
       "orderNumber": "#1542",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1778,7 +2010,9 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:34.501208"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:34.501208",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640494325929,
@@ -1788,7 +2022,9 @@
           "shopId": 12,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T15:00:13.387733"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T15:00:13.387733",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640494391465,
@@ -1798,13 +2034,16 @@
           "shopId": 6,
           "sku": "888830201329",
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:34.502554"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:34.502554",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662559899817,
       "orderNumber": "#1543",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1830,7 +2069,9 @@
           "shopId": 4,
           "sku": "147707",
           "qty": 1,
-          "updatedAt": "2022-09-19T15:58:00.721951"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T15:58:00.721951",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640513003689,
@@ -1840,7 +2081,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 2,
-          "updatedAt": "2022-09-19T15:12:17.936361"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-19T15:12:17.936361",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640513101993,
@@ -1850,7 +2093,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 3,
-          "updatedAt": "2022-09-19T15:13:32.083757"
+          "qtyFulfilled": 3,
+          "updatedAt": "2022-09-19T15:13:32.083757",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640512970921,
@@ -1860,7 +2105,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 3,
-          "updatedAt": "2022-09-19T17:29:25.042557"
+          "qtyFulfilled": 3,
+          "updatedAt": "2022-09-19T17:29:25.042557",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640513069225,
@@ -1870,7 +2117,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 5,
-          "updatedAt": "2022-09-19T17:29:25.043889"
+          "qtyFulfilled": 5,
+          "updatedAt": "2022-09-19T17:29:25.043889",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640513036457,
@@ -1880,7 +2129,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T15:12:17.938294"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T15:12:17.938294",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640512938153,
@@ -1890,13 +2141,16 @@
           "shopId": 4,
           "sku": "147711",
           "qty": 1,
-          "updatedAt": "2022-09-19T15:58:00.723624"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T15:58:00.723624",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662568386729,
       "orderNumber": "#1544",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1922,7 +2176,9 @@
           "shopId": 10,
           "sku": "SWW18DIBW",
           "qty": 1,
-          "updatedAt": "2022-09-19T22:20:15.585013"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T22:20:15.585013",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640527782057,
@@ -1932,7 +2188,9 @@
           "shopId": 8,
           "sku": "TZU19891",
           "qty": 2,
-          "updatedAt": "2022-09-19T17:28:35.840585"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-19T17:28:35.840585",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640527749289,
@@ -1942,13 +2200,16 @@
           "shopId": 10,
           "sku": "SWW36WHBU",
           "qty": 1,
-          "updatedAt": "2022-09-19T22:20:15.58628"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T22:20:15.58628",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662572286121,
       "orderNumber": "#1545",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -1974,7 +2235,9 @@
           "shopId": 4,
           "sku": "151022",
           "qty": 1,
-          "updatedAt": "2022-09-19T16:02:43.899321"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:02:43.899321",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640536498345,
@@ -1984,13 +2247,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T15:13:32.085599"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T15:13:32.085599",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662575726761,
       "orderNumber": "#1546",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2016,7 +2282,9 @@
           "shopId": 8,
           "sku": "BEC75480",
           "qty": 2,
-          "updatedAt": "2022-09-19T17:28:35.843546"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-19T17:28:35.843546",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640543543465,
@@ -2026,13 +2294,16 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:34.503736"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:34.503736",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662584541353,
       "orderNumber": "#1547",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2058,7 +2329,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T16:10:10.283665"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:10:10.283665",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640563171497,
@@ -2068,7 +2341,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T16:10:10.295701"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:10:10.295701",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640563302569,
@@ -2078,7 +2353,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T16:10:10.285338"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:10:10.285338",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640563105961,
@@ -2088,7 +2365,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T16:10:10.293863"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:10:10.293863",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640563138729,
@@ -2098,7 +2377,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T16:10:10.286818"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:10:10.286818",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640563237033,
@@ -2108,7 +2389,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T16:10:10.281397"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:10:10.281397",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640563204265,
@@ -2118,13 +2401,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T16:10:10.297447"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:10:10.297447",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662591979689,
       "orderNumber": "#1548",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2150,7 +2436,9 @@
           "shopId": 1,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T19:52:57.614407"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T19:52:57.614407",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640577851561,
@@ -2160,7 +2448,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:29:25.028582"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:29:25.028582",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640577884329,
@@ -2170,13 +2460,16 @@
           "shopId": 11,
           "sku": "161-026",
           "qty": 1,
-          "updatedAt": "2022-09-19T16:04:49.802448"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:04:49.802448",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662597877929,
       "orderNumber": "#1549",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2202,7 +2495,9 @@
           "shopId": 4,
           "sku": "175871",
           "qty": 1,
-          "updatedAt": "2022-09-19T16:00:15.589302"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:00:15.589302",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640588239017,
@@ -2212,7 +2507,9 @@
           "shopId": 7,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T21:05:42.103357"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T21:05:42.103357",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640588206249,
@@ -2222,7 +2519,9 @@
           "shopId": 11,
           "sku": "CRKM1-WLKMN1-7288",
           "qty": 1,
-          "updatedAt": "2022-09-19T16:04:49.807226"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:04:49.807226",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640588271785,
@@ -2232,13 +2531,16 @@
           "shopId": 4,
           "sku": "175789",
           "qty": 1,
-          "updatedAt": "2022-09-19T16:00:15.576391"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:00:15.576391",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662605512873,
       "orderNumber": "#1550",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2264,7 +2566,9 @@
           "shopId": 4,
           "sku": "76321",
           "qty": 1,
-          "updatedAt": "2022-09-19T16:21:18.406753"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:21:18.406753",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640602230953,
@@ -2274,13 +2578,16 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.637465"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.637465",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662606626985,
       "orderNumber": "#1551",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2306,7 +2613,9 @@
           "shopId": 6,
           "sku": "642249157383",
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:34.496256"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:34.496256",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640605507753,
@@ -2316,13 +2625,16 @@
           "shopId": 1,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T19:52:57.615946"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T19:52:57.615946",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662618423465,
       "orderNumber": "#1552",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2348,7 +2660,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T16:08:04.345337"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:08:04.345337",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640629821609,
@@ -2358,7 +2672,9 @@
           "shopId": 4,
           "sku": "150135",
           "qty": 1,
-          "updatedAt": "2022-09-19T16:10:28.341086"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:10:28.341086",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640629854377,
@@ -2368,7 +2684,9 @@
           "shopId": 4,
           "sku": "379200",
           "qty": 1,
-          "updatedAt": "2022-09-19T16:10:28.343358"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:10:28.343358",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640629788841,
@@ -2378,13 +2696,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T16:08:04.343569"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:08:04.343569",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662620455081,
       "orderNumber": "#1553",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2410,13 +2731,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T16:06:32.18084"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T16:06:32.18084",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662632153257,
       "orderNumber": "#1554",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2442,7 +2766,9 @@
           "shopId": 4,
           "sku": "7059",
           "qty": 1,
-          "updatedAt": "2022-09-19T18:16:03.127475"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T18:16:03.127475",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640659706025,
@@ -2452,7 +2778,9 @@
           "shopId": 4,
           "sku": "17935",
           "qty": 4,
-          "updatedAt": "2022-09-19T18:16:03.126065"
+          "qtyFulfilled": 4,
+          "updatedAt": "2022-09-19T18:16:03.126065",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640659771561,
@@ -2462,13 +2790,16 @@
           "shopId": 4,
           "sku": "150383",
           "qty": 1,
-          "updatedAt": "2022-09-19T18:16:03.128795"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T18:16:03.128795",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662643720361,
       "orderNumber": "#1555",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2494,7 +2825,9 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.640066"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.640066",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640680546473,
@@ -2504,13 +2837,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:29:25.045278"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:29:25.045278",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662655877289,
       "orderNumber": "#1556",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2536,7 +2872,9 @@
           "shopId": 8,
           "sku": "ANTLERSPLITM",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:28:35.836891"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:28:35.836891",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640704893097,
@@ -2546,13 +2884,16 @@
           "shopId": 8,
           "sku": "TZU19891",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:28:35.84217"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:28:35.84217",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662675177641,
       "orderNumber": "#1557",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2578,7 +2919,9 @@
           "shopId": 4,
           "sku": "333608",
           "qty": 1,
-          "updatedAt": "2022-09-19T20:58:28.199648"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:58:28.199648",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640744509609,
@@ -2588,13 +2931,16 @@
           "shopId": 4,
           "sku": "151365",
           "qty": 1,
-          "updatedAt": "2022-09-19T20:58:28.20125"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:58:28.20125",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662683304105,
       "orderNumber": "#1558",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2620,7 +2966,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 2,
-          "updatedAt": "2022-09-19T17:29:25.035755"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-19T17:29:25.035755",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640762630313,
@@ -2630,7 +2978,9 @@
           "shopId": 4,
           "sku": "137329",
           "qty": 1,
-          "updatedAt": "2022-09-19T22:19:21.932384"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T22:19:21.932384",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640762532009,
@@ -2640,7 +2990,9 @@
           "shopId": 4,
           "sku": "495702",
           "qty": 2,
-          "updatedAt": "2022-09-19T22:19:21.930645"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-19T22:19:21.930645",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640762597545,
@@ -2650,13 +3002,16 @@
           "shopId": 8,
           "sku": "FUZ00677",
           "qty": 1,
-          "updatedAt": "2022-09-19T17:28:35.83813"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T17:28:35.83813",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662692675753,
       "orderNumber": "#1559",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2682,7 +3037,9 @@
           "shopId": 4,
           "sku": "147257",
           "qty": 1,
-          "updatedAt": "2022-09-20T19:27:39.30493"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T19:27:39.30493",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640780652713,
@@ -2692,13 +3049,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T11:57:32.56376"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T11:57:32.56376",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662695788713,
       "orderNumber": "#1560",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2724,7 +3084,9 @@
           "shopId": 4,
           "sku": "180264",
           "qty": 1,
-          "updatedAt": "2022-09-20T15:58:03.517249"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T15:58:03.517249",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640786321577,
@@ -2734,7 +3096,9 @@
           "shopId": 12,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T18:00:12.340239"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T18:00:12.340239",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640786354345,
@@ -2744,7 +3108,9 @@
           "shopId": 8,
           "sku": "BEC75194",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:55.435118"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:55.435118",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640786288809,
@@ -2754,7 +3120,9 @@
           "shopId": 4,
           "sku": "146312",
           "qty": 1,
-          "updatedAt": "2022-09-19T18:00:12.328966"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T18:00:12.328966",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640786387113,
@@ -2764,13 +3132,16 @@
           "shopId": 4,
           "sku": "180844",
           "qty": 1,
-          "updatedAt": "2022-09-20T15:58:03.515365"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T15:58:03.515365",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662697656489,
       "orderNumber": "#1561",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2796,7 +3167,9 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:08.336174"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:08.336174",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640789893289,
@@ -2806,13 +3179,16 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.642514"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.642514",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662714499241,
       "orderNumber": "#1562",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2838,7 +3214,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T11:57:48.577756"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T11:57:48.577756",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640827084969,
@@ -2848,7 +3226,9 @@
           "shopId": 8,
           "sku": "BEC75480",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:55.437001"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:55.437001",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640826986665,
@@ -2858,7 +3238,9 @@
           "shopId": 4,
           "sku": "152592",
           "qty": 1,
-          "updatedAt": "2022-09-20T15:54:54.084673"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T15:54:54.084673",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640827052201,
@@ -2868,13 +3250,16 @@
           "shopId": 4,
           "sku": "153285",
           "qty": 1,
-          "updatedAt": "2022-09-21T20:00:11.406147"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T20:00:11.406147",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662714957993,
       "orderNumber": "#1563",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2900,7 +3285,9 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.643686"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.643686",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640828100777,
@@ -2910,7 +3297,9 @@
           "shopId": 4,
           "sku": "262373",
           "qty": 1,
-          "updatedAt": "2022-09-20T15:58:31.661972"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T15:58:31.661972",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640828068009,
@@ -2920,7 +3309,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T11:57:48.579454"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T11:57:48.579454",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640828166313,
@@ -2930,7 +3321,9 @@
           "shopId": 4,
           "sku": "150652",
           "qty": 1,
-          "updatedAt": "2022-09-20T15:58:31.66032"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T15:58:31.66032",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640828133545,
@@ -2940,13 +3333,16 @@
           "shopId": 4,
           "sku": "439997",
           "qty": 1,
-          "updatedAt": "2022-09-20T15:58:31.663299"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T15:58:31.663299",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662718398633,
       "orderNumber": "#1564",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -2972,7 +3368,9 @@
           "shopId": 4,
           "sku": "208678",
           "qty": 1,
-          "updatedAt": "2022-09-19T18:34:24.097432"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T18:34:24.097432",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640835276969,
@@ -2982,7 +3380,9 @@
           "shopId": 4,
           "sku": "208753",
           "qty": 1,
-          "updatedAt": "2022-09-19T18:34:24.101409"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T18:34:24.101409",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640835309737,
@@ -2992,7 +3392,9 @@
           "shopId": 8,
           "sku": "BEC75480",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:55.438803"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:55.438803",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640835244201,
@@ -3002,13 +3404,16 @@
           "shopId": 4,
           "sku": "208661",
           "qty": 1,
-          "updatedAt": "2022-09-19T18:34:24.099432"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T18:34:24.099432",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662739796137,
       "orderNumber": "#1565",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3034,13 +3439,16 @@
           "shopId": 4,
           "sku": "32808",
           "qty": 1,
-          "updatedAt": "2022-09-19T18:34:24.102799"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T18:34:24.102799",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662759686313,
       "orderNumber": "#1566",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3066,13 +3474,16 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:34.493289"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:34.493289",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662761947305,
       "orderNumber": "#1567",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3098,13 +3509,16 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:34.494952"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:34.494952",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662766207145,
       "orderNumber": "#1568",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3130,7 +3544,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T21:31:31.085821"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T21:31:31.085821",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640932401321,
@@ -3140,13 +3556,16 @@
           "shopId": 4,
           "sku": "151091",
           "qty": 1,
-          "updatedAt": "2022-09-19T19:07:55.52306"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T19:07:55.52306",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662768566441,
       "orderNumber": "#1569",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3172,7 +3591,9 @@
           "shopId": 4,
           "sku": "5642",
           "qty": 1,
-          "updatedAt": "2022-09-19T21:29:05.180648"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T21:29:05.180648",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640938463401,
@@ -3182,7 +3603,9 @@
           "shopId": 4,
           "sku": "151591",
           "qty": 1,
-          "updatedAt": "2022-09-19T21:29:05.184366"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T21:29:05.184366",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640938430633,
@@ -3192,7 +3615,9 @@
           "shopId": 4,
           "sku": "148668",
           "qty": 1,
-          "updatedAt": "2022-09-19T21:29:05.182781"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T21:29:05.182781",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640938496169,
@@ -3202,13 +3627,16 @@
           "shopId": 4,
           "sku": "150383",
           "qty": 1,
-          "updatedAt": "2022-09-19T21:29:05.185842"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T21:29:05.185842",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662782492841,
       "orderNumber": "#1570",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3234,7 +3662,9 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:34.50622"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:34.50622",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640968741033,
@@ -3244,7 +3674,9 @@
           "shopId": 7,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T21:05:42.112135"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T21:05:42.112135",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11640968806569,
@@ -3254,13 +3686,16 @@
           "shopId": 4,
           "sku": "365234",
           "qty": 1,
-          "updatedAt": "2022-09-19T19:07:55.525888"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T19:07:55.525888",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662787571881,
       "orderNumber": "#1571",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3286,13 +3721,16 @@
           "shopId": 7,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T21:05:42.113984"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T21:05:42.113984",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662807462057,
       "orderNumber": "#1572",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3318,13 +3756,16 @@
           "shopId": 4,
           "sku": "153763-1",
           "qty": 1,
-          "updatedAt": "2022-09-19T20:46:38.076478"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:46:38.076478",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662818635945,
       "orderNumber": "#1573",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3350,7 +3791,9 @@
           "shopId": 4,
           "sku": "153826",
           "qty": 1,
-          "updatedAt": "2022-09-19T20:46:38.078585"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:46:38.078585",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641042862249,
@@ -3360,13 +3803,16 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T16:48:28.640926"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T16:48:28.640926",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662820798633,
       "orderNumber": "#1574",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3392,7 +3838,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T12:00:34.98416"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:00:34.98416",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641047908521,
@@ -3402,7 +3850,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T12:00:34.990857"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:00:34.990857",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641047842985,
@@ -3412,13 +3862,16 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:08.339602"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:08.339602",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662824894633,
       "orderNumber": "#1575",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3444,7 +3897,9 @@
           "shopId": 8,
           "sku": "BEC75194",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:55.440579"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:55.440579",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641055346857,
@@ -3454,13 +3909,16 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.644894"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.644894",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662826860713,
       "orderNumber": "#1576",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3486,7 +3944,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T21:31:31.088092"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T21:31:31.088092",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641058754729,
@@ -3496,13 +3956,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T21:31:31.090172"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T21:31:31.090172",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662829121705,
       "orderNumber": "#1577",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3528,7 +3991,9 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-19T20:53:34.507458"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:53:34.507458",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641063604393,
@@ -3538,13 +4003,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T21:31:31.092006"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T21:31:31.092006",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662838821033,
       "orderNumber": "#1578",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3570,7 +4038,9 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.645952"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.645952",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641083166889,
@@ -3580,13 +4050,16 @@
           "shopId": 12,
           "sku": "9906",
           "qty": 1,
-          "updatedAt": "2022-09-19T20:00:12.152925"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T20:00:12.152925",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662862708905,
       "orderNumber": "#1579",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3612,7 +4085,9 @@
           "shopId": 8,
           "sku": "HYP00080",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:55.432912"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:55.432912",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641131597993,
@@ -3622,13 +4097,16 @@
           "shopId": 4,
           "sku": "458066",
           "qty": 1,
-          "updatedAt": "2022-09-19T21:34:51.564244"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T21:34:51.564244",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662865428649,
       "orderNumber": "#1580",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3654,7 +4132,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T21:31:31.093846"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T21:31:31.093846",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641137004713,
@@ -3664,13 +4144,16 @@
           "shopId": 4,
           "sku": "153773",
           "qty": 1,
-          "updatedAt": "2022-09-19T21:34:51.566184"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T21:34:51.566184",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662878011561,
       "orderNumber": "#1581",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3696,7 +4179,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T12:03:05.447817"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:03:05.447817",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641159090345,
@@ -3706,7 +4191,9 @@
           "shopId": 4,
           "sku": "2481",
           "qty": 2,
-          "updatedAt": "2022-09-19T22:04:11.044524"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-19T22:04:11.044524",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641159123113,
@@ -3716,7 +4203,9 @@
           "shopId": 11,
           "sku": "866779000388",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:03:05.446139"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:03:05.446139",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641159024809,
@@ -3726,7 +4215,9 @@
           "shopId": 4,
           "sku": "146312",
           "qty": 1,
-          "updatedAt": "2022-09-19T22:04:11.040604"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T22:04:11.040604",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641158992041,
@@ -3736,7 +4227,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T12:03:05.44457"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:03:05.44457",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641158959273,
@@ -3746,7 +4239,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T12:03:05.442575"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:03:05.442575",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641159057577,
@@ -3756,13 +4251,16 @@
           "shopId": 4,
           "sku": "151194",
           "qty": 1,
-          "updatedAt": "2022-09-19T22:04:11.042757"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T22:04:11.042757",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662882173097,
       "orderNumber": "#1582",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3788,7 +4286,9 @@
           "shopId": 4,
           "sku": "69491",
           "qty": 1,
-          "updatedAt": "2022-09-19T22:07:15.381815"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T22:07:15.381815",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641167872169,
@@ -3798,13 +4298,16 @@
           "shopId": 1,
           "sku": "",
           "qty": 2,
-          "updatedAt": "2022-09-20T13:48:44.075492"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-20T13:48:44.075492",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662906912937,
       "orderNumber": "#1583",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3830,7 +4333,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T12:07:40.262513"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:07:40.262513",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641215942825,
@@ -3840,13 +4345,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-19T21:31:31.095921"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T21:31:31.095921",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662922510505,
       "orderNumber": "#1584",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3872,7 +4380,9 @@
           "shopId": 4,
           "sku": "511471",
           "qty": 1,
-          "updatedAt": "2022-09-20T15:55:13.344228"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T15:55:13.344228",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641247989929,
@@ -3882,13 +4392,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:08.127886"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:08.127886",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662924804265,
       "orderNumber": "#1585",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3914,7 +4427,9 @@
           "shopId": 4,
           "sku": "217182",
           "qty": 1,
-          "updatedAt": "2022-09-19T22:12:49.486601"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T22:12:49.486601",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641252544681,
@@ -3924,7 +4439,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:08.13001"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:08.13001",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641252511913,
@@ -3934,7 +4451,9 @@
           "shopId": 4,
           "sku": "25916",
           "qty": 1,
-          "updatedAt": "2022-09-19T22:12:49.484163"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-19T22:12:49.484163",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641252577449,
@@ -3944,7 +4463,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:08.131942"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:08.131942",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641252610217,
@@ -3954,7 +4475,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:08.133816"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:08.133816",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641252675753,
@@ -3964,13 +4487,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:08.135931"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:08.135931",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662956687529,
       "orderNumber": "#1586",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -3996,7 +4522,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T12:08:35.477707"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:08:35.477707",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641320276137,
@@ -4006,13 +4534,16 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.647602"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.647602",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4662998171817,
       "orderNumber": "#1587",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -4038,7 +4569,9 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T01:32:44.534038"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T01:32:44.534038",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641411862697,
@@ -4048,7 +4581,9 @@
           "shopId": 4,
           "sku": "777",
           "qty": 1,
-          "updatedAt": "2022-09-20T18:53:08.697441"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T18:53:08.697441",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641411928233,
@@ -4058,7 +4593,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 2,
-          "updatedAt": "2022-09-20T12:27:08.138537"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-20T12:27:08.138537",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641411895465,
@@ -4068,13 +4605,16 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.648776"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.648776",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663002497193,
       "orderNumber": "#1588",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -4100,7 +4640,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:08.140302"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:08.140302",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641420742825,
@@ -4110,7 +4652,9 @@
           "shopId": 4,
           "sku": "21680",
           "qty": 1,
-          "updatedAt": "2022-09-20T18:52:10.653994"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T18:52:10.653994",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641420644521,
@@ -4120,7 +4664,9 @@
           "shopId": 4,
           "sku": "446773",
           "qty": 1,
-          "updatedAt": "2022-09-20T18:52:10.652156"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T18:52:10.652156",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641420578985,
@@ -4130,7 +4676,9 @@
           "shopId": 8,
           "sku": "GRN04110",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:55.442292"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:55.442292",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641420710057,
@@ -4140,7 +4688,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 2,
-          "updatedAt": "2022-09-20T12:27:08.142055"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-20T12:27:08.142055",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641420611753,
@@ -4150,13 +4700,16 @@
           "shopId": 8,
           "sku": "OMH10150",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:55.443995"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:55.443995",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663029334185,
       "orderNumber": "#1589",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -4182,7 +4735,9 @@
           "shopId": 8,
           "sku": "FUZ00677",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:55.445694"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:55.445694",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641477234857,
@@ -4192,13 +4747,16 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.649874"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.649874",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663033790633,
       "orderNumber": "#1590",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -4224,7 +4782,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T12:18:19.868374"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:18:19.868374",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641487622313,
@@ -4234,7 +4794,9 @@
           "shopId": 4,
           "sku": "153317",
           "qty": 1,
-          "updatedAt": "2022-09-20T18:50:44.689131"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T18:50:44.689131",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641487655081,
@@ -4244,7 +4806,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:08.143769"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:08.143769",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641487556777,
@@ -4254,7 +4818,9 @@
           "shopId": 4,
           "sku": "33942",
           "qty": 1,
-          "updatedAt": "2022-09-20T18:50:44.691248"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T18:50:44.691248",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641487589545,
@@ -4264,7 +4830,9 @@
           "shopId": 4,
           "sku": "33959",
           "qty": 1,
-          "updatedAt": "2022-09-20T18:50:44.693118"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T18:50:44.693118",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641487491241,
@@ -4274,13 +4842,16 @@
           "shopId": 13,
           "sku": "8130007",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:55:43.297529"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:55:43.297529",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663037886633,
       "orderNumber": "#1591",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -4306,7 +4877,9 @@
           "shopId": 7,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T16:30:23.91176"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:30:23.91176",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641497321641,
@@ -4316,13 +4889,16 @@
           "shopId": 4,
           "sku": "447183",
           "qty": 1,
-          "updatedAt": "2022-09-20T16:05:15.638251"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:05:15.638251",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663042932905,
       "orderNumber": "#1592",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -4348,7 +4924,9 @@
           "shopId": 8,
           "sku": "OMH10150",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:55.447504"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:55.447504",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641507545257,
@@ -4358,13 +4936,16 @@
           "shopId": 8,
           "sku": "BEC75480",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:55.449139"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:55.449139",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663045423273,
       "orderNumber": "#1593",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -4390,7 +4971,9 @@
           "shopId": 4,
           "sku": "130085",
           "qty": 2,
-          "updatedAt": "2022-09-21T20:00:11.408272"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-21T20:00:11.408272",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641512558761,
@@ -4400,7 +4983,9 @@
           "shopId": 4,
           "sku": "120222",
           "qty": 1,
-          "updatedAt": "2022-09-20T16:04:59.665912"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:04:59.665912",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641512591529,
@@ -4410,13 +4995,16 @@
           "shopId": 11,
           "sku": "130-046",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:12:55.791747"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:12:55.791747",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663053451433,
       "orderNumber": "#1594",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -4442,7 +5030,9 @@
           "shopId": 4,
           "sku": "483709",
           "qty": 1,
-          "updatedAt": "2022-09-20T18:53:37.332241"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T18:53:37.332241",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641530450089,
@@ -4452,13 +5042,16 @@
           "shopId": 7,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T16:30:23.914076"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:30:23.914076",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663054925993,
       "orderNumber": "#1595",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -4484,7 +5077,9 @@
           "shopId": 10,
           "sku": "SWW28HLRP",
           "qty": 1,
-          "updatedAt": "2022-09-20T01:36:34.3671"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T01:36:34.3671",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641534546089,
@@ -4494,7 +5089,9 @@
           "shopId": 5,
           "sku": "SP-119",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:16:52.034747"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:16:52.034747",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641534611625,
@@ -4504,13 +5101,16 @@
           "shopId": 4,
           "sku": "151596",
           "qty": 1,
-          "updatedAt": "2022-09-20T18:08:55.926983"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T18:08:55.926983",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663065542825,
       "orderNumber": "#1596",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -4536,7 +5136,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:08.147221"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:08.147221",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641556172969,
@@ -4546,7 +5148,9 @@
           "shopId": 4,
           "sku": "51892",
           "qty": 1,
-          "updatedAt": "2022-09-20T16:04:06.525959"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:04:06.525959",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641556140201,
@@ -4556,7 +5160,9 @@
           "shopId": 4,
           "sku": "497904",
           "qty": 1,
-          "updatedAt": "2022-09-20T16:04:06.524125"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:04:06.524125",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641556074665,
@@ -4566,7 +5172,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:08.145413"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:08.145413",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641556205737,
@@ -4576,13 +5184,16 @@
           "shopId": 4,
           "sku": "153787-1",
           "qty": 1,
-          "updatedAt": "2022-09-20T16:04:06.527703"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:04:06.527703",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663070130345,
       "orderNumber": "#1597",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -4608,7 +5219,9 @@
           "shopId": 4,
           "sku": "154395",
           "qty": 1,
-          "updatedAt": "2022-09-20T18:10:13.774502"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T18:10:13.774502",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641566363817,
@@ -4618,13 +5231,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T12:18:19.870117"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:18:19.870117",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663073833129,
       "orderNumber": "#1598",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -4650,7 +5266,9 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.650987"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.650987",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641574097065,
@@ -4660,13 +5278,16 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T18:53:07.010972"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T18:53:07.010972",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663098638505,
       "orderNumber": "#1599",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -4692,7 +5313,9 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.652301"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.652301",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641625215145,
@@ -4702,7 +5325,9 @@
           "shopId": 4,
           "sku": "153859",
           "qty": 1,
-          "updatedAt": "2022-09-20T18:08:55.931088"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T18:08:55.931088",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641625247913,
@@ -4712,7 +5337,9 @@
           "shopId": 1,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T13:48:44.077723"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T13:48:44.077723",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641625182377,
@@ -4722,13 +5349,16 @@
           "shopId": 4,
           "sku": "153845",
           "qty": 1,
-          "updatedAt": "2022-09-20T18:08:55.929449"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T18:08:55.929449",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663136420009,
       "orderNumber": "#1600",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -4754,7 +5384,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T12:18:19.871684"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:18:19.871684",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641708249257,
@@ -4764,7 +5396,9 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T18:53:07.012687"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T18:53:07.012687",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641708183721,
@@ -4774,7 +5408,9 @@
           "shopId": 8,
           "sku": "GRN11130",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:55.450769"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:55.450769",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641708118185,
@@ -4784,7 +5420,9 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T16:48:37.140319"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T16:48:37.140319",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641708150953,
@@ -4794,13 +5432,16 @@
           "shopId": 4,
           "sku": "290307",
           "qty": 2,
-          "updatedAt": "2022-09-20T17:45:36.354008"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-20T17:45:36.354008",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663143956649,
       "orderNumber": "#1601",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -4826,7 +5467,9 @@
           "shopId": 7,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T14:09:51.611391"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T14:09:51.611391",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641723912361,
@@ -4836,7 +5479,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T12:22:55.378527"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:22:55.378527",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641723977897,
@@ -4846,7 +5491,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T12:22:55.380004"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:22:55.380004",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641723879593,
@@ -4856,13 +5503,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T12:22:55.376817"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:22:55.376817",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663153164457,
       "orderNumber": "#1602",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -4888,7 +5538,9 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T13:18:21.723022"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T13:18:21.723022",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641742393513,
@@ -4898,7 +5550,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T12:21:14.827087"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:21:14.827087",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641742426281,
@@ -4908,13 +5562,16 @@
           "shopId": 11,
           "sku": "CRKM1-TACO01-7272",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:21:14.839703"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:21:14.839703",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663213785257,
       "orderNumber": "#1603",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -4940,7 +5597,9 @@
           "shopId": 4,
           "sku": "457403",
           "qty": 1,
-          "updatedAt": "2022-09-20T15:53:51.416301"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T15:53:51.416301",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641865502889,
@@ -4950,7 +5609,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T12:20:13.967176"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:20:13.967176",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11641865470121,
@@ -4960,13 +5621,16 @@
           "shopId": 11,
           "sku": "CP.989",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:20:13.965403"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:20:13.965403",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663501422761,
       "orderNumber": "#1604",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -4992,7 +5656,9 @@
           "shopId": 4,
           "sku": "64366",
           "qty": 1,
-          "updatedAt": "2022-09-20T16:39:40.824123"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:39:40.824123",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642384449705,
@@ -5002,13 +5668,16 @@
           "shopId": 11,
           "sku": "130-046",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:12:55.793892"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:12:55.793892",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663504961705,
       "orderNumber": "#1605",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5034,7 +5703,9 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T13:18:21.724901"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T13:18:21.724901",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642391134377,
@@ -5044,7 +5715,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:08.150435"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:08.150435",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642391101609,
@@ -5054,7 +5727,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:08.148813"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:08.148813",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642391068841,
@@ -5064,13 +5739,16 @@
           "shopId": 13,
           "sku": "1251XPK015",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:55:43.298746"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:55:43.298746",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663507517609,
       "orderNumber": "#1606",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5096,7 +5774,9 @@
           "shopId": 8,
           "sku": "BEC75480",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:27:55.45243"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:27:55.45243",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642395918505,
@@ -5106,13 +5786,16 @@
           "shopId": 4,
           "sku": "153235",
           "qty": 1,
-          "updatedAt": "2022-09-20T16:35:02.789799"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:35:02.789799",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663519412393,
       "orderNumber": "#1607",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5138,13 +5821,16 @@
           "shopId": 10,
           "sku": "SWW18WHWA",
           "qty": 1,
-          "updatedAt": "2022-09-20T12:05:50.57797"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T12:05:50.57797",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663570202793,
       "orderNumber": "#1608",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5170,7 +5856,9 @@
           "shopId": 4,
           "sku": "150360",
           "qty": 1,
-          "updatedAt": "2022-09-20T16:38:50.177057"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:38:50.177057",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642537574569,
@@ -5180,13 +5868,16 @@
           "shopId": 4,
           "sku": "69408",
           "qty": 1,
-          "updatedAt": "2022-09-20T16:38:50.174832"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:38:50.174832",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663574003881,
       "orderNumber": "#1609",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5212,7 +5903,9 @@
           "shopId": 8,
           "sku": "TZU19891",
           "qty": 1,
-          "updatedAt": "2022-09-20T13:08:44.681898"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T13:08:44.681898",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642545471657,
@@ -5222,7 +5915,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T13:08:30.122711"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T13:08:30.122711",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642545438889,
@@ -5232,13 +5927,16 @@
           "shopId": 4,
           "sku": "150383",
           "qty": 1,
-          "updatedAt": "2022-09-20T16:10:01.789035"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:10:01.789035",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663591501993,
       "orderNumber": "#1610",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5264,7 +5962,9 @@
           "shopId": 4,
           "sku": "153230",
           "qty": 1,
-          "updatedAt": "2022-09-20T15:53:51.365574"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T15:53:51.365574",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642582761641,
@@ -5274,7 +5974,9 @@
           "shopId": 4,
           "sku": "211586",
           "qty": 1,
-          "updatedAt": "2022-09-20T15:53:51.368123"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T15:53:51.368123",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642582696105,
@@ -5284,7 +5986,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T13:08:30.1274"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T13:08:30.1274",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642582663337,
@@ -5294,13 +5998,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T13:08:30.125602"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T13:08:30.125602",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663626039465,
       "orderNumber": "#1611",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5326,7 +6033,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.081146"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.081146",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642649477289,
@@ -5336,7 +6045,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.085046"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.085046",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642649510057,
@@ -5346,13 +6057,16 @@
           "shopId": 4,
           "sku": "153769",
           "qty": 1,
-          "updatedAt": "2022-09-20T16:09:04.898748"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:09:04.898748",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663629086889,
       "orderNumber": "#1612",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5378,7 +6092,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.086378"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.086378",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642655998121,
@@ -5388,13 +6104,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.088417"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.088417",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663635902633,
       "orderNumber": "#1613",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5420,7 +6139,9 @@
           "shopId": 4,
           "sku": "406234",
           "qty": 4,
-          "updatedAt": "2022-09-20T16:10:28.408043"
+          "qtyFulfilled": 4,
+          "updatedAt": "2022-09-20T16:10:28.408043",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642669924521,
@@ -5430,7 +6151,9 @@
           "shopId": 4,
           "sku": "119462",
           "qty": 1,
-          "updatedAt": "2022-09-20T16:10:28.410383"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:10:28.410383",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642669891753,
@@ -5440,13 +6163,16 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T18:53:07.005832"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T18:53:07.005832",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663636230313,
       "orderNumber": "#1614",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5472,7 +6198,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T14:09:09.362086"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T14:09:09.362086",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642670612649,
@@ -5482,7 +6210,9 @@
           "shopId": 4,
           "sku": "171125",
           "qty": 1,
-          "updatedAt": "2022-09-20T16:11:15.32047"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:11:15.32047",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642670579881,
@@ -5492,13 +6222,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T14:09:09.364279"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T14:09:09.364279",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663655628969,
       "orderNumber": "#1615",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5524,7 +6257,9 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T14:09:28.539049"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T14:09:28.539049",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642711277737,
@@ -5534,13 +6269,16 @@
           "shopId": 8,
           "sku": "BEC75480",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:22:48.247245"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:22:48.247245",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663662280873,
       "orderNumber": "#1616",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5566,13 +6304,16 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T15:27:48.704497"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T15:27:48.704497",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663678173353,
       "orderNumber": "#1617",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5598,7 +6339,9 @@
           "shopId": 4,
           "sku": "153317",
           "qty": 2,
-          "updatedAt": "2022-09-20T15:00:14.053428"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-20T15:00:14.053428",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642758660265,
@@ -5608,7 +6351,9 @@
           "shopId": 4,
           "sku": "212170",
           "qty": 1,
-          "updatedAt": "2022-09-20T16:02:41.122032"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:02:41.122032",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642758561961,
@@ -5618,7 +6363,9 @@
           "shopId": 8,
           "sku": "HYP00080",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:22:48.248751"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:22:48.248751",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642758627497,
@@ -5628,13 +6375,16 @@
           "shopId": 4,
           "sku": "153313",
           "qty": 2,
-          "updatedAt": "2022-09-20T16:02:41.118263"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-20T16:02:41.118263",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663717888169,
       "orderNumber": "#1618",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5660,7 +6410,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.095014"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.095014",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642842972329,
@@ -5670,7 +6422,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T16:05:34.588888"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:05:34.588888",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642843070633,
@@ -5680,7 +6434,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T16:00:15.939067"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:00:15.939067",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642843005097,
@@ -5690,13 +6446,16 @@
           "shopId": 4,
           "sku": "34833",
           "qty": 1,
-          "updatedAt": "2022-09-20T16:00:15.915805"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:00:15.915805",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663727784105,
       "orderNumber": "#1619",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5722,7 +6481,9 @@
           "shopId": 4,
           "sku": "130146",
           "qty": 1,
-          "updatedAt": "2022-09-20T16:38:10.83798"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:38:10.83798",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642864074921,
@@ -5732,7 +6493,9 @@
           "shopId": 4,
           "sku": "268535",
           "qty": 2,
-          "updatedAt": "2022-09-20T16:38:10.83641"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-20T16:38:10.83641",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642864140457,
@@ -5742,7 +6505,9 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T18:53:07.007835"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T18:53:07.007835",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642864042153,
@@ -5752,13 +6517,16 @@
           "shopId": 4,
           "sku": "6076",
           "qty": 1,
-          "updatedAt": "2022-09-20T16:38:10.834671"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T16:38:10.834671",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663790502057,
       "orderNumber": "#1620",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5784,7 +6552,9 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T18:53:07.009352"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T18:53:07.009352",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642999668905,
@@ -5794,7 +6564,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T17:13:27.49378"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T17:13:27.49378",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11642999701673,
@@ -5804,13 +6576,16 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T17:39:39.032375"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T17:39:39.032375",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663792173225,
       "orderNumber": "#1621",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5836,7 +6611,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.100728"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.100728",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643004190889,
@@ -5846,7 +6623,9 @@
           "shopId": 7,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T15:59:58.247895"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:59:58.247895",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643004223657,
@@ -5856,7 +6635,9 @@
           "shopId": 11,
           "sku": "161-028",
           "qty": 1,
-          "updatedAt": "2022-09-20T17:13:27.495806"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T17:13:27.495806",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643004256425,
@@ -5866,13 +6647,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T17:13:27.49744"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T17:13:27.49744",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663888412841,
       "orderNumber": "#1622",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5898,13 +6682,16 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T19:10:02.375724"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T19:10:02.375724",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663888609449,
       "orderNumber": "#1623",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5930,7 +6717,9 @@
           "shopId": 4,
           "sku": "147337",
           "qty": 1,
-          "updatedAt": "2022-09-20T19:23:43.736464"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T19:23:43.736464",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643196047529,
@@ -5940,13 +6729,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.109026"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.109026",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663893098665,
       "orderNumber": "#1624",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -5972,7 +6764,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.110418"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.110418",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643204829353,
@@ -5982,7 +6776,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.112766"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.112766",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643204862121,
@@ -5992,13 +6788,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.102359"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.102359",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663898341545,
       "orderNumber": "#1625",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6024,7 +6823,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.107493"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.107493",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643215708329,
@@ -6034,7 +6835,9 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-20T22:44:53.820723"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T22:44:53.820723",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643215610025,
@@ -6044,7 +6847,9 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T19:10:02.366626"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T19:10:02.366626",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643215642793,
@@ -6054,13 +6859,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.103776"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.103776",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663911973033,
       "orderNumber": "#1626",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6086,7 +6894,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.115495"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.115495",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643242184873,
@@ -6096,13 +6906,16 @@
           "shopId": 4,
           "sku": "146312",
           "qty": 1,
-          "updatedAt": "2022-09-20T19:28:58.214432"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T19:28:58.214432",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663915741353,
       "orderNumber": "#1627",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6128,7 +6941,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T22:48:30.547841"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T22:48:30.547841",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643248214185,
@@ -6138,13 +6953,16 @@
           "shopId": 4,
           "sku": "106769",
           "qty": 1,
-          "updatedAt": "2022-09-20T19:00:16.702241"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T19:00:16.702241",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663922065577,
       "orderNumber": "#1628",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6170,7 +6988,9 @@
           "shopId": 4,
           "sku": "497928",
           "qty": 1,
-          "updatedAt": "2022-09-20T20:31:17.902941"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T20:31:17.902941",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643263058089,
@@ -6180,13 +7000,16 @@
           "shopId": 4,
           "sku": "4508",
           "qty": 1,
-          "updatedAt": "2022-09-20T20:31:17.900862"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T20:31:17.900862",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663926489257,
       "orderNumber": "#1629",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6212,7 +7035,9 @@
           "shopId": 7,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T15:59:58.249345"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:59:58.249345",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643273511081,
@@ -6222,13 +7047,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T22:48:30.55004"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T22:48:30.55004",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4663983636649,
       "orderNumber": "#1630",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6254,7 +7082,9 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T20:01:03.694849"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T20:01:03.694849",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643391967401,
@@ -6264,13 +7094,16 @@
           "shopId": 10,
           "sku": "SWW36KEWA",
           "qty": 1,
-          "updatedAt": "2022-09-20T22:21:05.042237"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T22:21:05.042237",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664007491753,
       "orderNumber": "#1631",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6296,7 +7129,9 @@
           "shopId": 4,
           "sku": "118274",
           "qty": 1,
-          "updatedAt": "2022-09-20T21:00:17.671548"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T21:00:17.671548",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643441119401,
@@ -6306,13 +7141,16 @@
           "shopId": 6,
           "sku": "642249140972",
           "qty": 1,
-          "updatedAt": "2022-09-20T21:15:11.159757"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T21:15:11.159757",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664008638633,
       "orderNumber": "#1632",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6338,7 +7176,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.11854"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.11854",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643443151017,
@@ -6348,7 +7188,9 @@
           "shopId": 4,
           "sku": "153772",
           "qty": 1,
-          "updatedAt": "2022-09-20T21:51:38.759662"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T21:51:38.759662",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643443216553,
@@ -6358,7 +7200,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.116827"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.116827",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643443183785,
@@ -6368,13 +7212,16 @@
           "shopId": 4,
           "sku": "153859",
           "qty": 1,
-          "updatedAt": "2022-09-20T21:51:38.761476"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T21:51:38.761476",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664036655273,
       "orderNumber": "#1633",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6400,13 +7247,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.121345"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.121345",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664058445993,
       "orderNumber": "#1634",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6432,13 +7282,16 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T13:58:44.051021"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T13:58:44.051021",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664068079785,
       "orderNumber": "#1635",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6464,7 +7317,9 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T13:40:34.898947"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T13:40:34.898947",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643560394921,
@@ -6474,13 +7329,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 2,
-          "updatedAt": "2022-09-21T15:23:27.125061"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-21T15:23:27.125061",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664088264873,
       "orderNumber": "#1636",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6506,7 +7364,9 @@
           "shopId": 4,
           "sku": "70435",
           "qty": 1,
-          "updatedAt": "2022-09-20T22:00:17.485549"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T22:00:17.485549",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643601354921,
@@ -6516,7 +7376,9 @@
           "shopId": 4,
           "sku": "70411",
           "qty": 1,
-          "updatedAt": "2022-09-21T19:33:54.919051"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:33:54.919051",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643601453225,
@@ -6526,7 +7388,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T22:48:30.553194"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T22:48:30.553194",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643601322153,
@@ -6536,7 +7400,9 @@
           "shopId": 4,
           "sku": "34413",
           "qty": 1,
-          "updatedAt": "2022-09-21T19:33:54.917447"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:33:54.917447",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643601289385,
@@ -6546,7 +7412,9 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T13:58:44.05332"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T13:58:44.05332",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643601223849,
@@ -6556,7 +7424,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-20T22:48:30.551699"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T22:48:30.551699",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643601256617,
@@ -6566,7 +7436,9 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T13:58:44.052183"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T13:58:44.052183",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643601420457,
@@ -6576,13 +7448,16 @@
           "shopId": 4,
           "sku": "148479",
           "qty": 1,
-          "updatedAt": "2022-09-21T19:33:54.920204"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:33:54.920204",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664089051305,
       "orderNumber": "#1637",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6608,7 +7483,9 @@
           "shopId": 4,
           "sku": "153858",
           "qty": 1,
-          "updatedAt": "2022-09-21T16:10:50.804187"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T16:10:50.804187",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643603419305,
@@ -6618,13 +7495,16 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T13:40:34.902749"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T13:40:34.902749",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664097079465,
       "orderNumber": "#1638",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6650,13 +7530,16 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T13:28:34.582219"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T13:28:34.582219",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664109793449,
       "orderNumber": "#1639",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6682,7 +7565,9 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.632742"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.632742",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643646804137,
@@ -6692,13 +7577,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.129118"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.129118",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664124637353,
       "orderNumber": "#1640",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6724,7 +7612,9 @@
           "shopId": 4,
           "sku": "7158",
           "qty": 2,
-          "updatedAt": "2022-09-20T23:00:17.088394"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-20T23:00:17.088394",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643675902121,
@@ -6734,7 +7624,9 @@
           "shopId": 4,
           "sku": "7172",
           "qty": 1,
-          "updatedAt": "2022-09-20T23:00:17.071842"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T23:00:17.071842",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643676000425,
@@ -6744,7 +7636,9 @@
           "shopId": 4,
           "sku": "7196",
           "qty": 1,
-          "updatedAt": "2022-09-20T23:00:17.125015"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T23:00:17.125015",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643675967657,
@@ -6754,13 +7648,16 @@
           "shopId": 4,
           "sku": "7165",
           "qty": 1,
-          "updatedAt": "2022-09-20T23:00:17.10891"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-20T23:00:17.10891",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664152129705,
       "orderNumber": "#1641",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6786,13 +7683,16 @@
           "shopId": 7,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T15:59:58.250589"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:59:58.250589",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664165007529,
       "orderNumber": "#1642",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6818,7 +7718,9 @@
           "shopId": 8,
           "sku": "BEC75480",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:22:48.249845"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:22:48.249845",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643762245801,
@@ -6828,7 +7730,9 @@
           "shopId": 11,
           "sku": "AVE3157-1",
           "qty": 1,
-          "updatedAt": "2022-09-21T12:13:10.374009"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T12:13:10.374009",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643762278569,
@@ -6838,13 +7742,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T12:13:10.375458"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T12:13:10.375458",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664176705705,
       "orderNumber": "#1643",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6870,7 +7777,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.133066"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.133066",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643786068137,
@@ -6880,7 +7789,9 @@
           "shopId": 4,
           "sku": "290840",
           "qty": 1,
-          "updatedAt": "2022-09-21T00:00:15.537384"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T00:00:15.537384",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643786100905,
@@ -6890,13 +7801,16 @@
           "shopId": 4,
           "sku": "290307",
           "qty": 1,
-          "updatedAt": "2022-09-21T19:33:54.921273"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:33:54.921273",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664177754281,
       "orderNumber": "#1644",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6922,7 +7836,9 @@
           "shopId": 4,
           "sku": "66131",
           "qty": 1,
-          "updatedAt": "2022-09-21T16:10:50.805872"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T16:10:50.805872",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643788296361,
@@ -6932,7 +7848,9 @@
           "shopId": 4,
           "sku": "148891",
           "qty": 2,
-          "updatedAt": "2022-09-21T16:10:50.8074"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-21T16:10:50.8074",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643788361897,
@@ -6942,7 +7860,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T12:13:10.376689"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T12:13:10.376689",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643788329129,
@@ -6952,13 +7872,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.135698"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.135698",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664189452457,
       "orderNumber": "#1645",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -6984,7 +7907,9 @@
           "shopId": 4,
           "sku": "212422",
           "qty": 1,
-          "updatedAt": "2022-09-21T01:00:15.575212"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T01:00:15.575212",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643816345769,
@@ -6994,7 +7919,9 @@
           "shopId": 4,
           "sku": "407866",
           "qty": 1,
-          "updatedAt": "2022-09-21T19:28:55.334558"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:28:55.334558",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643816313001,
@@ -7004,7 +7931,9 @@
           "shopId": 4,
           "sku": "150646",
           "qty": 1,
-          "updatedAt": "2022-09-21T19:28:55.333123"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:28:55.333123",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643816411305,
@@ -7014,7 +7943,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T12:10:52.173"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T12:10:52.173",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643816280233,
@@ -7024,13 +7955,16 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T14:01:19.253932"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T14:01:19.253932",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664196956329,
       "orderNumber": "#1646",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -7056,7 +7990,9 @@
           "shopId": 10,
           "sku": "SWCFUOC",
           "qty": 1,
-          "updatedAt": "2022-09-21T01:00:40.519087"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T01:00:40.519087",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643830730921,
@@ -7066,7 +8002,9 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T13:28:46.214914"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T13:28:46.214914",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643830763689,
@@ -7076,7 +8014,9 @@
           "shopId": 6,
           "sku": "642249167214",
           "qty": 1,
-          "updatedAt": "2022-09-21T13:28:46.216338"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T13:28:46.216338",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643830796457,
@@ -7086,13 +8026,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T12:10:52.174632"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T12:10:52.174632",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664209506473,
       "orderNumber": "#1647",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -7118,7 +8061,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.092662"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.092662",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643858190505,
@@ -7128,7 +8073,9 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T13:58:44.049552"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T13:58:44.049552",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643858124969,
@@ -7138,13 +8085,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.089839"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.089839",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664219664553,
       "orderNumber": "#1648",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -7170,7 +8120,9 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T13:28:19.229657"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T13:28:19.229657",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643878965417,
@@ -7180,7 +8132,9 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T13:28:19.231081"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T13:28:19.231081",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643878932649,
@@ -7190,7 +8144,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T12:10:52.177198"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T12:10:52.177198",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643878834345,
@@ -7200,7 +8156,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T12:10:52.175871"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T12:10:52.175871",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643878867113,
@@ -7210,13 +8168,16 @@
           "shopId": 4,
           "sku": "7165",
           "qty": 1,
-          "updatedAt": "2022-09-21T01:00:15.757978"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T01:00:15.757978",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664226218153,
       "orderNumber": "#1649",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -7242,7 +8203,9 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T13:28:28.889167"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T13:28:28.889167",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643891482793,
@@ -7252,13 +8215,16 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.629998"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.629998",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664234967209,
       "orderNumber": "#1650",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -7284,7 +8250,9 @@
           "shopId": 7,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T15:59:58.246425"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:59:58.246425",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643909079209,
@@ -7294,13 +8262,16 @@
           "shopId": 4,
           "sku": "146190",
           "qty": 1,
-          "updatedAt": "2022-09-21T02:00:14.689623"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T02:00:14.689623",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664236114089,
       "orderNumber": "#1651",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -7326,7 +8297,9 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.096838"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.096838",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643911864489,
@@ -7336,7 +8309,9 @@
           "shopId": 4,
           "sku": "284993",
           "qty": 1,
-          "updatedAt": "2022-09-21T17:10:37.954957"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T17:10:37.954957",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643911930025,
@@ -7346,13 +8321,16 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-21T15:23:27.098904"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T15:23:27.098904",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664236409001,
       "orderNumber": "#1652",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -7378,7 +8356,9 @@
           "shopId": 4,
           "sku": "149555",
           "qty": 2,
-          "updatedAt": "2022-09-21T17:19:04.669039"
+          "qtyFulfilled": 2,
+          "updatedAt": "2022-09-21T17:19:04.669039",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643912290473,
@@ -7388,7 +8368,9 @@
           "shopId": 4,
           "sku": "22878",
           "qty": 1,
-          "updatedAt": "2022-09-21T02:00:14.761854"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T02:00:14.761854",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643912323241,
@@ -7398,13 +8380,16 @@
           "shopId": 4,
           "sku": "16006",
           "qty": 1,
-          "updatedAt": "2022-09-21T02:00:14.77068"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T02:00:14.77068",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664265212073,
       "orderNumber": "#1653",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -7430,7 +8415,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T12:07:54.656081"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T12:07:54.656081",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11643978088617,
@@ -7440,13 +8427,16 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T19:29:56.631458"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T19:29:56.631458",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664276582569,
       "orderNumber": "#1654",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -7472,7 +8462,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T12:07:54.65917"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T12:07:54.65917",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11644000764073,
@@ -7482,7 +8474,9 @@
           "shopId": 10,
           "sku": "SWCFUOC",
           "qty": 1,
-          "updatedAt": "2022-09-21T11:09:32.022458"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T11:09:32.022458",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11644000862377,
@@ -7492,7 +8486,9 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T12:07:54.66056"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T12:07:54.66056",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11644000796841,
@@ -7502,13 +8498,16 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "updatedAt": "2022-09-21T12:07:54.657846"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T12:07:54.657846",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     },
     {
       "orderId": 4664287133865,
       "orderNumber": "#1655",
+      "status": "placed",
       "billingAddress": null,
       "shippingAddress": {
         "address1": "9999 Excellent Drive",
@@ -7534,7 +8533,9 @@
           "shopId": 10,
           "sku": "SWW18LEBW",
           "qty": 1,
-          "updatedAt": "2022-09-21T11:09:32.024171"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T11:09:32.024171",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11644020523177,
@@ -7544,7 +8545,9 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "updatedAt": "2022-09-22T00:22:58.43005"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-22T00:22:58.43005",
+          "fulfillmentStatus": "unfulfilled"
         },
         {
           "lineItemId": 11644020588713,
@@ -7554,7 +8557,9 @@
           "shopId": 10,
           "sku": "SWW28HLRP",
           "qty": 1,
-          "updatedAt": "2022-09-21T11:09:32.025349"
+          "qtyFulfilled": 1,
+          "updatedAt": "2022-09-21T11:09:32.025349",
+          "fulfillmentStatus": "unfulfilled"
         }
       ]
     }
