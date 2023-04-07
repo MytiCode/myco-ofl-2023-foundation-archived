@@ -8,7 +8,7 @@ test("Can navigate to pickup sheets", async ({ page }) => {
   await expect(page).toHaveTitle(/Pickup Sheets/);
 });
 
-test.only("Can view packing slips", async ({ page }) => {
+test("Can view packing slips", async ({ page }) => {
   await page.goto("/packing-slips");
 
   // Order data
