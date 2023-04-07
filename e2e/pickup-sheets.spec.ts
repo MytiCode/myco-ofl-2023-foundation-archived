@@ -58,8 +58,16 @@ test.describe("Sorting", () => {
 });
 
 test.describe("Printing", () => {
-  test.skip("Each order is on its own page", () => {});
-  test.skip("Initials box is visible", () => {});
+  test.beforeAll(async ({ page }) => {
+    await page.goto("/packing-slips");
+    await page.emulateMedia({ media: "print" });
+  });
+
+  test.skip("Each order is on its own page", async () => {});
+
+  test("Initials box is visible", async ({ page }) => {
+    await expect(page.getByText("Initials").first()).toBeVisible();
+  });
 });
 
 // Chose not to invest effort in verifying in the web that the images are resized and not too large
