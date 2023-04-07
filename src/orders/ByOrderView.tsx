@@ -63,9 +63,12 @@ export default function ByOrderView({ orders }: { orders: OrderViewModel[] }) {
               {order.lineItems.map((li) => (
                 <tr key={li.lineItemId}>
                   <td className="border-b border-slate-100 py-4 p-2 text-slate-500">
-                    <a href={li.imageSrc} target="_blank">
-                      <img src={li.imageSrc} alt={li.title} className="border" />
-                    </a>
+                    {li.imageSrc
+                      ? <a href={li.imageSrc} target="_blank">
+                        <img src={li.imageSrc} alt={li.title} className="border" />
+                      </a>
+                      : null
+                    }
                   </td>
                   <td className="border-b border-slate-100 py-4 p-2 text-slate-500 align-top leading-4">
                     <a
