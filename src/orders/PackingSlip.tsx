@@ -70,21 +70,20 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
             {shop.lineItems.map((li: LineItemViewModel) => (
               <tr key={li.lineItemId} aria-labelledby={`line-item-row-${li.lineItemId}`} role="listitem">
                 <td className="border-b border-slate-100 py-4 p-2 text-slate-500">
-                  {Boolean(li.imageSrc) &&
-                    <a href={li.imageSrc} target="_blank">
-                      <img src={li.imageSrc} alt={li.title} className="border" />
-                    </a>
+                  {li.imageSrc
+                    ? <a href={li.imageSrc} target="_blank">
+                        <img src={li.imageSrc} alt={li.title} className="border" />
+                      </a>
+                    : null
                   }
                 </td>
                 <td className="border-b border-slate-100 py-4 p-2 text-slate-500 align-top leading-4">
-                  <a
-                    href="#TODO"
-                    target="_blank"
+                  <span
                     className="text-base font-bold leading-5 text-teal-700 mb-0 block"
                     id={`line-item-row-${li.lineItemId}`}
                   >
                     {li.title}
-                  </a>
+                  </span>
                   <div className="text-slate-400 ">
                     <p className="my-0 leading-5">
                       <span className="mr-4">

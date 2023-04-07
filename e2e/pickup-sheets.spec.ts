@@ -51,7 +51,11 @@ test("Can view packing slips", async ({ page }) => {
 });
 
 // We may want to test this in a view model test
-test.fixme("Orders, shops and line items are sorted", () => {});
+test.describe("Sorting", () => {
+  test.skip("Orders are sorted by order date", () => {});
+  test.skip("Shops are sorted by name", () => {});
+  test.skip("Line items are sorted by title", () => {});
+});
 
 test.describe("Printing", () => {
   test.skip("Each order is on its own page", () => {});
