@@ -132,11 +132,14 @@ function transformLineItem(lineItem: any, order: any): LineItem {
     lineItemId: lineItem.id,
     title: lineItem.name,
     price: lineItem.price,
-    imageSrc: lineItem.image_src,
+    imageSrc: lineItem.image_src
+      ? lineItem.image_src + "&width={MAX_WIDTH}"
+      : "",
     shopId,
     sku: lineItem.sku,
     qty: lineItem.qty,
-    qtyFulfilled: lineItem.qty,
+    // Half of the time, partially fulfill
+    qtyFulfilled: Math.random() * 100 >= 50 ? lineItem.qty : lineItem.qty - 1,
     updatedAt: lineItem.line_item_updated_at,
     fulfillmentStatus: "unfulfilled", // TODO: No really
   };

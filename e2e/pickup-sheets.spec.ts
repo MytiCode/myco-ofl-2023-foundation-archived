@@ -32,7 +32,7 @@ test("Can view packing slips", async ({ page }) => {
   await expect(lineItem.getByLabel("Shop Name")).toHaveText("Homeport");
   await expect(lineItem.getByRole("img")).toHaveAttribute(
     "src",
-    "https://cdn.shopify.com/s/files/1/0578/9899/1785/products/PerfumeArmy_grande__06524.1649704087.386.513.jpg?v=1653412449"
+    "https://cdn.shopify.com/s/files/1/0578/9899/1785/products/PerfumeArmy_grande__06524.1649704087.386.513.jpg?v=1653412449&width=400"
   );
   await expect(lineItem).toContainText("SKU: 114658");
   await expect(lineItem.getByLabel("Quantity Ordered")).toHaveText("1");

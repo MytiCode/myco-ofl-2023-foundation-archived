@@ -13,6 +13,7 @@ const orders = (data.orders as unknown as Order[])
     ...order,
     lineItems: order.lineItems.map(li => ({
       ...li,
+      imageSrc: li.imageSrc ? li.imageSrc.replace('{MAX_WIDTH}', '400') : li.imageSrc,
       shop: shopsById.get(li.shopId)! // should really check shop exists.
     }))
   }))

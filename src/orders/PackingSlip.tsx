@@ -61,9 +61,11 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
           {order.lineItems.map((li: LineItemViewModel) => (
             <tr key={li.lineItemId} role="listitem">
               <td className="border-b border-slate-100 py-4 p-2 text-slate-500">
-                <a href={li.imageSrc} target="_blank">
-                  <img src={li.imageSrc} alt={li.title} className="border" />
-                </a>
+                {Boolean(li.imageSrc) &&
+                  <a href={li.imageSrc} target="_blank">
+                    <img src={li.imageSrc} alt={li.title} className="border" />
+                  </a>
+                }
               </td>
               <td className="border-b border-slate-100 py-4 p-2 text-slate-500 align-top leading-4">
                 <a
@@ -80,23 +82,9 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
                     </strong>
                   </p>
                   <p className="my-0 leading-5">
-                    {Boolean(li.sku) && (
-                      <span className="mr-4">
-                        <strong className="text-slate-500">SKU:</strong>{" "}
-                        {li.sku}
-                      </span>
-                    )}
-                    <span className="shop-hidden">
-                      <strong className="text-slate-500">Updated:</strong>{" "}
-                      {formatDate(li.updatedAt)}
-                    </span>
-                  </p>
-                  <p className="my-0 leading-5 shop-hidden">
-                    <span>
-                      <strong className="text-slate-500">
-                        Line Item ID:
-                      </strong>{" "}
-                      {li.lineItemId}
+                    <span className="mr-4">
+                      <strong className="text-slate-500">SKU:</strong>{" "}
+                      {li.sku}
                     </span>
                   </p>
                 </div>
