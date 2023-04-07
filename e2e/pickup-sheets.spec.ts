@@ -59,6 +59,7 @@ test.describe("Sorting", () => {
 
 test.describe("Printing", () => {
   test.skip("Each order is on its own page", () => {});
+  test.skip("Initials box is visible", () => {});
 });
 
 // Chose not to invest effort in verifying in the web that the images are resized and not too large
