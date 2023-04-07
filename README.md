@@ -42,3 +42,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ```
 npx tsx scripts/sanitize-all-orders.ts
 ```
+
+## TODO
+
+- [ ] Change from '@/' to ':' for tspaths
+- [ ] Prevent lint errors at least in ci earlier than running all tests, probably on commit hook locally to avoid wasted time
