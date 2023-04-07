@@ -29,15 +29,7 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
             </span>
           </h3>
         </div>
-        <div className="ml-auto pl-8 flex">
-          <div className="mr-6">
-            <div className="text-slate-500 text-xs">Packed Date</div>
-            <div className="border h-8 w-20" />
-          </div>
-          <div className="mr-6">
-            <div className="text-slate-500 text-xs">Packed Time</div>
-            <div className="border h-8 w-20" />
-          </div>
+        <div className="ml-auto pl-8 hidden print:flex">
           <div>
             <div className="text-slate-500 text-xs">Initials</div>
             <div className="border h-8 w-20" />
