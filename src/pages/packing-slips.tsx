@@ -17,6 +17,7 @@ const orders = (data.orders as unknown as Order[])
       shop: shopsById.get(li.shopId)! // should really check shop exists.
     }))
   }))
+  .slice(0, 5) // TODO: Remove this
 
 export type LineItemViewModel = LineItem & {
   shop: ShopViewModel

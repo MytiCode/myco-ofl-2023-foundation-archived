@@ -2,3 +2,10 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@media print {
+  @page {
+    /* In chrome, this removes the headers/footer containing the date/time, url, etc. */
+    margin: 0mm;
+  }
+}

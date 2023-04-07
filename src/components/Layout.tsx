@@ -17,8 +17,8 @@ export default function Layout({ title, children }: LayoutProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="p-12 flex flex-col items-center"> 
-        <div className="flex items-center mb-4">
+      <main className="p-12 flex flex-col items-center print:p-0">
+        <div className="flex items-center mb-4 print:hidden">
           <Image
             src={mytiLogo}
             alt="Myti"

@@ -12,7 +12,7 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
               {order.shippingAddress.firstName} {order.shippingAddress.lastName}
             </span>
           </h2>
-          <h3 className="text-base m-0 font-bold text-slate-500 leading-4 shop-hidden">
+          <h3 className="text-base m-0 font-bold text-slate-500 leading-4">
             <a
               href="#"
               target="_blank"
@@ -28,7 +28,7 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
             </span>
           </h3>
         </div>
-        <div className="ml-auto pl-8 flex shop-hidden">
+        <div className="ml-auto pl-8 flex">
           <div className="mr-6">
             <div className="text-slate-500 text-xs">Packed Date</div>
             <div className="border h-8 w-20" />
@@ -76,7 +76,7 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
                   {li.title}
                 </a>
                 <div className="text-slate-400 ">
-                  <p className="my-0 text-base leading-6 shop-hidden">
+                  <p className="my-0 text-base leading-6">
                     <strong className="text-slate-500" aria-label="Shop Name">
                       {li.shop.name}
                     </strong>
@@ -91,8 +91,8 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
               </td>
               <td className="text-right border-b border-slate-100 py-4 p-2 text-slate-500 text-2xl align-top">
                 <div className="flex justify-end">
-                  <div className="border w-12 shop-hidden" />
-                  <span className="font-normal mx-2 shop-hidden">/</span>
+                  <div className="border w-12" />
+                  <span className="font-normal mx-2">/</span>
                   <span aria-label="Quantity Ordered">{li.qty}</span>
                 </div>
               </td>
