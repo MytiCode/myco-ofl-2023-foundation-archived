@@ -63,11 +63,11 @@ test.describe("Printing", () => {
     await page.emulateMedia({ media: "print" });
   });
 
-  test.skip("Each order is on its own page", async () => {});
-
   test("Initials box is visible", async ({ page }) => {
     await expect(page.getByText("Initials").first()).toBeVisible();
   });
+
+  test.skip("Each order is on its own page", async () => {});
 });
 
 // Chose not to invest effort in verifying in the web that the images are resized and not too large
