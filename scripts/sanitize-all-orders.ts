@@ -134,7 +134,7 @@ function transformLineItem(lineItem: any, order: any): LineItem {
     price: lineItem.price,
     imageSrc: lineItem.image_src
       ? lineItem.image_src + "&width={MAX_WIDTH}"
-      : "",
+      : null,
     shopId,
     sku: lineItem.sku,
     qty: lineItem.qty,
@@ -145,10 +145,19 @@ function transformLineItem(lineItem: any, order: any): LineItem {
   };
 }
 
+function buildOrderNumber(orderNumber: string, lineItems: LineItem[]): string {
+  const uniqueShopCount = new Set(lineItems.map((li) => li.shopId)).size;
+
+  return `${orderNumber}-${uniqueShopCount}`;
+}
+
 function transformOrder(order: any): Order {
+  const lineItems = order.line_items.map((li: any) =>
+    transformLineItem(li, order)
+  );
   return {
     orderId: order.id,
-    orderNumber: order.order_number,
+    orderNumber: buildOrderNumber(order.order_number, lineItems),
     status: "placed", // TODO: no ... Really
     billingAddress: null,
     // billingAddress: {
@@ -179,7 +188,7 @@ function transformOrder(order: any): Order {
     price: order.price,
     tax: order.tax,
     subtotal: order.price - order.tax,
-    lineItems: order.line_items.map((li: any) => transformLineItem(li, order)),
+    lineItems,
   };
 }
 

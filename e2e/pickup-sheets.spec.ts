@@ -1,3 +1,4 @@
+import { formatDate } from "../src/util";
 import { test, expect } from "@playwright/test";
 
 test("Can navigate to pickup sheets", async ({ page }) => {
@@ -12,8 +13,10 @@ test("Can view packing slips", async ({ page }) => {
   await page.goto("/packing-slips");
 
   // Order data
-  const firstOrder = page.getByLabel("#1226");
-  await expect(firstOrder).toContainText("Jun 6, 2022, 11:16 AM");
+  const firstOrder = page.getByLabel("#1226-2");
+  await expect(firstOrder).toContainText(
+    formatDate("2022-06-06T15:16:13+00:00")
+  );
 
   // Shipping info
   await expect(firstOrder).toContainText("Nobody Jones");
@@ -21,22 +24,39 @@ test("Can view packing slips", async ({ page }) => {
     "9999 Excellent Drive Apt 1, Burlington, VT 05401"
   );
 
-  // Line items
-  const lineItems = firstOrder.getByLabel("Line Items").getByRole("listitem");
-  await expect(lineItems).toHaveCount(2);
+  // Shops on the first order
+  const homeport = firstOrder.getByLabel("Homeport");
+  await expect(homeport).toBeVisible();
+  await expect(homeport.getByRole("listitem")).toHaveCount(1);
 
-  const lineItem = lineItems.filter({
-    hasText: "Auric Blends Perfume Oil - Moonlight",
-  });
+  // Ideally would stress having multiple items
+  const sidepony = firstOrder.getByLabel("SidePony Boutique");
+  await expect(sidepony).toBeVisible();
+  await expect(sidepony.getByRole("listitem")).toHaveCount(1);
+
+  // Just check the homeport Line items
+  const lineItem = homeport.getByLabel("Auric Blends Perfume Oil - Moonlight");
   await expect(lineItem).toBeVisible();
-  await expect(lineItem.getByLabel("Shop Name")).toHaveText("Homeport");
   await expect(lineItem.getByRole("img")).toHaveAttribute(
     "src",
     "https://cdn.shopify.com/s/files/1/0578/9899/1785/products/PerfumeArmy_grande__06524.1649704087.386.513.jpg?v=1653412449&width=400"
   );
   await expect(lineItem).toContainText("SKU: 114658");
   await expect(lineItem.getByLabel("Quantity Ordered")).toHaveText("1");
+
+  // TODO: Can't currently do this cos we dont know the value
   // await expect(lineItem.getByLabel("Quantity Fulfilled")).toHaveText("1");
 
   // TODO: Partial fulfillment message
 });
+
+// We may want to test this in a view model test
+test.fixme("Orders, shops and line items are sorted", () => {});
+
+test.describe("Printing", () => {
+  test.skip("Each order is on its own page", () => {});
+});
+
+// Chose not to invest effort in verifying in the web that the images are resized and not too large
+// Could probably download the image and ensure the dimensions are not larger than X or the filesize isn't larger than X
+test.skip("Packing slip images are a reasonable size", () => {});

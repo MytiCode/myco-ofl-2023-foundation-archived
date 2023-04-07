@@ -83,7 +83,7 @@ export type LineItem = {
    */
   price: string;
 
-  imageSrc: string;
+  imageSrc: string | null;
 
   /** The quantity of the item purchased in the order. */
   qty: number;

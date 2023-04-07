@@ -1,5 +1,6 @@
 import { LineItemViewModel, OrderViewModel } from "@/pages/packing-slips";
 import { formatDate } from "@/util";
+import React from "react";
 
 export default function PackingSlip({ order }: { order: OrderViewModel }) {
   return (
@@ -46,7 +47,7 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
       <table className="border-collapse w-full table-fixed text-sm">
         <thead>
           <tr>
-            <th className="w-32 border-b font-medium py-4 p-2 pt-0 pb-3 text-slate-600 text-left">
+            <th className="w-32 border-b font-medium pb-3 pl-0 text-slate-600 text-left">
               Image
             </th>
             <th className="border-b font-medium py-4 p-2 pt-0 pb-3 text-slate-600 text-left">
@@ -57,49 +58,54 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
             </th>
           </tr>
         </thead>
-        <tbody role="list" aria-label="Line Items">
-          {order.lineItems.map((li: LineItemViewModel) => (
-            <tr key={li.lineItemId} role="listitem">
-              <td className="border-b border-slate-100 py-4 p-2 text-slate-500">
-                {Boolean(li.imageSrc) &&
-                  <a href={li.imageSrc} target="_blank">
-                    <img src={li.imageSrc} alt={li.title} className="border" />
-                  </a>
-                }
+        {order.shops.map(shop => (
+          <tbody aria-labelledby={`shop-tbody-${shop.shopId}`} key={shop.shopId} role="list">
+            <tr key={shop.shopId}>
+              <td colSpan={3}>
+                <h3 className="text-xl font-bold mt-4 my-0 text-slate-500 leading-4" id={`shop-tbody-${shop.shopId}`}>
+                  {shop.name}
+                </h3>
               </td>
-              <td className="border-b border-slate-100 py-4 p-2 text-slate-500 align-top leading-4">
-                <a
-                  href="#TODO"
-                  target="_blank"
-                  className="text-base font-bold leading-5 text-teal-700 mb-0 block"
-                >
-                  {li.title}
-                </a>
-                <div className="text-slate-400 ">
-                  <p className="my-0 text-base leading-6">
-                    <strong className="text-slate-500" aria-label="Shop Name">
-                      {li.shop.name}
-                    </strong>
-                  </p>
-                  <p className="my-0 leading-5">
-                    <span className="mr-4">
-                      <strong className="text-slate-500">SKU:</strong>{" "}
-                      {li.sku}
-                    </span>
-                  </p>
-                </div>
-              </td>
-              <td className="text-right border-b border-slate-100 py-4 p-2 text-slate-500 text-2xl align-top">
-                <div className="flex justify-end">
-                  <div className="border w-12" />
-                  <span className="font-normal mx-2">/</span>
-                  <span aria-label="Quantity Ordered">{li.qty}</span>
-                </div>
-              </td>
-              {/* <pre>{JSON.stringify(li, null, 2)}</pre> */}
             </tr>
-          ))}
-        </tbody>
+            {shop.lineItems.map((li: LineItemViewModel) => (
+              <tr key={li.lineItemId} aria-labelledby={`line-item-row-${li.lineItemId}`} role="listitem">
+                <td className="border-b border-slate-100 py-4 p-2 text-slate-500">
+                  {Boolean(li.imageSrc) &&
+                    <a href={li.imageSrc} target="_blank">
+                      <img src={li.imageSrc} alt={li.title} className="border" />
+                    </a>
+                  }
+                </td>
+                <td className="border-b border-slate-100 py-4 p-2 text-slate-500 align-top leading-4">
+                  <a
+                    href="#TODO"
+                    target="_blank"
+                    className="text-base font-bold leading-5 text-teal-700 mb-0 block"
+                    id={`line-item-row-${li.lineItemId}`}
+                  >
+                    {li.title}
+                  </a>
+                  <div className="text-slate-400 ">
+                    <p className="my-0 leading-5">
+                      <span className="mr-4">
+                        <strong className="text-slate-500">SKU:</strong>{" "}
+                        {li.sku}
+                      </span>
+                    </p>
+                  </div>
+                </td>
+                <td className="text-right border-b border-slate-100 py-4 p-2 text-slate-500 text-2xl align-top">
+                  <div className="flex justify-end">
+                    <div className="border w-12" />
+                    <span className="font-normal mx-2">/</span>
+                    <span aria-label="Quantity Ordered">{li.qty}</span>
+                  </div>
+                </td>
+                {/* <pre>{JSON.stringify(li, null, 2)}</pre> */}
+              </tr>
+            ))}
+          </tbody>
+        ))}
       </table>
     </div>
   );
