@@ -1,5 +1,5 @@
 import { formatDate } from "../src/util";
-import { test, expect } from "@playwright/test";
+import { test, expect, Page } from "@playwright/test";
 
 test("Can navigate to pickup sheets", async ({ page }) => {
   await page.goto("/");
@@ -58,12 +58,18 @@ test.describe("Sorting", () => {
 });
 
 test.describe("Printing", () => {
-  test.beforeAll(async ({ page }) => {
+  let page: Page;
+  test.beforeAll(async ({ browser }) => {
+    page = await browser.newPage();
     await page.goto("/packing-slips");
     await page.emulateMedia({ media: "print" });
   });
 
-  test("Initials box is visible", async ({ page }) => {
+  test.afterAll(async () => {
+    await page.close();
+  });
+
+  test("Initials box is visible", async () => {
     await expect(page.getByText("Initials").first()).toBeVisible();
   });
 
