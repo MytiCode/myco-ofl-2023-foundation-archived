@@ -52,13 +52,39 @@ test("Can view packing slips", async ({ packingSlipsPage }) => {
   // TODO: Partial fulfillment message
 });
 
+test("Partially fulfilled items show an explanatory note", async ({
+  packingSlipsPage,
+}) => {
+  await packingSlipsPage.goto();
+
+  const orderNumbers = {
+    // TODO: Need to ensure 1514-3 ends up qtyFulfilled partial 1/2
+    // TODO: Choose another order for 0/1
+
+    partiallyFulfilled: "#1514-3",
+    // unfulfilled: "#1226-2",
+  };
+
+  const partiallyUnfulfilledOrder = packingSlipsPage.getOrder(
+    orderNumbers.partiallyFulfilled
+  );
+
+  const homeport = partiallyUnfulfilledOrder.getByLabel("Homeport");
+  await expect(homeport).toBeVisible();
+
+  const lineItem = homeport.getByLabel("Any Occasion - Whatever");
+  await expect(lineItem).toContainText("OH NOZE WE DIDNT HAVE IT ALL!");
+});
 /*
 test("Partially fulfilled items show an explanatory note", async ({ page }) => {
   await page.goto("/packing-slips");
 
   // Order data
   const orderNumbers = {
-    partiallyFulfilled: "#1226-2",
+    // TODO: Need to ensure 1514-3 ends up qtyFulfilled partial 1/2
+    // TODO: Choose another order for 0/1
+
+    partiallyFulfilled: "#1514-3",
     unfulfilled: "#1226-2",
   };
 
