@@ -4,7 +4,6 @@ import { test } from "./util";
 import { PackingSlipsPage } from "./pages";
 
 test("Can navigate to packing slips", async ({ packingSlipsPage }) => {
-  // TODO: Move to process.env.BASE_URL or something
   await packingSlipsPage.goto();
 
   await packingSlipsPage.nav.click("packing-slips");
