@@ -75,37 +75,6 @@ test("Partially fulfilled items show an explanatory note", async ({
   const lineItem = homeport.getByLabel("Any Occasion - Whatever");
   await expect(lineItem).toContainText("OH NOZE WE DIDNT HAVE IT ALL!");
 });
-/*
-test("Partially fulfilled items show an explanatory note", async ({ page }) => {
-  await page.goto("/packing-slips");
-
-  // Order data
-  const orderNumbers = {
-    // TODO: Need to ensure 1514-3 ends up qtyFulfilled partial 1/2
-    // TODO: Choose another order for 0/1
-
-    partiallyFulfilled: "#1514-3",
-    unfulfilled: "#1226-2",
-  };
-
-  const partiallyUnfulfilledOrder = page.getByLabel(
-    orderNumbers.partiallyFulfilled
-  );
-
-  const sidepony = partiallyUnfulfilledOrder.getByLabel("SidePony Boutique");
-  await expect(sidepony).toBeVisible();
-
-  // TODO: Using list item assumign its the on ly list item inside a shop is probably a bad idea...
-  // Lets just solve for type selection (its not id thats unique, its not role we cant make up role values, its not label thats too specific to individual items)
-  await expect(sidepony.getByRole("listitem")).toHaveCount(1);
-
-  // Just check the homeport Line items
-  const lineItem = homeport.getByLabel("Auric Blends Perfume Oil - Moonlight");
-  await expect(partiallyUnfulfilledOrder).toContainText(
-    formatDate("2022-06-06T15:16:13+00:00")
-  );
-});
-*/
 
 // We may want to test this in a view model test
 test.describe("Sorting", () => {
