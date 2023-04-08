@@ -57,24 +57,25 @@ test("Partially fulfilled items show an explanatory note", async ({
 }) => {
   await packingSlipsPage.goto();
 
-  const orderNumbers = {
-    // TODO: Need to ensure 1514-3 ends up qtyFulfilled partial 1/2
-    // TODO: Choose another order for 0/1
-
-    partiallyFulfilled: "#1514-3",
-    // unfulfilled: "#1226-2",
-  };
-
-  const partiallyUnfulfilledOrder = packingSlipsPage.getOrder(
-    orderNumbers.partiallyFulfilled
-  );
+  const partiallyUnfulfilledOrder = packingSlipsPage.getOrder("#1514-3");
 
   const homeport = partiallyUnfulfilledOrder.getByLabel("Homeport");
   await expect(homeport).toBeVisible();
 
-  const lineItem = homeport.getByLabel("Any Occasion - Whatever");
+  const partiallyFulfilledLineItem = homeport.getByLabel(
+    "Any Occasion - Whatever"
+  );
   // TODO: Consider asterisk here to note at bottom saying we'll email to communicate refunds for items that were not fulfillable
-  await expect(lineItem).toContainText("QTY Ordered: 2 (only 1 available)");
+  await expect(partiallyFulfilledLineItem).toContainText(
+    "QTY Ordered: 2 (Only 1 available)"
+  );
+
+  const unfulfilledLineItem = homeport.getByLabel(
+    "Cocktail Bomb Lovely Spritzer"
+  );
+  await expect(unfulfilledLineItem).toContainText(
+    "QTY Ordered: 1 (None available)"
+  );
 });
 
 // We may want to test this in a view model test

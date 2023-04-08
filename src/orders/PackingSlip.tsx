@@ -84,7 +84,7 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
                       {li.qtyFulfilled != li.qty
                         ? <p className="my-0 leading-5 text-red-800">
                             <strong>QTY Ordered:</strong>{" "}
-                            {li.qty} (only {li.qtyFulfilled} available)
+                            {li.qty} ({li.qtyFulfilled ? `Only ${li.qtyFulfilled} available` : 'None available'})
                           </p>
                         : null
                       }
