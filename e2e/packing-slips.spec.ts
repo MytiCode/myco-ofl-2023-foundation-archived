@@ -7,7 +7,7 @@ test("Can navigate to packing slips", async ({ packingSlipsPage }) => {
   // TODO: Move to process.env.BASE_URL or something
   await packingSlipsPage.goto();
 
-  await packingSlipsPage.page.getByTestId("nav-packing-slips").click();
+  await packingSlipsPage.nav.click("packing-slips");
 
   await expect(packingSlipsPage.page).toHaveTitle(/Packing Slips/);
 });
