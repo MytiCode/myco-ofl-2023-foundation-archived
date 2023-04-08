@@ -76,7 +76,7 @@
           "shopId": 4,
           "sku": "351558",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-06-06T17:13:12.353355",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -135,7 +135,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T13:33:18.044091",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -182,7 +182,7 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T19:29:56.635004",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -346,7 +346,7 @@
           "shopId": 4,
           "sku": "153317",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T12:00:12.997988",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -369,8 +369,8 @@
           "imageSrc": "https://cdn.shopify.com/s/files/1/0578/9899/1785/products/il_794xN.1376674279_608h__00467.1646082772.386.513.jpg?v=1660273197&width={MAX_WIDTH}",
           "shopId": 4,
           "sku": "301287",
-          "qty": 1,
-          "qtyFulfilled": 0,
+          "qty": 2,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T12:00:13.017694",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -417,7 +417,7 @@
           "shopId": 4,
           "sku": "151590",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T16:21:18.408604",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -464,7 +464,7 @@
           "shopId": 8,
           "sku": "FUZ00677",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T17:28:35.847918",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -476,7 +476,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T17:29:25.046539",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -488,7 +488,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T17:29:25.048568",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -500,7 +500,7 @@
           "shopId": 8,
           "sku": "FUS13918",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T17:28:35.84644",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -547,7 +547,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 2,
-          "qtyFulfilled": 2,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T17:29:25.051873",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -559,7 +559,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T17:29:25.053584",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -583,7 +583,7 @@
           "shopId": 4,
           "sku": "152539",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T16:02:43.902999",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -665,7 +665,7 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T20:53:08.333475",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -677,7 +677,7 @@
           "shopId": 11,
           "sku": "130-046",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T13:27:29.203905",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -724,7 +724,7 @@
           "shopId": 4,
           "sku": "184132",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T15:59:11.377797",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -736,7 +736,7 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T20:53:08.334886",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -795,7 +795,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T13:22:46.894879",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -819,7 +819,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T13:22:46.896474",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -854,7 +854,7 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T20:53:08.324123",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -866,7 +866,7 @@
           "shopId": 8,
           "sku": "OMH10150",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T17:28:35.827167",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -925,7 +925,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T17:29:25.022743",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -996,7 +996,7 @@
           "shopId": 8,
           "sku": "BEC75480",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T17:28:35.830037",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -1067,7 +1067,7 @@
           "shopId": 4,
           "sku": "153416",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T16:21:18.4049",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -1079,7 +1079,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T17:29:25.030113",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -1138,7 +1138,7 @@
           "shopId": 4,
           "sku": "342556",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T18:16:03.124612",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -1197,7 +1197,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 2,
-          "qtyFulfilled": 2,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T17:29:25.031611",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -1279,7 +1279,7 @@
           "shopId": 4,
           "sku": "153857",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T16:10:28.345122",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -1361,7 +1361,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T14:18:01.360329",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -1397,7 +1397,7 @@
           "shopId": 4,
           "sku": "106769",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T15:58:00.718849",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -1432,7 +1432,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T14:18:01.362438",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -1444,7 +1444,7 @@
           "shopId": 8,
           "sku": "BEC75194",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T17:28:35.8357",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -1468,7 +1468,7 @@
           "shopId": 8,
           "sku": "GRN04124",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T17:28:35.834489",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -1503,7 +1503,7 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T20:53:34.497515",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -1515,7 +1515,7 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T20:53:34.498725",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -1562,7 +1562,7 @@
           "shopId": 1,
           "sku": "",
           "qty": 2,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 2,
           "updatedAt": "2022-09-19T19:52:57.617416",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -1598,7 +1598,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T17:29:25.034372",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -1633,7 +1633,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T14:58:54.638614",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -1657,7 +1657,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T15:08:54.375939",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -1669,7 +1669,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T15:08:54.374078",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -1704,7 +1704,7 @@
           "shopId": 13,
           "sku": "GWP16489PK",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T12:55:43.296189",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -1739,7 +1739,7 @@
           "shopId": 4,
           "sku": "184064",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T15:00:13.176975",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -1798,7 +1798,7 @@
           "shopId": 4,
           "sku": "275557",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T15:00:13.217119",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -1822,7 +1822,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T15:08:54.377831",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -1869,7 +1869,7 @@
           "shopId": 7,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T21:05:42.10809",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -1881,7 +1881,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T15:11:03.439676",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -1916,7 +1916,7 @@
           "shopId": 8,
           "sku": "FUS13918",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T17:28:35.839369",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -1940,7 +1940,7 @@
           "shopId": 4,
           "sku": "211944",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T15:00:13.320861",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -2010,7 +2010,7 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T20:53:34.501208",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2022,7 +2022,7 @@
           "shopId": 12,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T15:00:13.387733",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2034,7 +2034,7 @@
           "shopId": 6,
           "sku": "888830201329",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T20:53:34.502554",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -2081,7 +2081,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 2,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 2,
           "updatedAt": "2022-09-19T15:12:17.936361",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2129,7 +2129,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T15:12:17.938294",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2141,7 +2141,7 @@
           "shopId": 4,
           "sku": "147711",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T15:58:00.723624",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -2176,7 +2176,7 @@
           "shopId": 10,
           "sku": "SWW18DIBW",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T22:20:15.585013",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2188,7 +2188,7 @@
           "shopId": 8,
           "sku": "TZU19891",
           "qty": 2,
-          "qtyFulfilled": 2,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T17:28:35.840585",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2235,7 +2235,7 @@
           "shopId": 4,
           "sku": "151022",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T16:02:43.899321",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2294,7 +2294,7 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T20:53:34.503736",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -2329,7 +2329,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T16:10:10.283665",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2341,7 +2341,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T16:10:10.295701",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2365,7 +2365,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T16:10:10.293863",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2377,7 +2377,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T16:10:10.286818",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2401,7 +2401,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T16:10:10.297447",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -2448,7 +2448,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T17:29:25.028582",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2460,7 +2460,7 @@
           "shopId": 11,
           "sku": "161-026",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T16:04:49.802448",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -2495,7 +2495,7 @@
           "shopId": 4,
           "sku": "175871",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T16:00:15.589302",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2531,7 +2531,7 @@
           "shopId": 4,
           "sku": "175789",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T16:00:15.576391",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -2566,7 +2566,7 @@
           "shopId": 4,
           "sku": "76321",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T16:21:18.406753",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2625,7 +2625,7 @@
           "shopId": 1,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T19:52:57.615946",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -2660,7 +2660,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T16:08:04.345337",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2672,7 +2672,7 @@
           "shopId": 4,
           "sku": "150135",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T16:10:28.341086",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2684,7 +2684,7 @@
           "shopId": 4,
           "sku": "379200",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T16:10:28.343358",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2696,7 +2696,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T16:08:04.343569",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -2731,7 +2731,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T16:06:32.18084",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -2766,7 +2766,7 @@
           "shopId": 4,
           "sku": "7059",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T18:16:03.127475",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2790,7 +2790,7 @@
           "shopId": 4,
           "sku": "150383",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T18:16:03.128795",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -2872,7 +2872,7 @@
           "shopId": 8,
           "sku": "ANTLERSPLITM",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T17:28:35.836891",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2919,7 +2919,7 @@
           "shopId": 4,
           "sku": "333608",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T20:58:28.199648",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2966,7 +2966,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 2,
-          "qtyFulfilled": 2,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T17:29:25.035755",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2978,7 +2978,7 @@
           "shopId": 4,
           "sku": "137329",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T22:19:21.932384",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -2990,7 +2990,7 @@
           "shopId": 4,
           "sku": "495702",
           "qty": 2,
-          "qtyFulfilled": 2,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T22:19:21.930645",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -3037,7 +3037,7 @@
           "shopId": 4,
           "sku": "147257",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T19:27:39.30493",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -3084,7 +3084,7 @@
           "shopId": 4,
           "sku": "180264",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T15:58:03.517249",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -3108,7 +3108,7 @@
           "shopId": 8,
           "sku": "BEC75194",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T12:27:55.435118",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -3120,7 +3120,7 @@
           "shopId": 4,
           "sku": "146312",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T18:00:12.328966",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -3132,7 +3132,7 @@
           "shopId": 4,
           "sku": "180844",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T15:58:03.515365",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -3179,7 +3179,7 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T19:29:56.642514",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -3214,7 +3214,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T11:57:48.577756",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -3297,7 +3297,7 @@
           "shopId": 4,
           "sku": "262373",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T15:58:31.661972",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -3380,7 +3380,7 @@
           "shopId": 4,
           "sku": "208753",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T18:34:24.101409",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -3439,7 +3439,7 @@
           "shopId": 4,
           "sku": "32808",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T18:34:24.102799",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -3556,7 +3556,7 @@
           "shopId": 4,
           "sku": "151091",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T19:07:55.52306",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -3603,7 +3603,7 @@
           "shopId": 4,
           "sku": "151591",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T21:29:05.184366",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -3627,7 +3627,7 @@
           "shopId": 4,
           "sku": "150383",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T21:29:05.185842",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -3674,7 +3674,7 @@
           "shopId": 7,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T21:05:42.112135",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -3721,7 +3721,7 @@
           "shopId": 7,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T21:05:42.113984",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -3850,7 +3850,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T12:00:34.990857",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -3909,7 +3909,7 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T19:29:56.644894",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -3944,7 +3944,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T21:31:31.088092",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4038,7 +4038,7 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T19:29:56.645952",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4097,7 +4097,7 @@
           "shopId": 4,
           "sku": "458066",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T21:34:51.564244",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -4144,7 +4144,7 @@
           "shopId": 4,
           "sku": "153773",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T21:34:51.566184",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -4179,7 +4179,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T12:03:05.447817",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4203,7 +4203,7 @@
           "shopId": 11,
           "sku": "866779000388",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T12:03:05.446139",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4227,7 +4227,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T12:03:05.44457",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4239,7 +4239,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T12:03:05.442575",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4251,7 +4251,7 @@
           "shopId": 4,
           "sku": "151194",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T22:04:11.042757",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -4286,7 +4286,7 @@
           "shopId": 4,
           "sku": "69491",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T22:07:15.381815",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4298,7 +4298,7 @@
           "shopId": 1,
           "sku": "",
           "qty": 2,
-          "qtyFulfilled": 2,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T13:48:44.075492",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -4345,7 +4345,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-19T21:31:31.095921",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -4380,7 +4380,7 @@
           "shopId": 4,
           "sku": "511471",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T15:55:13.344228",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4427,7 +4427,7 @@
           "shopId": 4,
           "sku": "217182",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-19T22:12:49.486601",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4522,7 +4522,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T12:08:35.477707",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4534,7 +4534,7 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T19:29:56.647602",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -4569,7 +4569,7 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T01:32:44.534038",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4593,7 +4593,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 2,
-          "qtyFulfilled": 2,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T12:27:08.138537",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4605,7 +4605,7 @@
           "shopId": 2,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T19:29:56.648776",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -4640,7 +4640,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T12:27:08.140302",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4700,7 +4700,7 @@
           "shopId": 8,
           "sku": "OMH10150",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T12:27:55.443995",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -4735,7 +4735,7 @@
           "shopId": 8,
           "sku": "FUZ00677",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T12:27:55.445694",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4782,7 +4782,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T12:18:19.868374",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4794,7 +4794,7 @@
           "shopId": 4,
           "sku": "153317",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T18:50:44.689131",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4818,7 +4818,7 @@
           "shopId": 4,
           "sku": "33942",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T18:50:44.691248",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4830,7 +4830,7 @@
           "shopId": 4,
           "sku": "33959",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T18:50:44.693118",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4842,7 +4842,7 @@
           "shopId": 13,
           "sku": "8130007",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T12:55:43.297529",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -4889,7 +4889,7 @@
           "shopId": 4,
           "sku": "447183",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T16:05:15.638251",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -4924,7 +4924,7 @@
           "shopId": 8,
           "sku": "OMH10150",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T12:27:55.447504",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4971,7 +4971,7 @@
           "shopId": 4,
           "sku": "130085",
           "qty": 2,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 2,
           "updatedAt": "2022-09-21T20:00:11.408272",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4983,7 +4983,7 @@
           "shopId": 4,
           "sku": "120222",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T16:04:59.665912",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -4995,7 +4995,7 @@
           "shopId": 11,
           "sku": "130-046",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T12:12:55.791747",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -5030,7 +5030,7 @@
           "shopId": 4,
           "sku": "483709",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T18:53:37.332241",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5089,7 +5089,7 @@
           "shopId": 5,
           "sku": "SP-119",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T12:16:52.034747",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5172,7 +5172,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T12:27:08.145413",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5184,7 +5184,7 @@
           "shopId": 4,
           "sku": "153787-1",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T16:04:06.527703",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -5231,7 +5231,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T12:18:19.870117",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -5325,7 +5325,7 @@
           "shopId": 4,
           "sku": "153859",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T18:08:55.931088",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5337,7 +5337,7 @@
           "shopId": 1,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T13:48:44.077723",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5349,7 +5349,7 @@
           "shopId": 4,
           "sku": "153845",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T18:08:55.929449",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -5396,7 +5396,7 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T18:53:07.012687",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5408,7 +5408,7 @@
           "shopId": 8,
           "sku": "GRN11130",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T12:27:55.450769",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5420,7 +5420,7 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T16:48:37.140319",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5432,7 +5432,7 @@
           "shopId": 4,
           "sku": "290307",
           "qty": 2,
-          "qtyFulfilled": 2,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T17:45:36.354008",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -5538,7 +5538,7 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T13:18:21.723022",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5550,7 +5550,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T12:21:14.827087",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5562,7 +5562,7 @@
           "shopId": 11,
           "sku": "CRKM1-TACO01-7272",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T12:21:14.839703",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -5597,7 +5597,7 @@
           "shopId": 4,
           "sku": "457403",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T15:53:51.416301",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5621,7 +5621,7 @@
           "shopId": 11,
           "sku": "CP.989",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T12:20:13.965403",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -5656,7 +5656,7 @@
           "shopId": 4,
           "sku": "64366",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T16:39:40.824123",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5668,7 +5668,7 @@
           "shopId": 11,
           "sku": "130-046",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T12:12:55.793892",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -5703,7 +5703,7 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T13:18:21.724901",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5715,7 +5715,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T12:27:08.150435",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5727,7 +5727,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T12:27:08.148813",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5786,7 +5786,7 @@
           "shopId": 4,
           "sku": "153235",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T16:35:02.789799",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -5903,7 +5903,7 @@
           "shopId": 8,
           "sku": "TZU19891",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T13:08:44.681898",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5915,7 +5915,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T13:08:30.122711",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5927,7 +5927,7 @@
           "shopId": 4,
           "sku": "150383",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T16:10:01.789035",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -5962,7 +5962,7 @@
           "shopId": 4,
           "sku": "153230",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T15:53:51.365574",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5974,7 +5974,7 @@
           "shopId": 4,
           "sku": "211586",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T15:53:51.368123",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -5986,7 +5986,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T13:08:30.1274",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -6045,7 +6045,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T15:23:27.085046",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -6057,7 +6057,7 @@
           "shopId": 4,
           "sku": "153769",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T16:09:04.898748",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -6092,7 +6092,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T15:23:27.086378",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -6151,7 +6151,7 @@
           "shopId": 4,
           "sku": "119462",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T16:10:28.410383",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -6163,7 +6163,7 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T18:53:07.005832",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -6210,7 +6210,7 @@
           "shopId": 4,
           "sku": "171125",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T16:11:15.32047",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -6222,7 +6222,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T14:09:09.364279",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -6257,7 +6257,7 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T14:09:28.539049",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -6269,7 +6269,7 @@
           "shopId": 8,
           "sku": "BEC75480",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T15:22:48.247245",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -6339,7 +6339,7 @@
           "shopId": 4,
           "sku": "153317",
           "qty": 2,
-          "qtyFulfilled": 2,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T15:00:14.053428",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -6481,7 +6481,7 @@
           "shopId": 4,
           "sku": "130146",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T16:38:10.83798",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -6493,7 +6493,7 @@
           "shopId": 4,
           "sku": "268535",
           "qty": 2,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 2,
           "updatedAt": "2022-09-20T16:38:10.83641",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -6552,7 +6552,7 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T18:53:07.009352",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -6647,7 +6647,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T17:13:27.49744",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -6682,7 +6682,7 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T19:10:02.375724",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -6729,7 +6729,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T15:23:27.109026",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -6764,7 +6764,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T15:23:27.110418",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -6823,7 +6823,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T15:23:27.107493",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -6835,7 +6835,7 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T22:44:53.820723",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -6859,7 +6859,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T15:23:27.103776",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -6894,7 +6894,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T15:23:27.115495",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -6906,7 +6906,7 @@
           "shopId": 4,
           "sku": "146312",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T19:28:58.214432",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -6953,7 +6953,7 @@
           "shopId": 4,
           "sku": "106769",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T19:00:16.702241",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -6988,7 +6988,7 @@
           "shopId": 4,
           "sku": "497928",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T20:31:17.902941",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -7035,7 +7035,7 @@
           "shopId": 7,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T15:59:58.249345",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -7094,7 +7094,7 @@
           "shopId": 10,
           "sku": "SWW36KEWA",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T22:21:05.042237",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -7200,7 +7200,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T15:23:27.116827",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -7212,7 +7212,7 @@
           "shopId": 4,
           "sku": "153859",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T21:51:38.761476",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -7247,7 +7247,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T15:23:27.121345",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -7282,7 +7282,7 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T13:58:44.051021",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -7317,7 +7317,7 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T13:40:34.898947",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -7329,7 +7329,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 2,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 2,
           "updatedAt": "2022-09-21T15:23:27.125061",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -7364,7 +7364,7 @@
           "shopId": 4,
           "sku": "70435",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T22:00:17.485549",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -7376,7 +7376,7 @@
           "shopId": 4,
           "sku": "70411",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T19:33:54.919051",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -7436,7 +7436,7 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T13:58:44.052183",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -7448,7 +7448,7 @@
           "shopId": 4,
           "sku": "148479",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T19:33:54.920204",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -7483,7 +7483,7 @@
           "shopId": 4,
           "sku": "153858",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T16:10:50.804187",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -7530,7 +7530,7 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T13:28:34.582219",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -7612,7 +7612,7 @@
           "shopId": 4,
           "sku": "7158",
           "qty": 2,
-          "qtyFulfilled": 2,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-20T23:00:17.088394",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -7648,7 +7648,7 @@
           "shopId": 4,
           "sku": "7165",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-20T23:00:17.10891",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -7683,7 +7683,7 @@
           "shopId": 7,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T15:59:58.250589",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -7730,7 +7730,7 @@
           "shopId": 11,
           "sku": "AVE3157-1",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T12:13:10.374009",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -7848,7 +7848,7 @@
           "shopId": 4,
           "sku": "148891",
           "qty": 2,
-          "qtyFulfilled": 2,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T16:10:50.8074",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -7860,7 +7860,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T12:13:10.376689",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -7907,7 +7907,7 @@
           "shopId": 4,
           "sku": "212422",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T01:00:15.575212",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -7931,7 +7931,7 @@
           "shopId": 4,
           "sku": "150646",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T19:28:55.333123",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -8014,7 +8014,7 @@
           "shopId": 6,
           "sku": "642249167214",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T13:28:46.216338",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -8026,7 +8026,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T12:10:52.174632",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -8073,7 +8073,7 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T13:58:44.049552",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -8144,7 +8144,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T12:10:52.177198",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -8156,7 +8156,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T12:10:52.175871",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -8203,7 +8203,7 @@
           "shopId": 6,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T13:28:28.889167",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -8262,7 +8262,7 @@
           "shopId": 4,
           "sku": "146190",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T02:00:14.689623",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -8297,7 +8297,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T15:23:27.096838",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -8321,7 +8321,7 @@
           "shopId": 3,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T15:23:27.098904",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -8356,7 +8356,7 @@
           "shopId": 4,
           "sku": "149555",
           "qty": 2,
-          "qtyFulfilled": 2,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T17:19:04.669039",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -8380,7 +8380,7 @@
           "shopId": 4,
           "sku": "16006",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T02:00:14.77068",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -8415,7 +8415,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T12:07:54.656081",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -8462,7 +8462,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T12:07:54.65917",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -8474,7 +8474,7 @@
           "shopId": 10,
           "sku": "SWCFUOC",
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T11:09:32.022458",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -8486,7 +8486,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 1,
+          "qtyFulfilled": 0,
           "updatedAt": "2022-09-21T12:07:54.66056",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -8498,7 +8498,7 @@
           "shopId": 11,
           "sku": null,
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T12:07:54.657846",
           "fulfillmentStatus": "unfulfilled"
         }
@@ -8533,7 +8533,7 @@
           "shopId": 10,
           "sku": "SWW18LEBW",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T11:09:32.024171",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -8545,7 +8545,7 @@
           "shopId": 9,
           "sku": "",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-22T00:22:58.43005",
           "fulfillmentStatus": "unfulfilled"
         },
@@ -8557,7 +8557,7 @@
           "shopId": 10,
           "sku": "SWW28HLRP",
           "qty": 1,
-          "qtyFulfilled": 0,
+          "qtyFulfilled": 1,
           "updatedAt": "2022-09-21T11:09:32.025349",
           "fulfillmentStatus": "unfulfilled"
         }

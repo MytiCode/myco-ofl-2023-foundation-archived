@@ -71,7 +71,7 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
                 </td>
                 <td className="border-b border-slate-100 py-4 p-2 text-slate-500 align-top leading-4">
                   <span
-                    className="text-base font-bold leading-5 text-teal-700 mb-0 block"
+                    className="text-lg font-bold leading-5 text-teal-700 mb-1 block"
                     id={`line-item-row-${li.lineItemId}`}
                   >
                     {li.title}
@@ -82,8 +82,9 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
                       {li.sku}
                     </p>
                       {li.qtyFulfilled != li.qty
-                        ? <p className="my-0 leading-5">
-                            OH NOZE WE DIDNT HAVE IT ALL!
+                        ? <p className="my-0 leading-5 text-red-800">
+                            <strong>QTY Ordered:</strong>{" "}
+                            {li.qty} (only {li.qtyFulfilled} available)
                           </p>
                         : null
                       }

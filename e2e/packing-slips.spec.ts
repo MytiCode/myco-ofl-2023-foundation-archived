@@ -73,7 +73,8 @@ test("Partially fulfilled items show an explanatory note", async ({
   await expect(homeport).toBeVisible();
 
   const lineItem = homeport.getByLabel("Any Occasion - Whatever");
-  await expect(lineItem).toContainText("OH NOZE WE DIDNT HAVE IT ALL!");
+  // TODO: Consider asterisk here to note at bottom saying we'll email to communicate refunds for items that were not fulfillable
+  await expect(lineItem).toContainText("QTY Ordered: 2 (only 1 available)");
 });
 
 // We may want to test this in a view model test

@@ -120,13 +120,23 @@ const shopNameToId = shops.reduce(
   new Map<string, number>()
 );
 
+const lineItemOverridesById = new Map<number, Partial<LineItem>>([
+  // Order 1514, partially fulfilled
+  [
+    11640211636393,
+    {
+      qty: 2,
+      qtyFulfilled: 1,
+    },
+  ],
+]);
+
 function transformLineItem(lineItem: any, order: any): LineItem {
   const shopId = shopNameToId.get(lineItem.shop_name);
   assert(
     typeof shopId === "number",
     `Could not get shopId for vendor "${lineItem.shop_name}"`
   );
-
   return {
     orderId: order.order_id, // shouldn't even be needed but we changed the model..
     lineItemId: lineItem.id,
@@ -142,6 +152,7 @@ function transformLineItem(lineItem: any, order: any): LineItem {
     qtyFulfilled: Math.random() * 100 >= 50 ? lineItem.qty : lineItem.qty - 1,
     updatedAt: lineItem.line_item_updated_at,
     fulfillmentStatus: "unfulfilled", // TODO: No really
+    ...(lineItemOverridesById.get(lineItem.id) || {}),
   };
 }
 
