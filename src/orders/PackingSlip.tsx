@@ -4,7 +4,7 @@ import React from "react";
 
 export default function PackingSlip({ order }: { order: OrderViewModel }) {
   return (
-    <div className="p-6 my-4 break-after-page print:m-10" aria-labelledby={`packing-slip-heading-${order.orderId}`}>
+    <div className="p-6 my-4 break-after-page print:m-10" aria-labelledby={`packing-slip-heading-${order.orderId}`} data-type="packing-slip">
       <div className="mb-6 flex">
         <div>
           <h2 className="text-2xl font-bold my-0 mb-2 leading-4" id={`packing-slip-heading-${order.orderId}`}>
