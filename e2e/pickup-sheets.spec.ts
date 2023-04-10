@@ -20,13 +20,13 @@ test("Can view pickup sheets", async ({ pickupSheetsPage }) => {
   await expect(shop.el).toContainText("52 Church Street, Burlington, VT 05401");
 
   // Order
-  const order = shop.getOrder("#1234-2");
+  const order = shop.getOrder("#1226-2");
   await expect(order.el).toBeVisible();
 
   // Line item: id, photo, qty, partial fulfillment note
-  const lineItem = order.getLineItem("Drink Koozie - Boozie Bottle Neoprene");
+  const lineItem = order.getLineItem("Auric Blends Perfume Oil - Moonlight");
   await expect(lineItem.el).toBeVisible();
-  await expect(lineItem.el).toContainText("Line Item ID: 123456789");
+  await expect(lineItem.el).toContainText("Line Item ID: 11352135467177");
   await expect(lineItem.qty).toHaveText("1");
   await expect(lineItem.img).toHaveAttribute(
     "src",

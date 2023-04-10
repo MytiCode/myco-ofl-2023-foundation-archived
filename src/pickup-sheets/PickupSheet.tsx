@@ -1,19 +1,35 @@
-export function PickupSheet() {
+import { LineItemViewModel } from "@/pages/packing-slips";
+import { OrderViewModel, ShopViewModel } from "@/pages/pickup-sheets";
+
+const labelIds = {
+  shop: (shop: ShopViewModel) => `pickup-sheet-shop-label-${shop.shopId}`,
+  order: (order: OrderViewModel) => `pickup-sheet-order-label-${order.orderId}`,
+  lineItem: (lineItem: LineItemViewModel) => `pickup-sheet-line-item-label-${lineItem.lineItemId}`,
+}
+
+export function PickupSheet({ shop }: { shop: ShopViewModel }) {
   return (
-    <div aria-labelledby="shop-label-1">
-      <h2 id="shop-label-1">Homeport</h2>
-      <p>52 Church Street, Burlington, VT 05401</p>
-      <div aria-labelledby="order-label-1">
-        <h3 id="order-label-1">#1234-2</h3>
-        <div aria-labelledby="line-item-1">
-          <h4 id="line-item-1">Drink Koozie - Boozie Bottle Neoprene</h4>
-          <p>
-            <span aria-label="QTY Ordered">1</span>
-            <span>Line Item ID: 123456789</span>
-          </p>
-          <img src="https://cdn.shopify.com/s/files/1/0578/9899/1785/products/PerfumeArmy_grande__06524.1649704087.386.513.jpg?v=1653412449&width=400" alt="The Line Item" />
+    <div aria-labelledby={labelIds.shop(shop)}>
+      <h2 id={labelIds.shop(shop)}>{shop.name}</h2>
+      <p>{shop.address1}{shop.address2 ? ` ${shop.address2}` : ''}, {shop.city}, {shop.stateCode} {shop.zip}</p>
+      {shop.orders.map(o => (
+        <div aria-labelledby={labelIds.order(o)} key={o.orderId}>
+          <h3 id={labelIds.order(o)}>{o.orderNumber}</h3>
+          {o.lineItems.map(li => (
+            <div aria-labelledby={labelIds.lineItem(li)} key={li.lineItemId}>
+              <h4 id={labelIds.lineItem(li)}>{li.title}</h4>
+              <p>
+                <span aria-label="QTY Ordered">{li.qty}</span>
+                <span>Line Item ID: {li.lineItemId}</span>
+              </p>
+              {li.imageSrc
+                ? <img src={li.imageSrc} alt={li.title} />
+                : null
+              }
+            </div>
+          ))}
         </div>
-      </div>
+      ))}
     </div>
   );
 }
