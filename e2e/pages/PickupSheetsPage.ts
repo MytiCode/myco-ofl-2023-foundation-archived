@@ -5,6 +5,10 @@ export class PickupSheetsPage extends BasePage {
     return this.page.goto("/pickup-sheets");
   }
 
+  get initials() {
+    return this.page.getByText("Initials");
+  }
+
   getShop(name: string) {
     const el = this.page.getByLabel(name);
     return {

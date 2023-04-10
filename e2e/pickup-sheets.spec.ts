@@ -1,4 +1,5 @@
 import { expect } from "@playwright/test";
+import { PickupSheetsPage } from "./pages";
 import { test } from "./util";
 
 test("Can navigate to pickup sheets", async ({ page, pickupSheetsPage }) => {
@@ -70,6 +71,23 @@ test.describe("Filter", () => {
 });
 
 test.describe("Printing", () => {
+  let pickupSheetsPage: PickupSheetsPage, afterAll: () => Promise<void>;
+  test.beforeAll(async ({ browser }) => {
+    const page = await browser.newPage();
+    pickupSheetsPage = new PickupSheetsPage(page);
+    await pickupSheetsPage.goto();
+    await pickupSheetsPage.forPrint();
+    afterAll = () => page.close();
+  });
+
+  test.afterAll(async () => {
+    await afterAll();
+  });
+
   test.skip("Each shop is on its own page", () => {});
-  test.fixme("Initials box is visible", async () => {});
+  test("Initials box is visible", async ({ pickupSheetsPage }) => {
+    await pickupSheetsPage.goto();
+
+    await expect(pickupSheetsPage.initials.first()).to;
+  });
 });

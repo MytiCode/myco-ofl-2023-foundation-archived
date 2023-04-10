@@ -24,10 +24,16 @@ const orders = (data.orders as unknown as Order[])
 // TODO: Do we need to sort here?
 const shops = (data.shops as unknown as Shop[])
   .map((shop): ShopViewModel => ({
-    orders: orders.filter(o => o.lineItems.find(li => li.shopId === shop.shopId)),
+    orders: orders
+      .map(o => ({
+        ...o,
+        lineItems: o.lineItems.filter(li => li.shopId === shop.shopId)
+      }))
+      .filter(o => o.lineItems.length),
     ...shop,
   }))
-  .sort((a, b) => a.name.localeCompare(b.name));
+  .filter(shop => shop.orders.length)
+  .sort((a, b) => a.name.localeCompare(b.name))
 
 export type LineItemViewModel = LineItem & {
 }
