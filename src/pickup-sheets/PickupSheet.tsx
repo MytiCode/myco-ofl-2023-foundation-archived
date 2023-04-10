@@ -72,7 +72,7 @@ export function PickupSheet({ shop }: { shop: ShopViewModel }) {
                       <span className="text-slate-500">Line Item ID: </span>
                       {li.lineItemId}
                     </p>
-e                     {li.qtyFulfilled != li.qty
+                      {li.qtyFulfilled != li.qty
                         ? <p className="my-0 leading-5 text-red-800">
                             <strong>QTY Ordered:</strong>{" "}
                             {li.qty} ({li.qtyFulfilled ? `Only ${li.qtyFulfilled} available` : 'None available'})

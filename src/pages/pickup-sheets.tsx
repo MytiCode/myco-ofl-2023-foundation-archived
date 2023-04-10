@@ -19,6 +19,7 @@ const orders = (data.orders as unknown as Order[])
       lineItems: lineItemViewModels,
     };
   })
+  // .slice(0, 10)
   .sort((a, b) => a.createdAt.localeCompare(b.createdAt))
 
 // TODO: Do we need to sort here?
