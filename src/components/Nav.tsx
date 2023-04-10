@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 const navItems = [
-  { href: '/', testID: 'nav-home', label: 'Home' },
-  { href: '/pickup-sheets', testID: 'nav-pickup-sheets', label: 'Pickup Sheets' },
-  { href: '/packing-slips', testID: 'nav-packing-slips', label: 'Packing Slips' },
+  { href: '/', type: 'nav-home', label: 'Home' },
+  { href: '/pickup-sheets', type: 'nav-pickup-sheets', label: 'Pickup Sheets' },
+  { href: '/packing-slips', type: 'nav-packing-slips', label: 'Packing Slips' },
 ];
 
 export default function Nav() {
@@ -14,7 +14,7 @@ export default function Nav() {
           key={navItem.label}
           href={navItem.href}
           className="text-link mr-2"
-          data-testid={navItem.testID}
+          data-type={navItem.type}
         >
           {navItem.label}
         </Link>

@@ -1,10 +1,10 @@
 import { formatDate } from "../src/util";
-import { expect, Page } from "@playwright/test";
+import { expect } from "@playwright/test";
 import { test } from "./util";
 import { PackingSlipsPage } from "./pages";
 
-test("Can navigate to packing slips", async ({ packingSlipsPage }) => {
-  await packingSlipsPage.goto();
+test("Can navigate to packing slips", async ({ page, packingSlipsPage }) => {
+  await page.goto("/");
 
   await packingSlipsPage.nav.click("packing-slips");
 
@@ -45,11 +45,6 @@ test("Can view packing slips", async ({ packingSlipsPage }) => {
   );
   await expect(lineItem).toContainText("SKU: 114658");
   await expect(lineItem.getByLabel("Quantity Ordered")).toHaveText("1");
-
-  // TODO: Can't currently do this cos we dont know the value
-  // await expect(lineItem.getByLabel("Quantity Fulfilled")).toHaveText("1");
-
-  // TODO: Partial fulfillment message
 });
 
 test("Partially fulfilled items show an explanatory note", async ({
@@ -62,20 +57,15 @@ test("Partially fulfilled items show an explanatory note", async ({
   const homeport = partiallyUnfulfilledOrder.getByLabel("Homeport");
   await expect(homeport).toBeVisible();
 
-  const partiallyFulfilledLineItem = homeport.getByLabel(
-    "Any Occasion - Whatever"
-  );
   // TODO: Consider asterisk here to note at bottom saying we'll email to communicate refunds for items that were not fulfillable
-  await expect(partiallyFulfilledLineItem).toContainText(
+  // Lengthen the line length
+  await expect(homeport.getByLabel("Any Occasion - Whatever")).toContainText(
     "QTY Ordered: 2 (Only 1 available)"
   );
 
-  const unfulfilledLineItem = homeport.getByLabel(
-    "Cocktail Bomb Lovely Spritzer"
-  );
-  await expect(unfulfilledLineItem).toContainText(
-    "QTY Ordered: 1 (None available)"
-  );
+  await expect(
+    homeport.getByLabel("Cocktail Bomb Lovely Spritzer")
+  ).toContainText("QTY Ordered: 1 (None available)");
 });
 
 // We may want to test this in a view model test
