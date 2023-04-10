@@ -45,5 +45,11 @@ npx tsx scripts/sanitize-all-orders.ts
 
 ## TODO
 
+- [ ] Switch shop.stateCode to shop.state (but still has state code)
+- [ ] Move view model types out of pages
+- [ ] Run all tests in VS Code with show browser checked works (doesnt hang indefinitely)
+- [ ] Run tests in VS Code with show browser checked closes browser after test succeeds
 - [ ] Change from '@/' to ':' for tspaths
 - [ ] Prevent lint errors at least in ci earlier than running all tests, probably on commit hook locally to avoid wasted time
+- [ ] Can pass page drivers directly to expect(packingSlipPage) just like expect(page)
+- [ ] Pattern for the root locator of a driver to use directly with expect expect(nav).toBeVisible() instead of expect(nav.root).toBeVisible() but root is pretty explicit so maybe go with that for now?

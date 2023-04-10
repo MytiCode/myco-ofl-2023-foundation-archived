@@ -137,6 +137,14 @@ const lineItemOverridesById = new Map<number, Partial<LineItem>>([
       qtyFulfilled: 0,
     },
   ],
+  // Order #1226-2, Fulfilled
+  [
+    11352135467177,
+    {
+      qty: 1,
+      qtyFulfilled: 1,
+    },
+  ],
 ]);
 
 function transformLineItem(lineItem: any, order: any): LineItem {

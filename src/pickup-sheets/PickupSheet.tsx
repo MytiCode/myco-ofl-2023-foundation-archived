@@ -1,35 +1,37 @@
-import { LineItemViewModel, OrderViewModel } from "@/pages/packing-slips";
-import { formatDate } from "@/util";
-import React from "react";
+import { LineItemViewModel } from "@/pages/packing-slips";
+import { OrderViewModel, ShopViewModel } from "@/pages/pickup-sheets";
 
-export default function PackingSlip({ order }: { order: OrderViewModel }) {
+const labelIds = {
+  shop: (shop: ShopViewModel) => `pickup-sheet-shop-label-${shop.shopId}`,
+  order: (order: OrderViewModel) => `pickup-sheet-order-label-${order.orderId}`,
+  lineItem: (lineItem: LineItemViewModel) => `pickup-sheet-line-item-label-${lineItem.lineItemId}`,
+}
+
+export function PickupSheet({ shop }: { shop: ShopViewModel }) {
   return (
-    <div className="p-6 my-4 break-after-page print:m-10" aria-labelledby={`packing-slip-heading-${order.orderId}`} data-type="packing-slip">
+    <div className="p-6 my-4 break-after-page print:m-10" aria-labelledby={labelIds.shop(shop)}>
       <div className="mb-6 flex">
         <div>
-          <h2 className="text-2xl font-bold my-0 mb-2 leading-4" id={`packing-slip-heading-${order.orderId}`}>
-            <span className="text-slate-500">{order.orderNumber}</span>
-            <span className="ml-2">
-              {order.shippingAddress.firstName} {order.shippingAddress.lastName}
-            </span>
+          <h2 className="text-2xl font-bold my-0 mb-2 leading-4" id={labelIds.shop(shop)}>
+            {shop.name}
           </h2>
-          <h3 className="text-base m-0 font-bold text-slate-500 leading-4">
-            <a
-              href="#"
-              target="_blank"
-              className="text-teal-700 leading-5 font-bold cursor-pointer"
-            >
-              {order.shippingAddress.address1}
-              {order.shippingAddress.address2 ? ` ${order.shippingAddress.address2}` : ""}
-              , {order.shippingAddress.city}, VT {order.shippingAddress.zip}
-              <br />
-            </a>
-            <span className="text-slate-400 leading-6" aria-label="Date Ordered">
-              {formatDate(order.createdAt)}
-            </span>
-          </h3>
+          <p className="text-base m-0 text-teal-700 leading-5 font-bold cursor-pointer">
+            {shop.address1}{shop.address2 ? ` ${shop.address2}` : ''}, {shop.city}, {shop.stateCode} {shop.zip}
+          </p>
         </div>
         <div className="ml-auto pl-8 hidden print:flex">
+          <div className="mr-6">
+            <div className="text-slate-500 text-xs">Pickup Date</div>
+            <div className="border h-8 w-20" />
+          </div>
+          <div className="mr-6">
+            <div className="text-slate-500 text-xs">Arrive Time</div>
+            <div className="border h-8 w-20" />
+          </div>
+          <div className="mr-6">
+            <div className="text-slate-500 text-xs">Depart Time</div>
+            <div className="border h-8 w-20" />
+          </div>
           <div>
             <div className="text-slate-500 text-xs">Initials</div>
             <div className="border h-8 w-20" />
@@ -45,22 +47,22 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
             <th className="border-b font-medium py-4 p-2 pt-0 pb-3 text-slate-600 text-left">
               Description
             </th>
-            <th className="w-40 uppercase border-b py-4 p-2 font-medium pt-0 pb-3 text-slate-600 text-left">
+            <th className="w-20 uppercase border-b py-4 p-2 font-medium pt-0 pb-3 text-slate-600 text-left">
               Qty
             </th>
           </tr>
         </thead>
-        {order.shops.map(shop => (
-          <tbody aria-labelledby={`shop-tbody-${shop.shopId}`} key={shop.shopId} role="list">
-            <tr key={shop.shopId}>
+        {shop.orders.map(o => (
+          <tbody aria-labelledby={labelIds.order(o)} key={o.orderId}>
+            <tr>
               <td colSpan={3}>
-                <h3 className="text-xl font-bold mt-4 my-0 text-slate-500 leading-4" id={`shop-tbody-${shop.shopId}`}>
-                  {shop.name}
+                <h3 className="text-xl font-bold mt-4 my-0 text-slate-500 leading-4" id={labelIds.order(o)}>
+                  <span className="text-xl font-bold text-slate-500">{o.orderNumber}</span>
                 </h3>
               </td>
             </tr>
-            {shop.lineItems.map((li: LineItemViewModel) => (
-              <tr key={li.lineItemId} aria-labelledby={`line-item-row-${li.lineItemId}`} role="listitem">
+            {o.lineItems.map(li => (
+              <tr key={li.lineItemId} aria-labelledby={labelIds.lineItem(li)}>
                 <td className="border-b border-slate-100 py-4 p-2 text-slate-500">
                   {li.imageSrc
                     ? <a href={li.imageSrc} target="_blank">
@@ -72,14 +74,14 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
                 <td className="border-b border-slate-100 py-4 p-2 text-slate-500 align-top leading-4">
                   <span
                     className="text-lg font-bold leading-5 text-teal-700 mb-1 block"
-                    id={`line-item-row-${li.lineItemId}`}
+                    id={labelIds.lineItem(li)}
                   >
                     {li.title}
                   </span>
                   <div className="text-slate-400 ">
                     <p className="my-0 leading-5">
-                      <strong className="text-slate-500">SKU:</strong>{" "}
-                      {li.sku}
+                      <span className="text-slate-500 font-bold">Line Item ID: </span>
+                      {li.lineItemId}
                     </p>
                       {li.qtyFulfilled != li.qty
                         ? <p className="my-0 leading-5 text-red-800">
@@ -94,10 +96,9 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
                   <div className="flex justify-end">
                     <div className="border w-12" />
                     <span className="font-normal mx-2">/</span>
-                    <span aria-label="Quantity Ordered">{li.qty}</span>
+                    <span aria-label="Quantity Fulfulled">{li.qtyFulfilled}</span>
                   </div>
                 </td>
-                {/* <pre>{JSON.stringify(li, null, 2)}</pre> */}
               </tr>
             ))}
           </tbody>
