@@ -6,6 +6,7 @@ const navItems = [
   { href: '/pickup-sheets', type: 'nav-pickup-sheets', label: 'Pickup Sheets' },
   { href: '/packing-slips', type: 'nav-packing-slips', label: 'Packing Slips' },
   { href: '/delivery-labels', type: 'nav-delivery-labels', label: 'Delivery Labels' },
+  { href: '/order-tracking-sheets', type: 'nav-order-tracking-sheets', label: 'Order Tracking Sheets' },
 ];
 
 export default function Nav() {
