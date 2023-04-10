@@ -80,7 +80,7 @@ export function PickupSheet({ shop }: { shop: ShopViewModel }) {
                   </span>
                   <div className="text-slate-400 ">
                     <p className="my-0 leading-5">
-                      <span className="text-slate-500">Line Item ID: </span>
+                      <span className="text-slate-500 font-bold">Line Item ID: </span>
                       {li.lineItemId}
                     </p>
                       {li.qtyFulfilled != li.qty
