@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from 'next/router';
 
 const navItems = [
   { href: '/', type: 'nav-home', label: 'Home' },
@@ -7,13 +8,15 @@ const navItems = [
 ];
 
 export default function Nav() {
+  const router = useRouter();
+
   return (
     <nav className="flex print:hidden">
       {navItems.map(navItem => (
         <Link
           key={navItem.label}
           href={navItem.href}
-          className="text-link mr-2"
+          className={`text-link mr-2 ${router.pathname === navItem.href ? 'text-teal-700' : ''}`}
           data-type={navItem.type}
         >
           {navItem.label}
