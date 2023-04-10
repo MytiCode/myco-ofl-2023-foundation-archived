@@ -54,7 +54,7 @@ test("Partially fulfilled items show an explanatory note", async ({
 
   await expect(
     partiallyUnfulfilledOrder.getLineItem("Cocktail Bomb Lovely Spritzer").el
-  ).toContainText("QTY Ordered: 1 (None available)");
+  ).toContainText("QTY Ordered: 2 (None available)");
 });
 
 // We may want to test this in a view model test

@@ -90,14 +90,9 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
                       }
                   </div>
                 </td>
-                <td className="text-right border-b border-slate-100 py-4 p-2 text-slate-500 text-2xl align-top">
-                  <div className="flex justify-end">
-                    <div className="border w-12" />
-                    <span className="font-normal mx-2">/</span>
-                    <span aria-label="Quantity Ordered">{li.qty}</span>
-                  </div>
+                <td className="border-b border-slate-100 py-4 p-2 text-slate-500 text-2xl align-top">
+                  <span aria-label="Quantity Fulfilled">{li.qtyFulfilled}</span>
                 </td>
-                {/* <pre>{JSON.stringify(li, null, 2)}</pre> */}
               </tr>
             ))}
           </tbody>
