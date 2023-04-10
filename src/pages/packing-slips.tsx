@@ -33,6 +33,7 @@ const orders = (data.orders as unknown as Order[])
     };
   })
   .sort((a, b) => a.createdAt.localeCompare(b.createdAt))
+  .slice(0, 10)
 
 export type LineItemViewModel = LineItem & {
   // shop: ShopViewModel

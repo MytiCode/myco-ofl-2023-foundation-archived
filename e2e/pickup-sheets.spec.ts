@@ -13,4 +13,43 @@ test("Can view pickup sheets", async ({ pickupSheetsPage }) => {
   await pickupSheetsPage.goto();
 
   await expect(pickupSheetsPage.page).toHaveTitle(/Pickup Sheets/);
+
+  // Shop data
+  const shop = pickupSheetsPage.getShop("Homeport");
+  await expect(shop.el).toBeVisible();
+  await expect(shop.el).toContainText("52 Church Street, Burlington, VT 05401");
+
+  // Order
+  const order = shop.getOrder("#1234-2");
+  await expect(order.el).toBeVisible();
+
+  // Line item: id, photo, qty, partial fulfillment note
+  const lineItem = order.getLineItem("Drink Koozie - Boozie Bottle Neoprene");
+  await expect(lineItem.el).toBeVisible();
+  await expect(lineItem.el).toContainText("Line Item ID: 123456789");
+  await expect(lineItem.qty).toHaveText("1");
+  await expect(lineItem.img).toHaveAttribute(
+    "src",
+    "https://cdn.shopify.com/s/files/1/0578/9899/1785/products/PerfumeArmy_grande__06524.1649704087.386.513.jpg?v=1653412449&width=400"
+  );
+});
+
+test("Partially fulfilled items show an explanatory note", () => {});
+
+// We may want to test this in a view model test
+test.describe("Sorting", () => {
+  test.skip("Orders are sorted by order date", () => {});
+  test.skip("Shops are sorted by name", () => {});
+  test.skip("Line items are sorted by title", () => {});
+});
+
+test.describe("Filter", () => {
+  test.skip("Packing slips are filtered by date", () => {});
+  test.skip("Packing slips do not include cancelled orders", () => {});
+  test.skip("Packing slips do not include out for delivery/delivered orders", () => {});
+});
+
+test.describe("Printing", () => {
+  test.skip("Each shop is on its own page", () => {});
+  test.fixme("Initials box is visible", async () => {});
 });
