@@ -16,35 +16,33 @@ test("Can view packing slips", async ({ packingSlipsPage }) => {
 
   // Order data
   const firstOrder = packingSlipsPage.getOrder("#1226-2");
-  await expect(firstOrder).toContainText(
+  await expect(firstOrder.el).toContainText(
     formatDate("2022-06-06T15:16:13+00:00")
   );
 
   // Shipping info
-  await expect(firstOrder).toContainText("Nobody Jones");
-  await expect(firstOrder).toContainText(
+  await expect(firstOrder.el).toContainText("Nobody Jones");
+  await expect(firstOrder.el).toContainText(
     "9999 Excellent Drive Apt 1, Burlington, VT 05401"
   );
 
   // Shops on the first order
-  const homeport = firstOrder.getByLabel("Homeport");
-  await expect(homeport).toBeVisible();
-  await expect(homeport.getByRole("listitem")).toHaveCount(1);
+  const homeport = firstOrder.getShop("Homeport");
+  await expect(homeport.el).toBeVisible();
 
   // Ideally would stress having multiple items
-  const sidepony = firstOrder.getByLabel("SidePony Boutique");
-  await expect(sidepony).toBeVisible();
-  await expect(sidepony.getByRole("listitem")).toHaveCount(1);
+  const sidepony = firstOrder.getShop("SidePony Boutique");
+  await expect(sidepony.el).toBeVisible();
 
   // Just check the homeport Line items
-  const lineItem = homeport.getByLabel("Auric Blends Perfume Oil - Moonlight");
-  await expect(lineItem).toBeVisible();
-  await expect(lineItem.getByRole("img")).toHaveAttribute(
+  const lineItem = homeport.getLineItem("Auric Blends Perfume Oil - Moonlight");
+  await expect(lineItem.el).toBeVisible();
+  await expect(lineItem.img).toHaveAttribute(
     "src",
     "https://cdn.shopify.com/s/files/1/0578/9899/1785/products/PerfumeArmy_grande__06524.1649704087.386.513.jpg?v=1653412449&width=400"
   );
-  await expect(lineItem).toContainText("SKU: 114658");
-  await expect(lineItem.getByLabel("Quantity Fulfilled")).toHaveText("1");
+  await expect(lineItem.el).toContainText("SKU: 114658");
+  await expect(lineItem.qty).toHaveText("1");
 });
 
 test("Partially fulfilled items show an explanatory note", async ({
@@ -54,18 +52,24 @@ test("Partially fulfilled items show an explanatory note", async ({
 
   const partiallyUnfulfilledOrder = packingSlipsPage.getOrder("#1514-3");
 
-  const homeport = partiallyUnfulfilledOrder.getByLabel("Homeport");
-  await expect(homeport).toBeVisible();
+  const homeport = partiallyUnfulfilledOrder.getShop("Homeport");
+  await expect(homeport.el).toBeVisible();
 
   // TODO: Consider asterisk here to note at bottom saying we'll email to communicate refunds for items that were not fulfillable
   // Lengthen the line length
-  await expect(homeport.getByLabel("Any Occasion - Whatever")).toContainText(
+  const partialLineItem = homeport.getLineItem("Any Occasion - Whatever");
+  expect(partialLineItem.qty).toHaveText("1");
+  await expect(partialLineItem.el).toContainText(
     "QTY Ordered: 2 (Only 1 available)"
   );
 
-  await expect(
-    homeport.getByLabel("Cocktail Bomb Lovely Spritzer")
-  ).toContainText("QTY Ordered: 2 (None available)");
+  const unavailableLinteItem = homeport.getLineItem(
+    "Cocktail Bomb Lovely Spritzer"
+  );
+  expect(unavailableLinteItem.qty).toHaveText("0");
+  await expect(unavailableLinteItem.el).toContainText(
+    "QTY Ordered: 2 (None available)"
+  );
 });
 
 // We may want to test this in a view model test

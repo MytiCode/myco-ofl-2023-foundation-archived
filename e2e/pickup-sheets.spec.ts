@@ -46,15 +46,24 @@ test("Partially fulfilled items show an explanatory note", async ({
 
   await expect(partiallyUnfulfilledOrder.el).toBeVisible();
 
+  const partialLineItem = partiallyUnfulfilledOrder.getLineItem(
+    "Any Occasion - Whatever"
+  );
+  expect(partialLineItem.qty).toHaveText("1");
+
   // TODO: Consider asterisk here to note at bottom saying we'll email to communicate refunds for items that were not fulfillable
   // Lengthen the line length
-  await expect(
-    partiallyUnfulfilledOrder.getLineItem("Any Occasion - Whatever").el
-  ).toContainText("QTY Ordered: 2 (Only 1 available)");
+  await expect(partialLineItem.el).toContainText(
+    "QTY Ordered: 2 (Only 1 available)"
+  );
 
-  await expect(
-    partiallyUnfulfilledOrder.getLineItem("Cocktail Bomb Lovely Spritzer").el
-  ).toContainText("QTY Ordered: 2 (None available)");
+  const unavailableLineItem = partiallyUnfulfilledOrder.getLineItem(
+    "Cocktail Bomb Lovely Spritzer"
+  );
+  expect(unavailableLineItem.qty).toHaveText("0");
+  await expect(unavailableLineItem.el).toContainText(
+    "QTY Ordered: 2 (None available)"
+  );
 });
 
 // We may want to test this in a view model test

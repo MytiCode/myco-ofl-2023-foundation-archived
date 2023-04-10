@@ -1,6 +1,5 @@
 import { LineItemViewModel } from "@/pages/packing-slips";
 import { OrderViewModel, ShopViewModel } from "@/pages/pickup-sheets";
-import { formatDate } from "@/util";
 
 const labelIds = {
   shop: (shop: ShopViewModel) => `pickup-sheet-shop-label-${shop.shopId}`,
@@ -97,7 +96,7 @@ export function PickupSheet({ shop }: { shop: ShopViewModel }) {
                   <div className="flex justify-end">
                     <div className="border w-12" />
                     <span className="font-normal mx-2">/</span>
-                    <span aria-label="Quantity Ordered">{li.qty}</span>
+                    <span aria-label="Quantity Fulfulled">{li.qtyFulfilled}</span>
                   </div>
                 </td>
               </tr>
