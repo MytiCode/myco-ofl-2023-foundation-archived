@@ -14,7 +14,6 @@ const labelsPerPage = 4;
 export default function DeliveryLabelsPage() {
   const pages = chunk(orders, labelsPerPage);
 
-  // Split orders into chunks of 4 per page
   return (
     <Layout title="Delivery Labels">
       {pages.map((orders, index) => (
