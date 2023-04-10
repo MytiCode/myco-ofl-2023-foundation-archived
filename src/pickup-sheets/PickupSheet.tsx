@@ -26,6 +26,13 @@ export function PickupSheet({ shop }: { shop: ShopViewModel }) {
                 ? <img src={li.imageSrc} alt={li.title} />
                 : null
               }
+              {li.qtyFulfilled != li.qty
+                ? <p className="my-0 leading-5 text-red-800">
+                    <strong>QTY Ordered:</strong>{" "}
+                    {li.qty} ({li.qtyFulfilled ? `Only ${li.qtyFulfilled} available` : 'None available'})
+                  </p>
+                : null
+              }
             </div>
           ))}
         </div>

@@ -34,7 +34,27 @@ test("Can view pickup sheets", async ({ pickupSheetsPage }) => {
   );
 });
 
-test("Partially fulfilled items show an explanatory note", () => {});
+test("Partially fulfilled items show an explanatory note", async ({
+  pickupSheetsPage,
+}) => {
+  await pickupSheetsPage.goto();
+
+  const partiallyUnfulfilledOrder = pickupSheetsPage
+    .getShop("Homeport")
+    .getOrder("#1514-3");
+
+  await expect(partiallyUnfulfilledOrder.el).toBeVisible();
+
+  // TODO: Consider asterisk here to note at bottom saying we'll email to communicate refunds for items that were not fulfillable
+  // Lengthen the line length
+  await expect(
+    partiallyUnfulfilledOrder.getLineItem("Any Occasion - Whatever").el
+  ).toContainText("QTY Ordered: 2 (Only 1 available)");
+
+  await expect(
+    partiallyUnfulfilledOrder.getLineItem("Cocktail Bomb Lovely Spritzer").el
+  ).toContainText("QTY Ordered: 1 (None available)");
+});
 
 // We may want to test this in a view model test
 test.describe("Sorting", () => {
