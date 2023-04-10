@@ -36,7 +36,7 @@ export function PickupSheet({ shop }: { shop: ShopViewModel }) {
             <th className="border-b font-medium py-4 p-2 pt-0 pb-3 text-slate-600 text-left">
               Description
             </th>
-            <th className="w-40 uppercase border-b py-4 p-2 font-medium pt-0 pb-3 text-slate-600 text-left">
+            <th className="w-20 uppercase border-b py-4 p-2 font-medium pt-0 pb-3 text-slate-600 text-left">
               Qty
             </th>
           </tr>
