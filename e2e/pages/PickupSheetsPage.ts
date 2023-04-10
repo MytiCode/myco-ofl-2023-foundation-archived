@@ -9,6 +9,18 @@ export class PickupSheetsPage extends BasePage {
     return this.page.getByText("Initials");
   }
 
+  get pickupDate() {
+    return this.page.getByText("Pickup Date");
+  }
+
+  get arriveTime() {
+    return this.page.getByText("Arrive Time");
+  }
+
+  get departTime() {
+    return this.page.getByText("Depart Time");
+  }
+
   getShop(name: string) {
     const el = this.page.getByLabel(name);
     return {

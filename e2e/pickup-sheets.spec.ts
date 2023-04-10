@@ -85,9 +85,11 @@ test.describe("Printing", () => {
   });
 
   test.skip("Each shop is on its own page", () => {});
-  test("Initials box is visible", async ({ pickupSheetsPage }) => {
-    await pickupSheetsPage.goto();
 
-    await expect(pickupSheetsPage.initials.first()).to;
+  test("Print only boxes are visible", async () => {
+    await expect(pickupSheetsPage.initials.first()).toBeVisible();
+    await expect(pickupSheetsPage.pickupDate.first()).toBeVisible();
+    await expect(pickupSheetsPage.arriveTime.first()).toBeVisible();
+    await expect(pickupSheetsPage.departTime.first()).toBeVisible();
   });
 });

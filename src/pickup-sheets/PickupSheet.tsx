@@ -21,6 +21,18 @@ export function PickupSheet({ shop }: { shop: ShopViewModel }) {
           </p>
         </div>
         <div className="ml-auto pl-8 hidden print:flex">
+          <div className="mr-6">
+            <div className="text-slate-500 text-xs">Pickup Date</div>
+            <div className="border h-8 w-20" />
+          </div>
+          <div className="mr-6">
+            <div className="text-slate-500 text-xs">Arrive Time</div>
+            <div className="border h-8 w-20" />
+          </div>
+          <div className="mr-6">
+            <div className="text-slate-500 text-xs">Depart Time</div>
+            <div className="border h-8 w-20" />
+          </div>
           <div>
             <div className="text-slate-500 text-xs">Initials</div>
             <div className="border h-8 w-20" />
