@@ -120,32 +120,63 @@ const shopNameToId = shops.reduce(
   new Map<string, number>()
 );
 
+const lineItemOverridesById = new Map<number, Partial<LineItem>>([
+  // Order 1514, partially fulfilled
+  [
+    11640211636393,
+    {
+      qty: 2,
+      qtyFulfilled: 1,
+    },
+  ],
+  // Order 1514, not fulfilled
+  [
+    11640211603625,
+    {
+      qty: 2,
+      qtyFulfilled: 0,
+    },
+  ],
+]);
+
 function transformLineItem(lineItem: any, order: any): LineItem {
   const shopId = shopNameToId.get(lineItem.shop_name);
   assert(
     typeof shopId === "number",
     `Could not get shopId for vendor "${lineItem.shop_name}"`
   );
-
   return {
     orderId: order.order_id, // shouldn't even be needed but we changed the model..
     lineItemId: lineItem.id,
     title: lineItem.name,
     price: lineItem.price,
-    imageSrc: lineItem.image_src,
+    imageSrc: lineItem.image_src
+      ? lineItem.image_src + "&width={MAX_WIDTH}"
+      : null,
     shopId,
     sku: lineItem.sku,
     qty: lineItem.qty,
-    qtyFulfilled: lineItem.qty,
+    // Half of the time, partially fulfill
+    qtyFulfilled: Math.random() * 100 >= 50 ? lineItem.qty : lineItem.qty - 1,
     updatedAt: lineItem.line_item_updated_at,
     fulfillmentStatus: "unfulfilled", // TODO: No really
+    ...(lineItemOverridesById.get(lineItem.id) || {}),
   };
 }
 
+function buildOrderNumber(orderNumber: string, lineItems: LineItem[]): string {
+  const uniqueShopCount = new Set(lineItems.map((li) => li.shopId)).size;
+
+  return `${orderNumber}-${uniqueShopCount}`;
+}
+
 function transformOrder(order: any): Order {
+  const lineItems = order.line_items.map((li: any) =>
+    transformLineItem(li, order)
+  );
   return {
     orderId: order.id,
-    orderNumber: order.order_number,
+    orderNumber: buildOrderNumber(order.order_number, lineItems),
     status: "placed", // TODO: no ... Really
     billingAddress: null,
     // billingAddress: {
@@ -176,7 +207,7 @@ function transformOrder(order: any): Order {
     price: order.price,
     tax: order.tax,
     subtotal: order.price - order.tax,
-    lineItems: order.line_items.map((li: any) => transformLineItem(li, order)),
+    lineItems,
   };
 }
 

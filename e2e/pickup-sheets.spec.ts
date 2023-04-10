@@ -1,10 +1,10 @@
-import { test, expect } from "@playwright/test";
+import { expect } from "@playwright/test";
+import { test } from "./util";
 
-test("Can navigate to pickup sheets", async ({ page }) => {
-  // TODO: Move to process.env.BASE_URL or something
-  await page.goto("http://localhost:3000/");
+test("Can navigate to pickup sheets", async ({ pickupSheetsPage }) => {
+  await pickupSheetsPage.goto();
 
-  await page.getByTestId("nav-pickup-sheets").click();
+  await pickupSheetsPage.nav.click("pickup-sheets");
 
-  await expect(page).toHaveTitle(/Pickup Sheets/);
+  await expect(pickupSheetsPage.page).toHaveTitle(/Pickup Sheets/);
 });

@@ -8,7 +8,7 @@ const navItems = [
 
 export default function Nav() {
   return (
-    <nav className="flex">
+    <nav className="flex print:hidden">
       {navItems.map(navItem => (
         <Link
           key={navItem.label}
