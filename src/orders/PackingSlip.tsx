@@ -52,7 +52,7 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
         </thead>
         {order.shops.map(shop => (
           <tbody aria-labelledby={`shop-tbody-${shop.shopId}`} key={shop.shopId} role="list">
-            <tr key={shop.shopId}>
+            <tr>
               <td colSpan={3}>
                 <h3 className="text-xl font-bold mt-4 my-0 text-slate-500 leading-4" id={`shop-tbody-${shop.shopId}`}>
                   {shop.name}
