@@ -75,6 +75,12 @@ test.describe("Sorting", () => {
   test.skip("Line items are sorted by title", () => {});
 });
 
+test.describe("Filter", () => {
+  test.skip("Packing slips are filtered by date", () => {});
+  test.skip("Packing slips do not include cancelled orders", () => {});
+  test.skip("Packing slips do not include out for delivery/delivered orders", () => {});
+});
+
 test.describe("Printing", () => {
   let packingSlipsPage: PackingSlipsPage, afterAll: () => Promise<void>;
   test.beforeAll(async ({ browser }) => {
