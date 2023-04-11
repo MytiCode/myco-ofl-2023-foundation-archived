@@ -23,7 +23,7 @@ export function DeliveryLabel({ order }: { order: OrderViewModel }) {
           <p>
             {address.firstName} {address.lastName}<br />
             {address.address1}{address.address2 ? ', ' + address.address2 : ''},<br />
-            {address.city}, {address.stateCode} {address.zip}
+            {address.city}, {address.state} {address.zip}
           </p>
           <p className="mt-3">
             <strong className="font-bold uppercase">Delivered By:</strong>

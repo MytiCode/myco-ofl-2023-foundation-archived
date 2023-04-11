@@ -106,8 +106,7 @@ function transformShop(shop: any): Shop {
     address2: shop.address2,
     city: shop.city,
     zip: shop.zip,
-    state: "Vermont",
-    stateCode: "VT",
+    state: "VT",
   };
 }
 
@@ -202,8 +201,7 @@ function transformOrder(order: any): Order {
       address2: order.shipping_address2,
       city: order.shipping_city,
       zip: order.shipping_zip,
-      state: order.shipping_state,
-      stateCode: "VT",
+      state: "VT",
       firstName: order.shipping_first_name,
       lastName: order.shipping_last_name,
     },
