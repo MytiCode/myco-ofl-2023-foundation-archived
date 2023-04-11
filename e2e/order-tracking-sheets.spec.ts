@@ -56,9 +56,7 @@ test("Can download order tracking sheet", async ({
   const download = await downloadPromise;
   expect(download.suggestedFilename()).toEqual("Order Tracking Sheet.xlsx");
 
-  // TODO: What path to use that works for local and CI?
-  // Delete the path afterwards or just put it somewhere tmp?
-  // TODO: Should we use createReadStream rather than saving to disk and then reading?
+  // Is there some way to use download.createReadStream to avoid saving to disk?
   const tmpPath = path.join(os.tmpdir(), `doesnt-matter-${Date.now()}.xlsx`);
   await download.saveAs(tmpPath);
 
