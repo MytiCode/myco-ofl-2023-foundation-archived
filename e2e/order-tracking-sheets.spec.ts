@@ -25,7 +25,7 @@ test("Can download order tracking sheet", async ({
   await orderTrackingSheetsPage.goto();
 
   const download = await downloadPromise;
-  expect(download.suggestedFilename()).toEqual("test.xlsx");
+  expect(download.suggestedFilename()).toEqual("Order Tracking Sheet.xlsx");
 
   // TODO: What path to use that works for local and CI?
   // Delete the path afterwards or just put it somewhere tmp?
