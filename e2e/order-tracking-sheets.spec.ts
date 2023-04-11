@@ -5,6 +5,8 @@ import {
   OrderTrackingSheetConfig,
   OrderTrackingSheetLabel,
 } from "../src/pages/order-tracking-sheets";
+import * as os from "os";
+import * as path from "path";
 
 class OrderTrackingSheetReader {
   constructor(
@@ -57,10 +59,10 @@ test("Can download order tracking sheet", async ({
   // TODO: What path to use that works for local and CI?
   // Delete the path afterwards or just put it somewhere tmp?
   // TODO: Should we use createReadStream rather than saving to disk and then reading?
-  const path = `something-${Date.now()}.xlsx`;
-  await download.saveAs(path);
+  const tmpPath = path.join(os.tmpdir(), `doesnt-matter-${Date.now()}.xlsx`);
+  await download.saveAs(tmpPath);
 
-  const sheets = new OrderTrackingSheetReader().read(path);
+  const sheets = new OrderTrackingSheetReader().read(tmpPath);
 
   // Orders
   const orders = sheets.get("Orders");
