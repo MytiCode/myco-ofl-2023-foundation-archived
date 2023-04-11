@@ -1,7 +1,34 @@
 import { expect } from "@playwright/test";
 import { test } from "./util";
 import * as XLSX from "xlsx";
-import { OrderTrackingSheetConfig } from "../src/pages/order-tracking-sheets";
+import {
+  OrderTrackingSheetConfig,
+  OrderTrackingSheetLabel,
+} from "../src/pages/order-tracking-sheets";
+
+class OrderTrackingSheetReader {
+  constructor(
+    private config: OrderTrackingSheetConfig = new OrderTrackingSheetConfig()
+  ) {}
+
+  read(path: string) {
+    const book = XLSX.readFile(path);
+
+    const sheets = new Map<OrderTrackingSheetLabel, any[]>();
+    this.config.sheets.forEach(({ label, columnNames }) => {
+      sheets.set(
+        label,
+        XLSX.utils
+          .sheet_to_json(book.Sheets[label], {
+            header: columnNames,
+          })
+          .slice(1)
+      );
+    });
+
+    return sheets;
+  }
+}
 
 test("Can navigate to order tracking sheets", async ({
   page,
@@ -33,16 +60,11 @@ test("Can download order tracking sheet", async ({
   const path = `something-${Date.now()}.xlsx`;
   await download.saveAs(path);
 
-  const book = XLSX.readFile(path);
+  const sheets = new OrderTrackingSheetReader().read(path);
 
-  const config = new OrderTrackingSheetConfig();
-  const ordersSheetLabel = "Orders";
-  const orders: any[] = XLSX.utils
-    .sheet_to_json(book.Sheets[ordersSheetLabel], {
-      header: config.forSheet(ordersSheetLabel).columnNames,
-    })
-    .slice(1);
-
+  // Orders
+  const orders = sheets.get("Orders");
+  if (!orders) throw new Error("Expected orders to exist");
   expect(orders.length).toBeGreaterThan(0);
   const order = orders[0];
   expect(order).toBeDefined();
@@ -50,12 +72,9 @@ test("Can download order tracking sheet", async ({
   expect(order.shopName).toEqual("Homeport");
   expect(order.fulfillmentStatus).toEqual("unfulfilled");
 
-  const lineItemsSheetLabel = "Line Items";
-  const lineItems: any[] = XLSX.utils
-    .sheet_to_json(book.Sheets[lineItemsSheetLabel], {
-      header: config.forSheet(lineItemsSheetLabel).columnNames,
-    })
-    .slice(1);
+  // Line items
+  const lineItems = sheets.get("Line Items");
+  if (!lineItems) throw new Error("Expected line items to exist");
   expect(lineItems.length).toBeGreaterThan(0);
   const lineItem = lineItems[0];
   expect(lineItem).toBeDefined();
