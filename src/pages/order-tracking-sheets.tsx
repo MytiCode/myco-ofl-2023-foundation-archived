@@ -90,24 +90,18 @@ class OrderTrackingSheetWriter {
   }
 }
 
-let didInit = false;
-
 export default function OrderTrackingSheetsPage() {
   useEffect(() => {
-    if (!didInit) {
-      didInit = true;
-
-      // TODO: Filename "Order Tracking Sheet – {START_DATE}-{END_DATE}"
-      new OrderTrackingSheetWriter().write({
-        filename: 'Order Tracking Sheet.xlsx',
-        orders: [
-          ["#1226-2", "Homeport", "unfulfilled"],
-        ],
-        lineItems: [
-          ["#1226-2", "Auric Blends Perfume Oil - Moonlight", "1", "1", "11352135467177"],
-        ]
-      });
-    }
+    // TODO: Filename "Order Tracking Sheet – {START_DATE}-{END_DATE}"
+    new OrderTrackingSheetWriter().write({
+      filename: 'Order Tracking Sheet.xlsx',
+      orders: [
+        ["#1226-2", "Homeport", "unfulfilled"],
+      ],
+      lineItems: [
+        ["#1226-2", "Auric Blends Perfume Oil - Moonlight", "1", "1", "11352135467177"],
+      ]
+    });
   }, []);
 
   return (
