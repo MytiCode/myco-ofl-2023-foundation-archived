@@ -1,5 +1,5 @@
-import { LineItemViewModel, OrderViewModel } from "@/pages/packing-slips";
-import { formatDate } from "@/util";
+import { LineItemViewModel, OrderViewModel } from ":pages/packing-slips";
+import { formatDate } from ":util";
 import React from "react";
 
 export default function PackingSlip({ order }: { order: OrderViewModel }) {

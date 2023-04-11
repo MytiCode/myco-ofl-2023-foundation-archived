@@ -1,4 +1,4 @@
-import { ShopOrder } from "@/pages/order-tracking-sheets";
+import { ShopOrder } from ":pages/order-tracking-sheets";
 import { useEffect } from "react";
 import { OrderTrackingSheetWriter } from "./OrderTrackingSheetWriter";
 
