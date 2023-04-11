@@ -1,12 +1,12 @@
 import { expect } from "@playwright/test";
 import { test } from "./util";
 import * as XLSX from "xlsx";
+import * as os from "os";
+import * as path from "path";
 import {
   OrderTrackingSheetConfig,
   OrderTrackingSheetLabel,
-} from "../src/pages/order-tracking-sheets";
-import * as os from "os";
-import * as path from "path";
+} from "../src/order-tracking-sheets/OrderTrackingSheetConfig";
 
 class OrderTrackingSheetReader {
   constructor(
@@ -70,7 +70,7 @@ test("Can download order tracking sheet", async ({
   expect(order).toBeDefined();
   expect(order.orderNumber).toEqual("#1226-2");
   expect(order.shopName).toEqual("Homeport");
-  expect(order.fulfillmentStatus).toEqual("unfulfilled");
+  expect(order.fulfillmentStatus).toEqual("placed");
 
   // Line items
   const lineItems = sheets.get("Line Items");
