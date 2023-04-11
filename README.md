@@ -45,7 +45,6 @@ npx tsx scripts/sanitize-all-orders.ts
 
 ## TODO
 
-- [ ] Switch shop.stateCode to shop.state (but still has state code)
 - [ ] Move view model types out of pages
 - [ ] Run all tests in VS Code with show browser checked works (doesnt hang indefinitely)
 - [ ] Run tests in VS Code with show browser checked closes browser after test succeeds

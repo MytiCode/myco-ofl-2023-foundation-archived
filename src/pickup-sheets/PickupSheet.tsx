@@ -16,7 +16,7 @@ export function PickupSheet({ shop }: { shop: ShopViewModel }) {
             {shop.name}
           </h2>
           <p className="text-base m-0 text-teal-700 leading-5 font-bold cursor-pointer">
-            {shop.address1}{shop.address2 ? ` ${shop.address2}` : ''}, {shop.city}, {shop.stateCode} {shop.zip}
+            {shop.address1}{shop.address2 ? ` ${shop.address2}` : ''}, {shop.city}, {shop.state} {shop.zip}
           </p>
         </div>
         <div className="ml-auto pl-8 hidden print:flex">

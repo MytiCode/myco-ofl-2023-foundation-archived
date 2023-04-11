@@ -63,7 +63,6 @@ export type CustomerAddress = {
   address2: string;
   city: string;
   state: string;
-  stateCode: string;
   zip: string;
 };
 
@@ -115,6 +114,5 @@ export type Shop = {
   address2?: string;
   city: string;
   state: string;
-  stateCode: string;
   zip: string;
 };
