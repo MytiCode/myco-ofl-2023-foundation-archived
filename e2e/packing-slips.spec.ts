@@ -1,4 +1,4 @@
-import { formatDate } from "../src/util";
+import { formatDate } from ":util";
 import { expect } from "@playwright/test";
 import { test } from "./util";
 import { PackingSlipsPage } from "./pages";
