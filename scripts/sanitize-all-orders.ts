@@ -1,4 +1,4 @@
-import { LineItem, Order, Shop } from "@/orders/model";
+import { LineItem, Order, Shop } from ":orders/model";
 import assert from "assert";
 import fs from "fs";
 

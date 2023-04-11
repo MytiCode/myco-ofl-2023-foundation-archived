@@ -1,7 +1,7 @@
-import Layout from "@/components/Layout";
-import { OrderTrackingSheet } from "@/order-tracking-sheets/OrderTrackingSheet";
+import Layout from ":components/Layout";
+import { OrderTrackingSheet } from ":order-tracking-sheets/OrderTrackingSheet";
 import { Shop, Order } from "../orders/model";
-import data from '@/data/pilot2-dummy-orders.json';
+import data from ':data/pilot2-dummy-orders.json';
 
 export type ShopOrder = {
   order: Order;

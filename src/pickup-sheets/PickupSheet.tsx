@@ -1,5 +1,5 @@
-import { LineItemViewModel } from "@/pages/packing-slips";
-import { OrderViewModel, ShopViewModel } from "@/pages/pickup-sheets";
+import { LineItemViewModel } from ":pages/packing-slips";
+import { OrderViewModel, ShopViewModel } from ":pages/pickup-sheets";
 
 const labelIds = {
   shop: (shop: ShopViewModel) => `pickup-sheet-shop-label-${shop.shopId}`,

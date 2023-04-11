@@ -1,7 +1,7 @@
-import Layout from "@/components/Layout";
-import { PickupSheet } from "@/pickup-sheets/PickupSheet";
+import Layout from ":components/Layout";
+import { PickupSheet } from ":pickup-sheets/PickupSheet";
 import { LineItem, Order, Shop } from "../orders/model";
-import data from '@/data/pilot2-dummy-orders.json';
+import data from ':data/pilot2-dummy-orders.json';
 
 const orders = (data.orders as unknown as Order[])
   .map(order => {
