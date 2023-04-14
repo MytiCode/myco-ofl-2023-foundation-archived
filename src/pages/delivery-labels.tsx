@@ -1,5 +1,5 @@
 import Layout from ":components/Layout";
-import { DeliveryLabel } from ":delivery-labels/DeliveryLabel";
+import { DeliveryLabel } from ":orders/delivery-labels/DeliveryLabel";
 import { chunk } from "lodash";
 
 import { Order } from "../orders/model";

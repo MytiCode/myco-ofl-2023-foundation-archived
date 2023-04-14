@@ -1,5 +1,5 @@
 import { OrderViewModel } from ":pages/delivery-labels";
-import mytiLogo from '../../public/myti-logo-delivery-labels.png';
+import mytiLogo from '../../../public/myti-logo-delivery-labels.png';
 import Image from 'next/image'
 
 const labelIds = {

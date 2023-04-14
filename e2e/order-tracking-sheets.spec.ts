@@ -6,7 +6,7 @@ import * as path from "path";
 import {
   OrderTrackingSheetConfig,
   OrderTrackingSheetLabel,
-} from ":order-tracking-sheets/OrderTrackingSheetConfig";
+} from ":orders/order-tracking-sheets/OrderTrackingSheetConfig";
 
 class OrderTrackingSheetReader {
   constructor(

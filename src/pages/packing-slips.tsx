@@ -2,7 +2,7 @@ import Layout from ":components/Layout";
 
 import { LineItem, Order, Shop } from "../orders/model";
 import data from ':data/pilot2-dummy-orders.json';
-import PackingSlip from ":packing-slips/PackingSlip";
+import PackingSlip from ":orders/packing-slips/PackingSlip";
 
 // TODO: Do we need to sort here?
 const shops = (data.shops as unknown as Shop[]).sort((a, b) => a.name.localeCompare(b.name));
