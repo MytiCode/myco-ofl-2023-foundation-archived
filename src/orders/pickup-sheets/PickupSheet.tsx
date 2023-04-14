@@ -1,4 +1,4 @@
-import { LineItemViewModel } from ":pages/packing-slips";
+import { LineItemViewModel } from ":pages/pickup-sheets";
 import { OrderViewModel, ShopViewModel } from ":pages/pickup-sheets";
 
 const labelIds = {
@@ -16,7 +16,7 @@ export function PickupSheet({ shop }: { shop: ShopViewModel }) {
             {shop.name}
           </h2>
           <p className="text-base m-0 text-teal-700 leading-5 font-bold cursor-pointer">
-            {shop.address1}{shop.address2 ? ` ${shop.address2}` : ''}, {shop.city}, {shop.state} {shop.zip}
+            {shop.address.address1}{shop.address.address2 ? ` ${shop.address.address2}` : ''}, {shop.address.city}, {shop.address.state} {shop.address.zip}
           </p>
         </div>
         <div className="ml-auto pl-8 hidden print:flex">
