@@ -52,10 +52,8 @@ export const OrderLineItem = z.object({
   /** The name of the item's supplier. */
   shopId: z.number(),
 
-  updatedAt: z.string(),
-
   // TODO: Fulfillment related stuff
-  fulfillmentStatus: z.enum(["unfulfilled", "fulfilled"]),
+  fulfillmentStatus: z.enum(["AWAITING_FULFILLMENT", "CANCELLED", "PARTIALLY_FULFILLED", "FULFILLED"]),
 
   // TODO(ryanouellette): I'm pretty sure this isn't correctly handled at the moment. Review.
   // We take this from fulfillableQuantity? But that's set ahead of the order being fulfilled
@@ -106,10 +104,18 @@ export const Order = z.object({
   /** A list of line item objects, each containing information about an item in the order. */
   lineItems: z.array(OrderLineItem),
 
-  // TODO(ryanouellette): We should perhaps opt to SHOUT_CASE enum literals where we can. Although, perhaps we should
-  // just match shopify/big-commerce if they're consistent between them so that we're consistent throughout
-  // at least to begin, before a new integration violates the practice? Discuss with ben@.
-  status: z.enum(["placed", "cancelled", "out-for-delivery", "delivered"]),
+  status: z.enum([
+    /** Order is awaiting fulfillment. This remains the state until cancelled or all lineItems are in a terminal state. */
+    "AWAITING_FULFILLMENT",
+    /** Order is cancelled, either because all line items were cancelled or the order itself was cancelled. */
+    "CANCELLED",
+    /** Order line items are all in terminal states and one or more line items are FULFILLED or PARTIALLY_FULFILLED. */
+    "READY_FOR_PICKUP",
+    /** Order is out for delivery. */
+    "OUT_FOR_DELIVERY",
+    /** Order is delivered. */
+    "DELIVERED",
+  ]),
 });
 
 // ===== BEGIN SUPPORTING CODECS =====

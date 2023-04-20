@@ -15,9 +15,7 @@ function errorFromCaught(caught: unknown): Error {
     if (typeof caught === "string") {
       error = new Error(caught);
     } else {
-      error = new Error(
-        `caught unexpected error, its dump is: ${JSON.stringify(caught)}`
-      );
+      error = new Error(`caught unexpected error, its dump is: ${JSON.stringify(caught)}`);
     }
   } else {
     error = caught;
@@ -33,16 +31,10 @@ export class MycoClient {
   constructor(private config: MycoClientConfig) {}
 
   apiPath(path: string): string {
-    // TODO(benglass): Normalize path to start with '/', or throw if it doesnt
-    // TODO(benglass): Probably also normalize apiPath as well
     return this.config.apiUrl + path;
   }
 
-  // TODO(benglass): @codeshare Why do we get this error in web trying to use ResultPromise?
-  // Type 'ResultPromise' is not a valid async function return type in ES5/ES3
-  // because it does not refer to a Promise-compatible constructor value.ts(1055)
-  // async getOrders(): ResultPromise<MycoTypes.OrdersResponse> {
-  async getOrders(): Promise<Result<MycoTypes.OrdersResponse, Error>> {
+  async getOrders(): ResultPromise<MycoTypes.OrdersResponse> {
     let encoded: AxiosResponse;
     try {
       encoded = await axios.get(this.apiPath("/orders"));
@@ -50,10 +42,7 @@ export class MycoClient {
       return Err(errorFromCaught(e));
     }
 
-    const decodeResult = MycoCodecs.safeDecode(
-      encoded,
-      MycoCodecs.OrdersResponsePayload
-    );
+    const decodeResult = MycoCodecs.safeDecode(encoded, MycoCodecs.OrdersResponsePayload);
     if (decodeResult.err) {
       return decodeResult;
     }
