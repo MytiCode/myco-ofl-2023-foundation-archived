@@ -4,6 +4,7 @@ type ShippingAddress = Exclude<Myco.Order["shippingAddress"], null>;
 
 type TestOrder = {
   orderNumber: Myco.Order["orderNumber"];
+  createdAt: string;
   shippingAddress: Pick<
     ShippingAddress,
     "firstName" | "lastName" | "address1" | "city" | "state" | "zip"
@@ -13,6 +14,7 @@ type TestOrder = {
     title: Myco.OrderLineItem["title"];
     qty: number;
     qtyFulfilled: number;
+    sku: string;
     imageSrc: string;
     shop: {
       name: Myco.Shop["name"];
@@ -36,9 +38,11 @@ export const WellKnownOrders: Record<WellKnownOrderKeys, TestOrder> = {
   fulfilled: {
     orderNumber: "#1031-2",
     shippingAddress: testAddress,
+    createdAt: "2023-04-20T16:21:00+00:00",
     lineItems: [
       {
         title: "ATAT 4D Paper Model Kit",
+        sku: "MYTBCG-ATAT-4DPMK012",
         lineItemId: 13807499542843,
         qty: 2,
         qtyFulfilled: 2,
@@ -53,11 +57,13 @@ export const WellKnownOrders: Record<WellKnownOrderKeys, TestOrder> = {
   },
   partiallyFulfilled: {
     orderNumber: "#1032-2",
+    createdAt: "2023-04-20T16:21:00+00:00",
     shippingAddress: testAddress,
     lineItems: [
       {
         title: "ATAT 4D Paper Model Kit",
         lineItemId: 13807502623035,
+        sku: "NOPE",
         qty: 2,
         qtyFulfilled: 0,
         imageSrc:
@@ -71,6 +77,7 @@ export const WellKnownOrders: Record<WellKnownOrderKeys, TestOrder> = {
         // title: "ATAT Darth Vader Earbuds",
         title: "ATAT Darth Vader Earbuds - Black",
         lineItemId: 13807502590267,
+        sku: "TODO:NOPE",
         qty: 2,
         qtyFulfilled: 1,
         imageSrc:

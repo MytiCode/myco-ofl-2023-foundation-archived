@@ -2,6 +2,7 @@ import { formatDate } from ":util";
 import { expect } from "@playwright/test";
 import { test } from "./util";
 import { PackingSlipsPage } from "./pages";
+import { WellKnownOrders } from "./fixtures";
 
 test("Can navigate to packing slips", async ({ page, packingSlipsPage }) => {
   await page.goto("/");
@@ -12,64 +13,63 @@ test("Can navigate to packing slips", async ({ page, packingSlipsPage }) => {
 });
 
 test("Can view packing slips", async ({ packingSlipsPage }) => {
+  const expectedOrder = WellKnownOrders.fulfilled;
+
   await packingSlipsPage.goto();
 
   // Order data
-  const firstOrder = packingSlipsPage.getOrder("#1226-2");
+  const firstOrder = packingSlipsPage.getOrder(expectedOrder.orderNumber);
   await expect(firstOrder.el).toContainText(
-    formatDate("2022-06-06T15:16:13+00:00")
+    formatDate(expectedOrder.createdAt)
   );
 
   // Shipping info
-  await expect(firstOrder.el).toContainText("Nobody Jones");
+  const { shippingAddress: expectedAddress } = expectedOrder;
   await expect(firstOrder.el).toContainText(
-    "9999 Excellent Drive Apt 1, Burlington, VT 05401"
+    `${expectedAddress.firstName} ${expectedAddress.lastName}`
+  );
+  await expect(firstOrder.el).toContainText(
+    `${expectedAddress.address1}, ${expectedAddress.city}, ${expectedAddress.state} ${expectedAddress.zip}`
   );
 
-  // Shops on the first order
-  const homeport = firstOrder.getShop("Homeport");
-  await expect(homeport.el).toBeVisible();
+  for (const expectedItem of expectedOrder.lineItems) {
+    const shop = firstOrder.getShop(expectedItem.shop.name);
+    await expect(shop.el).toBeVisible();
 
-  // Ideally would stress having multiple items
-  const sidepony = firstOrder.getShop("SidePony Boutique");
-  await expect(sidepony.el).toBeVisible();
-
-  // Just check the homeport Line items
-  const lineItem = homeport.getLineItem("Auric Blends Perfume Oil - Moonlight");
-  await expect(lineItem.el).toBeVisible();
-  await expect(lineItem.img).toHaveAttribute(
-    "src",
-    "https://cdn.shopify.com/s/files/1/0578/9899/1785/products/PerfumeArmy_grande__06524.1649704087.386.513.jpg?v=1653412449&width=400"
-  );
-  await expect(lineItem.el).toContainText("SKU: 114658");
-  await expect(lineItem.qty).toHaveText("1");
+    const lineItem = shop.getLineItem(expectedItem.title);
+    await expect(lineItem.el).toBeVisible();
+    await expect(lineItem.img).toHaveAttribute("src", expectedItem.imageSrc);
+    await expect(lineItem.el).toContainText(`SKU: ${expectedItem.sku}`);
+    await expect(lineItem.qty).toHaveText(String(expectedItem.qtyFulfilled));
+  }
 });
 
 test("Partially fulfilled items show an explanatory note", async ({
   packingSlipsPage,
 }) => {
+  const expectedOrder = WellKnownOrders.partiallyFulfilled;
+
   await packingSlipsPage.goto();
 
-  const partiallyUnfulfilledOrder = packingSlipsPage.getOrder("#1514-3");
-
-  const homeport = partiallyUnfulfilledOrder.getShop("Homeport");
-  await expect(homeport.el).toBeVisible();
-
-  // TODO: Consider asterisk here to note at bottom saying we'll email to communicate refunds for items that were not fulfillable
-  // Lengthen the line length
-  const partialLineItem = homeport.getLineItem("Any Occasion - Whatever");
-  expect(partialLineItem.qty).toHaveText("1");
-  await expect(partialLineItem.el).toContainText(
-    "QTY Ordered: 2 (Only 1 available)"
+  const partiallyUnfulfilledOrder = packingSlipsPage.getOrder(
+    expectedOrder.orderNumber
   );
 
-  const unavailableLinteItem = homeport.getLineItem(
-    "Cocktail Bomb Lovely Spritzer"
-  );
-  expect(unavailableLinteItem.qty).toHaveText("0");
-  await expect(unavailableLinteItem.el).toContainText(
-    "QTY Ordered: 2 (None available)"
-  );
+  for (const expectedItem of expectedOrder.lineItems) {
+    const shop = partiallyUnfulfilledOrder.getShop(expectedItem.shop.name);
+    await expect(shop.el).toBeVisible();
+
+    // TODO: Consider asterisk here to note at bottom saying we'll email to communicate refunds for items that were not fulfillable
+    // Lengthen the line length
+    const item = shop.getLineItem(expectedItem.title);
+    expect(item.qty).toHaveText(String(expectedItem.qtyFulfilled));
+    const expectedAvailableText = expectedItem.qtyFulfilled
+      ? `Only ${expectedItem.qtyFulfilled} available`
+      : "None available";
+    await expect(item.el).toContainText(
+      `QTY Ordered: ${expectedItem.qty} (${expectedAvailableText})`
+    );
+  }
 });
 
 // We may want to test this in a view model test
