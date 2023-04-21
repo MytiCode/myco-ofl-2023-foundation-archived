@@ -2,6 +2,7 @@ import { LineItemViewModel, OrderViewModel } from ":pages/packing-slips";
 import { formatDate } from ":util";
 import React from "react";
 
+// TODO(benglass): order.shippingAddress should be required and then we should drop the null checks
 export default function PackingSlip({ order }: { order: OrderViewModel }) {
   return (
     <div className="p-6 my-4 break-after-page print:m-10" aria-labelledby={`packing-slip-heading-${order.orderId}`} data-type="packing-slip">
@@ -9,21 +10,25 @@ export default function PackingSlip({ order }: { order: OrderViewModel }) {
         <div>
           <h2 className="text-2xl font-bold my-0 mb-2 leading-4" id={`packing-slip-heading-${order.orderId}`}>
             <span className="text-slate-500">{order.orderNumber}</span>
-            <span className="ml-2">
-              {order.shippingAddress.firstName} {order.shippingAddress.lastName}
-            </span>
+            {order.shippingAddress &&
+              <span className="ml-2">
+                {order.shippingAddress.firstName} {order.shippingAddress.lastName}
+              </span>
+            }
           </h2>
           <h3 className="text-base m-0 font-bold text-slate-500 leading-4">
-            <a
-              href="#"
-              target="_blank"
-              className="text-teal-700 leading-5 font-bold cursor-pointer"
-            >
-              {order.shippingAddress.address1}
-              {order.shippingAddress.address2 ? ` ${order.shippingAddress.address2}` : ""}
-              , {order.shippingAddress.city}, VT {order.shippingAddress.zip}
-              <br />
-            </a>
+            {order.shippingAddress &&
+              <a
+                href="#"
+                target="_blank"
+                className="text-teal-700 leading-5 font-bold cursor-pointer"
+              >
+                {order.shippingAddress.address1}
+                {order.shippingAddress.address2 ? ` ${order.shippingAddress.address2}` : ""},{' '}
+                {order.shippingAddress.city}, VT {order.shippingAddress.zip}
+                <br />
+              </a>
+            }
             <span className="text-slate-400 leading-6" aria-label="Date Ordered">
               {formatDate(order.createdAt)}
             </span>

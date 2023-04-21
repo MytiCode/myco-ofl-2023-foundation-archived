@@ -6,6 +6,7 @@ const labelIds = {
   label: (o: { orderId: number }) => `delivery-label-order-${o.orderId}`
 }
 
+// TODO(benglass): address shoudl be required then remove null checks
 export function DeliveryLabel({ order }: { order: OrderViewModel }) {
   const { shippingAddress: address } = order;
   return (
@@ -20,11 +21,13 @@ export function DeliveryLabel({ order }: { order: OrderViewModel }) {
           >
             Order {order.orderNumber}
           </h2>
-          <p>
-            {address.firstName} {address.lastName}<br />
-            {address.address1}{address.address2 ? ', ' + address.address2 : ''},<br />
-            {address.city}, {address.state} {address.zip}
-          </p>
+          {address &&
+            <p>
+              {address.firstName} {address.lastName}<br />
+              {address.address1}{address.address2 ? ', ' + address.address2 : ''},<br />
+              {address.city}, {address.state} {address.zip}
+            </p>
+          }
           <p className="mt-3">
             <strong className="font-bold uppercase">Delivered By:</strong>
           </p>

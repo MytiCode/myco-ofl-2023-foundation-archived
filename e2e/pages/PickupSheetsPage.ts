@@ -33,7 +33,7 @@ export class PickupSheetsPage extends BasePage {
             const lineItemEl = orderEl.getByLabel(title);
             return {
               el: lineItemEl,
-              qty: lineItemEl.getByLabel("Quantity Fulfulled"),
+              qty: lineItemEl.getByLabel("Quantity Fulfilled"),
               img: lineItemEl.getByRole("img"),
             };
           },

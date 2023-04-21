@@ -1,6 +1,141 @@
 import { expect } from "@playwright/test";
 import { PickupSheetsPage } from "./pages";
 import { test } from "./util";
+import { Myco } from ":api/client";
+
+type TestOrder = {
+  orderNumber: Myco.Order["orderNumber"];
+  lineItems: Array<{
+    lineItemId: number;
+    title: Myco.OrderLineItem["title"];
+    qty: number;
+    qtyFulfilled: number;
+    imageSrc: string;
+    shop: {
+      name: Myco.Shop["name"];
+      address: string;
+    };
+  }>;
+};
+
+// const WellKnownOrders: Record<"fulfilled" | "partiallyFulfilled", TestOrder> = {
+//   fulfilled: {
+//     orderNumber: "#1016-2",
+//     lineItems: [
+//       {
+//         title: "Sleeping Queens",
+//         lineItemId: 13799803322683,
+//         qty: 2,
+//         qtyFulfilled: 2,
+//         imageSrc:
+//           "https://cdn.shopify.com/s/files/1/0733/2030/0859/products/170227672_fe3b9271-a6bf-4bb4-a41e-40b28aabc1f5.jpg?v=1681828546",
+//         shop: {
+//           name: "Myti BigC Games",
+//           address: "50 Lakeside Avenue, Burlington, VT 05401",
+//         },
+//       },
+//     ],
+//   },
+//   partiallyFulfilled: {
+//     orderNumber: "#1015-2",
+//     lineItems: [
+//       {
+//         title: "Sleeping Queens",
+//         lineItemId: 13799803322683,
+//         qty: 2,
+//         qtyFulfilled: 1,
+//         imageSrc:
+//           "https://cdn.shopify.com/s/files/1/0733/2030/0859/products/170227672.jpg?v=1680119441",
+//         shop: {
+//           name: "Myti BigC Games",
+//           address: "50 Lakeside Avenue, Burlington, VT 05401",
+//         },
+//       },
+//       {
+//         title: "Massive Headphone Travel Pillow",
+//         lineItemId: 13799158645051,
+//         qty: 2,
+//         qtyFulfilled: 0,
+//         imageSrc:
+//           "https://cdn.shopify.com/s/files/1/0733/2030/0859/products/115681594.jpg?v=1680620869",
+//         shop: {
+//           name: "Mytify Audio",
+//           address: "50 Lakeside Avenue, Burlington, VT 05401",
+//         },
+//       },
+//     ],
+//   },
+// };
+
+type WellKnownOrderKeys = "fulfilled" | "partiallyFulfilled";
+
+// #1031-2
+// ATAT 4D Paper Model Kit
+// Line Item ID: 13807499542843
+
+// #1032-2
+// ATAT 4D Paper Model Kit
+// Line Item ID: 13807502623035
+// https://cdn.shopify.com/s/files/1/0733/2030/0859/products/173536198.png?v=1681492715
+
+// #1031-2
+// ATAT Darth Vader Earbuds - None More Black
+// Line Item ID: 13807499575611
+
+// #1032-2
+// ATAT Darth Vader Earbuds - Black
+// Line Item ID: 13807502590267
+// https://cdn.shopify.com/s/files/1/0733/2030/0859/products/118766225.jpg?v=1682007280
+
+const WellKnownOrders: Record<WellKnownOrderKeys, TestOrder> = {
+  fulfilled: {
+    orderNumber: "#1031-2",
+    lineItems: [
+      {
+        title: "ATAT 4D Paper Model Kit",
+        lineItemId: 13807499542843,
+        qty: 2,
+        qtyFulfilled: 2,
+        imageSrc:
+          "https://cdn.shopify.com/s/files/1/0733/2030/0859/products/173536198.png?v=1681492715",
+        shop: {
+          name: "Myti BigC Games",
+          address: "50 Lakeside Avenue, Burlington, VT 05401",
+        },
+      },
+    ],
+  },
+  partiallyFulfilled: {
+    orderNumber: "#1032-2",
+    lineItems: [
+      {
+        title: "ATAT 4D Paper Model Kit",
+        lineItemId: 13807502623035,
+        qty: 2,
+        qtyFulfilled: 0,
+        imageSrc:
+          "https://cdn.shopify.com/s/files/1/0733/2030/0859/products/173536198.png?v=1681492715",
+        shop: {
+          name: "Myti BigC Games",
+          address: "50 Lakeside Avenue, Burlington, VT 05401",
+        },
+      },
+      {
+        // title: "ATAT Darth Vader Earbuds",
+        title: "ATAT Darth Vader Earbuds - Black",
+        lineItemId: 13807502590267,
+        qty: 2,
+        qtyFulfilled: 1,
+        imageSrc:
+          "https://cdn.shopify.com/s/files/1/0733/2030/0859/products/118766225.jpg?v=1682007280",
+        shop: {
+          name: "Mytify Audio",
+          address: "50 Lakeside Avenue, Burlington, VT 05401",
+        },
+      },
+    ],
+  },
+};
 
 test("Can navigate to pickup sheets", async ({ page, pickupSheetsPage }) => {
   await page.goto("/");
@@ -11,59 +146,66 @@ test("Can navigate to pickup sheets", async ({ page, pickupSheetsPage }) => {
 });
 
 test("Can view pickup sheets", async ({ pickupSheetsPage }) => {
+  const expectedOrder = WellKnownOrders.fulfilled;
+
   await pickupSheetsPage.goto();
 
   await expect(pickupSheetsPage.page).toHaveTitle(/Pickup Sheets/);
 
-  // Shop data
-  const shop = pickupSheetsPage.getShop("Homeport");
-  await expect(shop.el).toBeVisible();
-  await expect(shop.el).toContainText("52 Church Street, Burlington, VT 05401");
+  for (const {
+    shop: expectedShop,
+    title,
+    lineItemId,
+    imageSrc,
+    qtyFulfilled,
+  } of expectedOrder.lineItems) {
+    // Shop data
+    const shop = pickupSheetsPage.getShop(expectedShop.name);
+    await expect(shop.el).toBeVisible();
+    await expect(shop.el).toContainText(expectedShop.address);
 
-  // Order
-  const order = shop.getOrder("#1226-2");
-  await expect(order.el).toBeVisible();
+    // Order
+    const order = shop.getOrder(expectedOrder.orderNumber);
+    await expect(order.el).toBeVisible();
 
-  // Line item: id, photo, qty, partial fulfillment note
-  const lineItem = order.getLineItem("Auric Blends Perfume Oil - Moonlight");
-  await expect(lineItem.el).toBeVisible();
-  await expect(lineItem.el).toContainText("Line Item ID: 11352135467177");
-  await expect(lineItem.qty).toHaveText("1");
-  await expect(lineItem.img).toHaveAttribute(
-    "src",
-    "https://cdn.shopify.com/s/files/1/0578/9899/1785/products/PerfumeArmy_grande__06524.1649704087.386.513.jpg?v=1653412449&width=400"
-  );
+    // Line item: id, photo, qty, partial fulfillment note
+    const lineItem = order.getLineItem(title);
+    await expect(lineItem.el).toBeVisible();
+    await expect(lineItem.el).toContainText(`Line Item ID: ${lineItemId}`);
+
+    // TODO(benglass): This is failing b/c API is returning the wrong value here
+    // skip til we get a fix so we aren't blocked on adopting API
+    await expect(lineItem.qty).toHaveText(String(qtyFulfilled));
+
+    await expect(lineItem.img).toHaveAttribute("src", imageSrc);
+  }
 });
 
 test("Partially fulfilled items show an explanatory note", async ({
   pickupSheetsPage,
 }) => {
+  const expectedOrder = WellKnownOrders.partiallyFulfilled;
+  const expectedLineItems = expectedOrder.lineItems;
+
   await pickupSheetsPage.goto();
 
-  const partiallyUnfulfilledOrder = pickupSheetsPage
-    .getShop("Homeport")
-    .getOrder("#1514-3");
+  for (const { title, shop, qty, qtyFulfilled } of expectedLineItems) {
+    const partiallyUnfulfilledOrder = pickupSheetsPage
+      .getShop(shop.name)
+      .getOrder(expectedOrder.orderNumber);
 
-  await expect(partiallyUnfulfilledOrder.el).toBeVisible();
+    await expect(partiallyUnfulfilledOrder.el).toBeVisible();
 
-  const partialLineItem = partiallyUnfulfilledOrder.getLineItem(
-    "Any Occasion - Whatever"
-  );
-  expect(partialLineItem.qty).toHaveText("1");
+    const lineItem = partiallyUnfulfilledOrder.getLineItem(title);
 
-  // TODO: Consider asterisk here to note at bottom saying we'll email to communicate refunds for items that were not fulfillable
-  // Lengthen the line length
-  await expect(partialLineItem.el).toContainText(
-    "QTY Ordered: 2 (Only 1 available)"
-  );
+    await expect(lineItem.qty).toHaveText(String(qtyFulfilled));
 
-  const unavailableLineItem = partiallyUnfulfilledOrder.getLineItem(
-    "Cocktail Bomb Lovely Spritzer"
-  );
-  expect(unavailableLineItem.qty).toHaveText("0");
-  await expect(unavailableLineItem.el).toContainText(
-    "QTY Ordered: 2 (None available)"
-  );
+    await expect(lineItem.el).toContainText(
+      `QTY Ordered: ${qty} (${
+        qtyFulfilled === 0 ? "None available" : `Only ${qtyFulfilled} available`
+      })`
+    );
+  }
 });
 
 // We may want to test this in a view model test
