@@ -13,7 +13,6 @@ function createShopOrderViewModels({ orders, shops }: { orders: Myco.Order[], sh
       return Array.from(
         new Set(order.lineItems.map(li => li.shopId))
       )
-        .filter(shopId => shopId !== 0) // TODO(benglass): Remove as soon as api is fixed
         .map(shopId => {
           const shop = shopsById.get(shopId);
           if (!shop) throw new Error(`Could not get shop for shopId ${shopId}`);
