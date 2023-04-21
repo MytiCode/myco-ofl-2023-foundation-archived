@@ -1,7 +1,13 @@
 import { Myco } from ":api/client";
 
+type ShippingAddress = Exclude<Myco.Order["shippingAddress"], null>;
+
 type TestOrder = {
   orderNumber: Myco.Order["orderNumber"];
+  shippingAddress: Pick<
+    ShippingAddress,
+    "firstName" | "lastName" | "address1" | "city" | "state" | "zip"
+  >;
   lineItems: Array<{
     lineItemId: number;
     title: Myco.OrderLineItem["title"];
@@ -16,9 +22,20 @@ type TestOrder = {
 };
 
 type WellKnownOrderKeys = "fulfilled" | "partiallyFulfilled";
+
+const testAddress = {
+  firstName: "Trevor",
+  lastName: "Testeroni",
+  address1: "327 North Street",
+  city: "Winooski",
+  state: "VT",
+  zip: "05404",
+};
+
 export const WellKnownOrders: Record<WellKnownOrderKeys, TestOrder> = {
   fulfilled: {
     orderNumber: "#1031-2",
+    shippingAddress: testAddress,
     lineItems: [
       {
         title: "ATAT 4D Paper Model Kit",
@@ -36,6 +53,7 @@ export const WellKnownOrders: Record<WellKnownOrderKeys, TestOrder> = {
   },
   partiallyFulfilled: {
     orderNumber: "#1032-2",
+    shippingAddress: testAddress,
     lineItems: [
       {
         title: "ATAT 4D Paper Model Kit",
