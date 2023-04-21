@@ -17,6 +17,7 @@ type TestOrder = {
     sku: string;
     imageSrc: string;
     shop: {
+      // TODO: add shopId here and to line items?
       name: Myco.Shop["name"];
       address: string;
     };
