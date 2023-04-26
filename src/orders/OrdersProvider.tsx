@@ -15,18 +15,8 @@ export function OrdersProvider({ children }: { children: (state: OrdersState) =>
   });
 
   useEffect(() => {
-    if (!api) {
-      throw new Error('TODO(benglass): api should be defined.. should be impossible.. how to fix the type');
-    }
-
     (async () => {
       setState({ status: 'loading' });
-
-      // const orders = (data.orders as unknown as Order[]);
-      // const shops = (data.shops as unknown as Shop[]);
-      // const api = new MycoClient({
-      //   apiUrl: 'http://localhost:8080',
-      // });
 
       const result = await api.getOrders();
       if (result.err) {
