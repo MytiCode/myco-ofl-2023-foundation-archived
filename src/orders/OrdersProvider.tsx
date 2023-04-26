@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Myco, MycoClient } from ":api/client";
+import { APIContext } from ":pages/_app";
 
 export type OrdersState = {
   status: 'idle' | 'loading' | 'loaded';
@@ -8,19 +9,24 @@ export type OrdersState = {
 }
 
 export function OrdersProvider({ children }: { children: (state: OrdersState) => JSX.Element }) {
+  const api = useContext(APIContext);
   const [state, setState] = useState<OrdersState>({
     status: 'idle',
   });
 
   useEffect(() => {
+    if (!api) {
+      throw new Error('TODO(benglass): api should be defined.. should be impossible.. how to fix the type');
+    }
+
     (async () => {
       setState({ status: 'loading' });
 
       // const orders = (data.orders as unknown as Order[]);
       // const shops = (data.shops as unknown as Shop[]);
-      const api = new MycoClient({
-        apiUrl: 'http://localhost:8080'
-      });
+      // const api = new MycoClient({
+      //   apiUrl: 'http://localhost:8080',
+      // });
 
       const result = await api.getOrders();
       if (result.err) {

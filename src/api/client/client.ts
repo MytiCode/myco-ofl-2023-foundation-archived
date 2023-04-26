@@ -15,7 +15,9 @@ function errorFromCaught(caught: unknown): Error {
     if (typeof caught === "string") {
       error = new Error(caught);
     } else {
-      error = new Error(`caught unexpected error, its dump is: ${JSON.stringify(caught)}`);
+      error = new Error(
+        `caught unexpected error, its dump is: ${JSON.stringify(caught)}`
+      );
     }
   } else {
     error = caught;
@@ -24,7 +26,12 @@ function errorFromCaught(caught: unknown): Error {
 }
 
 export class MycoClientConfig {
-  constructor(public readonly apiUrl: string) {}
+  // TODO(benglass): Make accessToken required?
+  // Its not required right now to allow testing  NOT sending it, this might be a bad reason
+  constructor(
+    public readonly apiUrl: string,
+    public readonly accessToken?: string
+  ) {}
 }
 
 export class MycoClient {
@@ -34,15 +41,43 @@ export class MycoClient {
     return this.config.apiUrl + path;
   }
 
-  async getOrders(): ResultPromise<MycoTypes.OrdersResponse> {
-    let encoded: AxiosResponse;
+  private async request(url: string) {
     try {
-      encoded = await axios.get(this.apiPath("/orders"));
+      const headers: Record<string, string> = {};
+      if (this.config.accessToken) {
+        // TODO(benglass): Prefix should not be hard coded in 2 places
+        // But not likely to change
+        headers["Authorization"] = `JWT ${this.config.accessToken}`;
+      }
+      const absoluteURL = this.apiPath(url);
+      return Ok(await axios.get(absoluteURL, { headers }));
     } catch (e) {
       return Err(errorFromCaught(e));
     }
+  }
 
-    const decodeResult = MycoCodecs.safeDecode(encoded, MycoCodecs.OrdersResponsePayload);
+  async getEntry(): Promise<Result<void, Error>> {
+    const result = await this.request("/");
+
+    if (result.err) {
+      return result;
+    }
+
+    // Nothing meaningful to return from entry yet
+    return Ok(undefined);
+  }
+
+  async getOrders(): Promise<Result<MycoTypes.OrdersResponse, Error>> {
+    const encodedResult = await this.request("/orders");
+    if (encodedResult.err) {
+      return encodedResult;
+    }
+
+    const encoded = encodedResult.val;
+    const decodeResult = MycoCodecs.safeDecode(
+      encoded,
+      MycoCodecs.OrdersResponsePayload
+    );
     if (decodeResult.err) {
       return decodeResult;
     }
