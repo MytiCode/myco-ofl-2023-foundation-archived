@@ -2,6 +2,8 @@ import { MycoClient } from ':api/client';
 import ':styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ReactElement, createContext, useEffect, useState } from 'react'
+import jwt from 'jsonwebtoken';
+import { z } from 'zod';
 
 function Login({ onLogin }: { onLogin: (token: string) => void }) {
   return (
@@ -29,6 +31,7 @@ function Login({ onLogin }: { onLogin: (token: string) => void }) {
 
 const ACCESS_TOKEN_SESSION_KEY = 'myti-auth';
 
+type User = { userId: string };
 /**
  * TODO(benglass) Figure out how to make dynamic values in a context non-option
  * Here we know for the rest of the app if they useContext(APIContext) they are guaranteed to get it
@@ -41,10 +44,12 @@ const ACCESS_TOKEN_SESSION_KEY = 'myti-auth';
  * Don't use context api?
  */
 export const APIContext = createContext<MycoClient>(null as unknown as MycoClient);
+export const UserContext = createContext<User>(null as unknown as User);
 
 function App({ children }: { children: ReactElement}) {
   const [appState, setAppState] = useState<'verify-token' | 'no-token' | 'booted'>('verify-token');
   const [apiClient, setAPIClient] = useState<MycoClient>();
+  const [user, setUser] = useState<User>();
 
   useEffect(() => {
     (async () => {
@@ -63,6 +68,13 @@ function App({ children }: { children: ReactElement}) {
               localStorage.removeItem(ACCESS_TOKEN_SESSION_KEY);
               window.location.reload();
             } else {
+              console.log(jwt.decode(token));
+              const payload = z.object({
+                sub: z.string()
+              }).parse(jwt.decode(token));
+              setUser({
+                userId: payload.sub
+              });
               setAPIClient(api);
               setAppState('booted');
             }
@@ -82,10 +94,12 @@ function App({ children }: { children: ReactElement}) {
     );
   }
 
-  if (appState === 'booted') {
+  if (appState === 'booted' && apiClient && user) {
     return (
       <APIContext.Provider value={apiClient}>
-        {children}
+        <UserContext.Provider value={user}>
+          {children}
+        </UserContext.Provider>
       </APIContext.Provider>
     );
   }
