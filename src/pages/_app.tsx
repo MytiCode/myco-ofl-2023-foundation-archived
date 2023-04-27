@@ -4,10 +4,13 @@ import type { AppProps } from 'next/app'
 import { ReactElement, createContext, useEffect, useState } from 'react'
 import jwt from 'jsonwebtoken';
 import { z } from 'zod';
+import shallNotPassImage from '../../public/shall-not-pass.png';
+import Image from 'next/image';
 
 function Login({ onLogin }: { onLogin: (token: string) => void }) {
   return (
     <form
+      className="p-2 w-1/2 mx-auto"
       onSubmit={e => {
         e.preventDefault();
 
@@ -20,11 +23,12 @@ function Login({ onLogin }: { onLogin: (token: string) => void }) {
         }
       }}
     >
-      <label>
-        WHO GOES THERE!<br />
-        <textarea name="token"></textarea>
+      <Image src={shallNotPassImage} alt="YOU SHALL NOT PASS" className="mb-4" />
+      <label className="text-2xl font-bold">
+        YOU SHALL NOT PASS!<br />
+        <textarea placeholder="What is your token?" name="token" className="border-slate-500 border-2 w-full p-4"></textarea>
       </label>
-      <button type="submit">Login</button>
+      <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Login</button>
     </form>
   );
 }
