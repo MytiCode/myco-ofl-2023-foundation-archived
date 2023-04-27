@@ -3,7 +3,12 @@ import { OrderTrackingSheet } from ":orders/order-tracking-sheets/OrderTrackingS
 import { OrdersProvider } from ":orders/OrdersProvider";
 import { Myco } from ":api/client";
 
-function createShopOrderViewModels({ orders, shops }: { orders: Myco.Order[], shops: Myco.Shop[] }) {
+export type ShopOrder = {
+  shop: Myco.Shop;
+  order: Myco.Order;
+}
+
+function createShopOrderViewModels({ orders, shops }: { orders: Myco.Order[], shops: Myco.Shop[] }): ShopOrder[] {
   const shopsById = new Map(
       shops.map(shop => [shop.shopId, shop])
   );
@@ -28,7 +33,6 @@ function createShopOrderViewModels({ orders, shops }: { orders: Myco.Order[], sh
 export default function OrderTrackingSheetsPage() {
   return (
     <Layout title="Order Tracking Sheets">
-      {/* <OrderTrackingSheet shopOrders={shopOrders} /> */}
       <OrdersProvider>
         {({ orders, shops }) => {
           if (!shops || !orders) {
