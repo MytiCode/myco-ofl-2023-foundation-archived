@@ -77,7 +77,7 @@ function App({ children }: { children: ReactElement}) {
             setAppState('no-token');
           } else {
             const api = new MycoClient({
-              apiUrl: 'http://localhost:8080',
+              apiUrl: z.string().min(1).parse(process.env.NEXT_PUBLIC_API_URL),
               accessToken: token
             });
             const result = await api.getEntry();
