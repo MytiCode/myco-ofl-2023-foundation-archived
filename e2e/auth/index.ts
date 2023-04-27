@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import { Err, Ok, Result } from "ts-results";
 
-type User = {
+export type User = {
   userId: string;
 };
 

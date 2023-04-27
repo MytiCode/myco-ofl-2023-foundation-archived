@@ -4,6 +4,8 @@ import { DeliveryLabelsPage } from "./pages/DeliveryLabelsPage";
 import { OrderTrackingSheetsPage } from "./pages/OrderTrackingSheetsPage";
 import { z } from "zod";
 import { TokenSigner } from "./auth";
+import { AuthDriver } from "./drivers/AuthDriver";
+import { LoginPage } from "./pages/LoginPage";
 
 export const test = base.extend<{
   packingSlipsPage: PackingSlipsPage;
@@ -11,6 +13,8 @@ export const test = base.extend<{
   deliveryLabelsPage: DeliveryLabelsPage;
   orderTrackingSheetsPage: OrderTrackingSheetsPage;
   tokenSigner: TokenSigner;
+  login: LoginPage;
+  auth: AuthDriver;
 }>({
   packingSlipsPage: async ({ page }, use) => {
     use(new PackingSlipsPage(page));
@@ -38,5 +42,11 @@ export const test = base.extend<{
           })
       )
     );
+  },
+  login: async ({ page, tokenSigner }, use) => {
+    use(new LoginPage(page, tokenSigner));
+  },
+  auth: async ({ page, tokenSigner }, use) => {
+    use(new AuthDriver(page, tokenSigner));
   },
 });
