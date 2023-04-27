@@ -34,9 +34,12 @@ class OrderTrackingSheetReader {
 }
 
 test("Can navigate to order tracking sheets", async ({
+  auth,
   page,
   orderTrackingSheetsPage,
 }) => {
+  await auth.forceLogin();
+
   await page.goto("/");
 
   await orderTrackingSheetsPage.nav.click("order-tracking-sheets");
@@ -47,9 +50,12 @@ test("Can navigate to order tracking sheets", async ({
 });
 
 test("Can download order tracking sheet", async ({
+  auth,
   page,
   orderTrackingSheetsPage,
 }) => {
+  await auth.forceLogin();
+
   const downloadPromise = page.waitForEvent("download");
 
   await orderTrackingSheetsPage.goto();

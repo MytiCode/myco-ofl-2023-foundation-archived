@@ -3,9 +3,12 @@ import { test } from "./util";
 import { WellKnownOrders } from "./fixtures";
 
 test("Can navigate to delivery labels", async ({
+  auth,
   page,
   deliveryLabelsPage,
 }) => {
+  await auth.forceLogin();
+
   await page.goto("/");
 
   await deliveryLabelsPage.nav.click("delivery-labels");
@@ -13,7 +16,9 @@ test("Can navigate to delivery labels", async ({
   await expect(deliveryLabelsPage.page).toHaveTitle(/Delivery Labels/);
 });
 
-test("Can view delivery labels", async ({ deliveryLabelsPage }) => {
+test("Can view delivery labels", async ({ auth, deliveryLabelsPage }) => {
+  await auth.forceLogin();
+
   const expectedOrder = WellKnownOrders.fulfilled;
 
   await deliveryLabelsPage.goto();

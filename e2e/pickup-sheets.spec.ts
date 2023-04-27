@@ -2,8 +2,15 @@ import { expect } from "@playwright/test";
 import { PickupSheetsPage } from "./pages";
 import { test } from "./util";
 import { WellKnownOrders } from "./fixtures";
+import { AuthDriver } from "./drivers/AuthDriver";
 
-test("Can navigate to pickup sheets", async ({ page, pickupSheetsPage }) => {
+test("Can navigate to pickup sheets", async ({
+  auth,
+  page,
+  pickupSheetsPage,
+}) => {
+  await auth.forceLogin();
+
   await page.goto("/");
 
   await pickupSheetsPage.nav.click("pickup-sheets");
@@ -11,7 +18,9 @@ test("Can navigate to pickup sheets", async ({ page, pickupSheetsPage }) => {
   await expect(pickupSheetsPage.page).toHaveTitle(/Pickup Sheets/);
 });
 
-test("Can view pickup sheets", async ({ pickupSheetsPage }) => {
+test("Can view pickup sheets", async ({ auth, pickupSheetsPage }) => {
+  await auth.forceLogin();
+
   const expectedOrder = WellKnownOrders.fulfilled;
 
   await pickupSheetsPage.goto();
@@ -48,8 +57,11 @@ test("Can view pickup sheets", async ({ pickupSheetsPage }) => {
 });
 
 test("Partially fulfilled items show an explanatory note", async ({
+  auth,
   pickupSheetsPage,
 }) => {
+  await auth.forceLogin();
+
   const expectedOrder = WellKnownOrders.partiallyFulfilled;
   const expectedLineItems = expectedOrder.lineItems;
 
@@ -89,9 +101,11 @@ test.describe("Filter", () => {
 
 test.describe("Printing", () => {
   let pickupSheetsPage: PickupSheetsPage, afterAll: () => Promise<void>;
-  test.beforeAll(async ({ browser }) => {
+  test.beforeAll(async ({ tokenSigner, browser }) => {
     const page = await browser.newPage();
+    const auth = new AuthDriver(page, tokenSigner);
     pickupSheetsPage = new PickupSheetsPage(page);
+    await auth.forceLogin();
     await pickupSheetsPage.goto();
     await pickupSheetsPage.forPrint();
     afterAll = () => page.close();

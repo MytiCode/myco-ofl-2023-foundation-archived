@@ -3,8 +3,15 @@ import { expect } from "@playwright/test";
 import { test } from "./util";
 import { PackingSlipsPage } from "./pages";
 import { WellKnownOrders } from "./fixtures";
+import { AuthDriver } from "./drivers/AuthDriver";
 
-test("Can navigate to packing slips", async ({ page, packingSlipsPage }) => {
+test("Can navigate to packing slips", async ({
+  auth,
+  page,
+  packingSlipsPage,
+}) => {
+  await auth.forceLogin();
+
   await page.goto("/");
 
   await packingSlipsPage.nav.click("packing-slips");
@@ -12,7 +19,9 @@ test("Can navigate to packing slips", async ({ page, packingSlipsPage }) => {
   await expect(packingSlipsPage.page).toHaveTitle(/Packing Slips/);
 });
 
-test("Can view packing slips", async ({ packingSlipsPage }) => {
+test("Can view packing slips", async ({ auth, packingSlipsPage }) => {
+  await auth.forceLogin();
+
   const expectedOrder = WellKnownOrders.fulfilled;
 
   await packingSlipsPage.goto();
@@ -45,8 +54,11 @@ test("Can view packing slips", async ({ packingSlipsPage }) => {
 });
 
 test("Partially fulfilled items show an explanatory note", async ({
+  auth,
   packingSlipsPage,
 }) => {
+  await auth.forceLogin();
+
   const expectedOrder = WellKnownOrders.partiallyFulfilled;
 
   await packingSlipsPage.goto();
@@ -87,8 +99,10 @@ test.describe("Filter", () => {
 
 test.describe("Printing", () => {
   let packingSlipsPage: PackingSlipsPage, afterAll: () => Promise<void>;
-  test.beforeAll(async ({ browser }) => {
+  test.beforeAll(async ({ browser, tokenSigner }) => {
     const page = await browser.newPage();
+    const auth = new AuthDriver(page, tokenSigner);
+    await auth.forceLogin();
     packingSlipsPage = new PackingSlipsPage(page);
     await packingSlipsPage.goto();
     await packingSlipsPage.forPrint();

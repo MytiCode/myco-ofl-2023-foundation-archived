@@ -1,6 +1,7 @@
 import { Page } from "@playwright/test";
 import { BaseDriver } from "./BaseDriver";
 import { TokenSigner, User } from "e2e/auth";
+import { z } from "zod";
 
 const ACCESS_TOKEN_SESSION_KEY = "myti-auth";
 
@@ -10,7 +11,7 @@ export class AuthDriver extends BaseDriver {
   }
 
   async forceLogin(token: string): Promise<void>;
-  async forceLogin(user: User): Promise<void>;
+  async forceLogin(user?: User): Promise<void>;
   async forceLogin(userOrToken: any): Promise<void> {
     if (typeof userOrToken === "string") {
       const token = userOrToken;
@@ -26,7 +27,12 @@ export class AuthDriver extends BaseDriver {
         }
       );
     } else {
-      const user = userOrToken;
+      const user = z
+        .object({
+          userId: z.string().default("trevor-testeroni"),
+        })
+        .parse(userOrToken || {});
+
       const token = await this.tokenSigner.sign(user).unwrap();
 
       return await this.forceLogin(token);

@@ -27,7 +27,6 @@ export class LoginPage extends BasePage {
     } else {
       const user = userOrToken;
       const token = await this.tokenSigner.sign(user).unwrap();
-      console.log("signe token", token);
 
       return await this.login(token);
     }
