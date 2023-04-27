@@ -2,39 +2,8 @@ import { test as base } from "@playwright/test";
 import { PackingSlipsPage, PickupSheetsPage } from "./pages";
 import { DeliveryLabelsPage } from "./pages/DeliveryLabelsPage";
 import { OrderTrackingSheetsPage } from "./pages/OrderTrackingSheetsPage";
-import jwt from "jsonwebtoken";
-import { Err, Ok, Result } from "ts-results";
 import { z } from "zod";
-
-type User = {
-  userId: string;
-};
-
-export type SigningKey = {
-  readonly keyId: string;
-  readonly privateKey: string;
-};
-
-class TokenSigner {
-  constructor(private key: SigningKey) {}
-
-  sign(user: User): Result<string, Error> {
-    const payload = {
-      sub: user.userId,
-    };
-
-    try {
-      const token = jwt.sign(payload, this.key.privateKey, {
-        algorithm: "RS256",
-        keyid: this.key.keyId,
-      });
-
-      return Ok(token);
-    } catch (e) {
-      return Err(e as Error);
-    }
-  }
-}
+import { TokenSigner } from "./auth";
 
 export const test = base.extend<{
   packingSlipsPage: PackingSlipsPage;
