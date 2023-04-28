@@ -28,7 +28,7 @@ function Login({ onLogin, error }: { onLogin: (token: string) => void, error?: s
         YOU SHALL NOT PASS!
       </label>
       {error &&
-        <p className="text-lg text-red-600 font-bold">Invalid token, please try again or ask for a fresh one, this one my be expired.</p>
+        <p className="text-xl text-red-700 mb-2 font-bold">Invalid token, please try again (copy/paste error?) or ask for a fresh one, this one my be expired.</p>
       }
       <textarea id="token" aria-label="Token" placeholder="What is the secret password?" name="token" className="border-slate-200 border-2 w-full p-4 mb-2 text-2xl rounded-md"></textarea>
       <button type="submit" className="bg-teal-800 hover:bg-teal-700 text-lg text-white font-bold py-2 px-6 border rounded-md">Login</button>
