@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <p>Welcome to MyCo, {user.userId}!</p>
+      <p className="text-3xl text-slate-600">Welcome, Willkommen, Shalom, Bonjour, ¡Hola! {user.userId}!</p>
     </Layout>
   )
 }

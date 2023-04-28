@@ -13,12 +13,12 @@ export default function Nav() {
   const router = useRouter();
 
   return (
-    <nav className="flex print:hidden">
+    <nav className="flex print:hidden -ml-1 p-3 mt-2 border-slate-200 bg-teal-900 rounded">
       {navItems.map(navItem => (
         <Link
           key={navItem.label}
           href={navItem.href}
-          className={`text-link mr-2 ${router.pathname === navItem.href ? 'text-teal-700' : ''}`}
+          className={`p-4 py-2 mr-2 text-lg ${router.pathname === navItem.href ? 'bg-teal-950 text-white rounded-md' : 'text-slate-100'}`}
           data-type={navItem.type}
         >
           {navItem.label}
