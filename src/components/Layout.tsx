@@ -19,7 +19,7 @@ export default function Layout({ title, children }: LayoutProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="print:p-0">
-        <div className="flex flex-col mb-4 print:hidden">
+        <div className="flex flex-col mb-4 print:hidden sticky top-0 bg-white shadow-md">
           <div className="flex items-end mb-2 py-2 p-6">
             <Link
               href="/"
