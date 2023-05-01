@@ -89,7 +89,13 @@ test("Can download order tracking sheet", async ({
     const orderRows = orders.filter(
       (o) => o.orderNumber === expectedOrder.orderNumber
     );
-    expect(orderRows.length).toBeGreaterThan(0);
+    expect(orderRows.length).toBe(2);
+
+    // Should be the right number of line item rows
+    const orderLineItemRows = lineItems.filter(
+      (li) => li.orderNumber === expectedOrder.orderNumber
+    );
+
     for (const expectedItem of expectedOrder.lineItems) {
       // Should be an order row for that item
       // We don't need to assert this for each item but it doesn't hurt
@@ -100,12 +106,16 @@ test("Can download order tracking sheet", async ({
       expect(order.fulfillmentStatus).toEqual("READY_FOR_PICKUP");
 
       // Should be a line item row for that item
-      const lineItem = lineItems.find(
-        (li) => li.lineItemId === String(expectedItem.lineItemId)
+      const lineItemRows = lineItems.filter(
+        (li) =>
+          li.orderNumber === expectedOrder.orderNumber &&
+          li.lineItemId === String(expectedItem.lineItemId)
       );
-      expect(lineItem).toBeDefined();
+      expect(lineItemRows).toHaveLength(1);
 
+      const [lineItem] = lineItemRows;
       expect(lineItem.orderNumber).toEqual(expectedOrder.orderNumber);
+      expect(lineItem.shopName).toEqual(expectedItem.shop.name);
       expect(lineItem.title).toEqual(expectedItem.title);
       expect(lineItem.qty).toEqual(String(expectedItem.qty));
       expect(lineItem.qtyFulfilled).toEqual(String(expectedItem.qtyFulfilled));

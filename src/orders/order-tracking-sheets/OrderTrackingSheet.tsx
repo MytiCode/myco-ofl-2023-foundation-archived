@@ -8,8 +8,8 @@ export function OrderTrackingSheet({ shopOrders }: { shopOrders: ShopOrder[] }) 
       order.orderNumber, shop.name, order.status
     ]);
 
-    const lineItems = shopOrders.flatMap(({ order }) => order.lineItems.map(li => [
-      order.orderNumber, li.title, li.qty, li.qtyFulfilled, li.lineItemId
+    const lineItems = shopOrders.flatMap(({ shop, order }) => order.lineItems.map(li => [
+      order.orderNumber, shop.name, li.title, li.qty, li.qtyFulfilled, li.lineItemId
     ]));
 
     // TODO: Filename "Order Tracking Sheet – {START_DATE}-{END_DATE}"

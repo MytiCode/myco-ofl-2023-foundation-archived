@@ -14,13 +14,20 @@ function createShopOrderViewModels({ orders, shops }: { orders: Myco.Order[], sh
   );
 
   const shopOrders = orders
-    .flatMap(order => {
+    .flatMap(rawOrder => {
+      // One row for each unique shop
       return Array.from(
-        new Set(order.lineItems.map(li => li.shopId))
+        new Set(rawOrder.lineItems.map(li => li.shopId))
       )
         .map(shopId => {
           const shop = shopsById.get(shopId);
           if (!shop) throw new Error(`Could not get shop for shopId ${shopId}`);
+
+          // only the line items for that shop
+          const order = {
+            ...rawOrder,
+            lineItems: rawOrder.lineItems.filter(li => li.shopId === shopId)
+          };
 
           return { order, shop };
         })
