@@ -53,7 +53,7 @@ export function PickupSheet({ shop }: { shop: ShopViewModel }) {
           </tr>
         </thead>
         {shop.orders.map(o => (
-          <tbody aria-labelledby={labelIds.order(o)} key={o.orderId}>
+          <tbody aria-labelledby={labelIds.order(o)} key={o.orderId} className="print:break-inside-avoid-page">
             <tr>
               <td colSpan={3}>
                 <h3 className="text-xl font-bold mt-4 my-0 text-slate-500 leading-4" id={labelIds.order(o)}>

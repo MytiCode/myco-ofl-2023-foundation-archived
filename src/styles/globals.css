@@ -6,6 +6,6 @@
 @media print {
   @page {
     /* In chrome, this removes the headers/footer containing the date/time, url, etc. */
-    margin: 0mm;
+    margin: auto 0 0;
   }
 }
