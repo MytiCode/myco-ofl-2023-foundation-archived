@@ -30,7 +30,7 @@ export type OrderViewModel = Myco.Order & {
 export default function PickupSheetsPage() {
   return (
     <Layout title="Pickup Sheets">
-      <OrdersProvider>
+      <OrdersProvider includeStatus={["READY_FOR_PICKUP"]}>
         {({ orders, shops }) => {
           if (!shops || !orders) {
             return <p>Loading...</p>

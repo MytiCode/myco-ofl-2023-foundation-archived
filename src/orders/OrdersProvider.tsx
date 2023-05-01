@@ -8,7 +8,12 @@ export type OrdersState = {
   shops?: Myco.Shop[];
 }
 
-export function OrdersProvider({ children }: { children: (state: OrdersState) => JSX.Element }) {
+type OrdersProviderProps = {
+  children: (state: OrdersState) => JSX.Element,
+  includeStatus?: Array<Myco.Order["status"]>
+}
+
+export function OrdersProvider({ children, includeStatus = [] }: OrdersProviderProps) {
   const api = useContext(APIContext);
   const [state, setState] = useState<OrdersState>({
     status: 'idle',
@@ -30,6 +35,7 @@ export function OrdersProvider({ children }: { children: (state: OrdersState) =>
         orders = orders
           // TODO: Move to the api
           .filter(order => order.shippingAddress)
+          .filter(order => !includeStatus.length || includeStatus.includes(order.status))
           .map(order => ({
             ...order,
             lineItems: order.lineItems

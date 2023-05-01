@@ -36,7 +36,7 @@ export type OrderViewModel = Myco.Order & {
 export default function PackingSlipsPage() {
   return (
     <Layout title="Packing Slips">
-      <OrdersProvider>
+      <OrdersProvider includeStatus={["READY_FOR_PICKUP"]}>
         {({ orders, shops }) => {
           if (!shops || !orders) {
             return <p>Loading...</p>

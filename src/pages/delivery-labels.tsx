@@ -15,7 +15,7 @@ export default function DeliveryLabelsPage() {
 
   return (
     <Layout title="Delivery Labels">
-      <OrdersProvider>
+      <OrdersProvider includeStatus={["READY_FOR_PICKUP"]}>
         {({ orders }) => {
           if (!orders) {
             return <p>Loading...</p>
