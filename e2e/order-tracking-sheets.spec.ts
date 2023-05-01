@@ -61,7 +61,10 @@ test("Can download order tracking sheet", async ({
   await orderTrackingSheetsPage.goto();
 
   const download = await downloadPromise;
-  expect(download.suggestedFilename()).toEqual("Order Tracking Sheet.xlsx");
+
+  expect(download.suggestedFilename()).toMatch(
+    /Order Tracking Sheet - \d\d\d\d-\d\d-\d\d-\d\d-\d\d-[A|P]M.xlsx/
+  );
 
   // Is there some way to use download.createReadStream to avoid saving to disk?
   const tmpPath = path.join(os.tmpdir(), `doesnt-matter-${Date.now()}.xlsx`);

@@ -1,6 +1,7 @@
 import { ShopOrder } from ":pages/order-tracking-sheets";
 import { useEffect } from "react";
 import { OrderTrackingSheetWriter } from "./OrderTrackingSheetWriter";
+import { DateTime } from "luxon";
 
 export function OrderTrackingSheet({ shopOrders }: { shopOrders: ShopOrder[] }) {
   useEffect(() => {
@@ -12,9 +13,10 @@ export function OrderTrackingSheet({ shopOrders }: { shopOrders: ShopOrder[] }) 
       order.orderNumber, shop.name, li.title, li.qty, li.qtyFulfilled, li.lineItemId
     ]));
 
-    // TODO: Filename "Order Tracking Sheet – {START_DATE}-{END_DATE}"
+    const humanDateTime = DateTime.now().toFormat('yyyy-LL-dd-hh-mm-a');
+    const filename = `Order Tracking Sheet - ${humanDateTime}.xlsx`;
     new OrderTrackingSheetWriter().write({
-      filename: 'Order Tracking Sheet.xlsx',
+      filename,
       orders,
       lineItems
     });
