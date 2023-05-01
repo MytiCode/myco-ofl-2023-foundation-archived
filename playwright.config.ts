@@ -66,15 +66,14 @@ export default defineConfig({
   ],
 
   /* Run your local dev server before starting the tests */
-  webServer:
-    process.env.CI !== "1"
-      ? {
-          command: "npm run dev",
-          url: "http://localhost:3000",
-          reuseExistingServer: !process.env.CI,
-        }
-      : {
-          command: "npm run build && PORT=3000 npm run start",
-          url: "http://localhost:3000",
-        },
+  webServer: process.env.CI
+    ? {
+        command: "npm run build && PORT=3000 npm run start",
+        url: "http://localhost:3000",
+      }
+    : {
+        command: "npm run dev",
+        url: "http://localhost:3000",
+        reuseExistingServer: !process.env.CI,
+      },
 });
