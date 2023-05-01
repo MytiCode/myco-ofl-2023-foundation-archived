@@ -91,11 +91,6 @@ test("Can download order tracking sheet", async ({
     );
     expect(orderRows.length).toBe(2);
 
-    // Should be the right number of line item rows
-    const orderLineItemRows = lineItems.filter(
-      (li) => li.orderNumber === expectedOrder.orderNumber
-    );
-
     for (const expectedItem of expectedOrder.lineItems) {
       // Should be an order row for that item
       // We don't need to assert this for each item but it doesn't hurt
