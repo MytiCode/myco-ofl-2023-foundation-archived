@@ -44,8 +44,12 @@ export default function PickupSheetsPage() {
           const shopsVM = createShopViewModels({ orders, shops });
           return (
             <>
-              {shopsVM.map(shop => (
-                <PickupSheet key={shop.shopId} shop={shop} />
+              {shopsVM.map((shop, index) => (
+                <PickupSheet
+                  key={shop.shopId}
+                  shop={shop}
+                  className={index + 1 !== shopsVM.length ? 'break-after-page' : ''}
+                />
               ))}
             </>
           );

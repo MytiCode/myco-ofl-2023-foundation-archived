@@ -25,7 +25,7 @@ export default function DeliveryLabelsPage() {
           return (
             <>
               {pages.map((orders, index) => (
-                <div key={index} className="print:break-after-page print:p-10">
+                <div key={index} className={`${index + 1 !== pages.length ? "print:break-after-page" : ''} print:p-16 print:pb-0`}>
                   {orders.map(o => (
                     <DeliveryLabel key={o.orderId} order={o} />
                   ))}

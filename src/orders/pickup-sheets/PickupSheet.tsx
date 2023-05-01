@@ -7,9 +7,9 @@ const labelIds = {
   lineItem: (lineItem: LineItemViewModel) => `pickup-sheet-line-item-label-${lineItem.lineItemId}`,
 }
 
-export function PickupSheet({ shop }: { shop: ShopViewModel }) {
+export function PickupSheet({ shop, className = '' }: { shop: ShopViewModel, className?: string }) {
   return (
-    <div className="p-6 my-4 break-after-page print:m-10" aria-labelledby={labelIds.shop(shop)}>
+    <div className={`p-6 my-4 print:m-10 ${className}`} aria-labelledby={labelIds.shop(shop)}>
       <div className="mb-6 flex">
         <div>
           <h2 className="text-2xl font-bold my-0 mb-2 leading-4" id={labelIds.shop(shop)}>
