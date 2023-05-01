@@ -3,10 +3,6 @@ import { Err, Ok, Result } from "ts-results";
 import * as MycoCodecs from "./codecs";
 import * as MycoTypes from "./types";
 
-// TODO(ryanouellette): @codeshare Should be imported from util.
-/** ResultPromise is a convenience type alias for a type commonly used throughout the application. */
-export type ResultPromise<T> = Promise<Result<T, Error>>;
-
 // TODO(ryanouellette): @codeshare Figure out how to fold this. Borrowed from MytiError.fromCaught. Not sure
 // if we plan to share MytiError, or whatever next iteration of it between services and webapp.
 function errorFromCaught(caught: unknown): Error {
@@ -15,9 +11,7 @@ function errorFromCaught(caught: unknown): Error {
     if (typeof caught === "string") {
       error = new Error(caught);
     } else {
-      error = new Error(
-        `caught unexpected error, its dump is: ${JSON.stringify(caught)}`
-      );
+      error = new Error(`caught unexpected error, its dump is: ${JSON.stringify(caught)}`);
     }
   } else {
     error = caught;
@@ -28,10 +22,7 @@ function errorFromCaught(caught: unknown): Error {
 export class MycoClientConfig {
   // TODO(benglass): Make accessToken required?
   // Its not required right now to allow testing  NOT sending it, this might be a bad reason
-  constructor(
-    public readonly apiUrl: string,
-    public readonly accessToken?: string
-  ) {}
+  constructor(public readonly apiUrl: string, public readonly accessToken?: string) {}
 }
 
 export class MycoClient {
@@ -41,7 +32,7 @@ export class MycoClient {
     return this.config.apiUrl + path;
   }
 
-  private async request(url: string) {
+  private async request(url: string): Promise<Result<AxiosResponse, Error>> {
     try {
       const headers: Record<string, string> = {};
       if (this.config.accessToken) {
@@ -68,16 +59,13 @@ export class MycoClient {
   }
 
   async getOrders(): Promise<Result<MycoTypes.OrdersResponse, Error>> {
-    const encodedResult = await this.request("/orders");
+    const encodedResult = await this.request("/orders?open=1");
     if (encodedResult.err) {
       return encodedResult;
     }
 
     const encoded = encodedResult.val;
-    const decodeResult = MycoCodecs.safeDecode(
-      encoded,
-      MycoCodecs.OrdersResponsePayload
-    );
+    const decodeResult = MycoCodecs.safeDecode(encoded, MycoCodecs.OrdersResponsePayload);
     if (decodeResult.err) {
       return decodeResult;
     }

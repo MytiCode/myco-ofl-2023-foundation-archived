@@ -126,6 +126,25 @@ export const Order = z.object({
 
 // TODO(ryanouellette): @types This is kinda gross, but likely gets some of a solution handed to it if we try
 // tRPC? Maybe? Ugh. So many things to establish.
+export const OrdersRequest = z.object({
+  /**
+   * A boolean that filters orders based on whether they are open or closed.
+   *   true: only open orders are returned.
+   *   false: only closed orders are returned.
+   *   null: both open and closed orders are returned.
+   */
+  // TODO(ryanouellette): @codeshare This should go into zodutil or a related zod url package once we refine/agree on the shape.
+  open: z
+    .optional(
+      z.union([
+        z.enum(["1", "0"]).transform((v) => v === "1"),
+        z.enum(["true", "false"]).transform((v) => v === "true"),
+        z.null(),
+      ])
+    )
+    .default(null),
+});
+
 export const OrdersResponse = z.object({
   orders: z.array(Order),
   shops: z.array(Shop),

@@ -8,7 +8,12 @@ function createShopViewModels({ shops, orders }: { shops: Myco.Shop[], orders: M
     orders: orders
       .map(o => ({
         ...o,
-        lineItems: o.lineItems.filter(li => li.shopId === shop.shopId)
+        lineItems: o.lineItems
+          .filter(li => li.shopId === shop.shopId)
+          // Won't be picking up cancelled items
+          // We are only dealing with READY_FOR_PICKUP orders
+          // so awaiting fulfillment is already filtered out
+          .filter(li => li.fulfillmentStatus !== 'CANCELLED')
       }))
       .filter(o => o.lineItems.length),
       ...shop,

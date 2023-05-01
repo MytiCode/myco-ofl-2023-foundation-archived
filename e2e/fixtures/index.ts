@@ -16,6 +16,7 @@ type TestOrder = {
     qtyFulfilled: number;
     sku: string;
     imageSrc: string;
+    fullfillmentStatus: Myco.OrderLineItem["fulfillmentStatus"];
     shop: {
       // TODO: add shopId here and to line items?
       name: Myco.Shop["name"];
@@ -47,6 +48,7 @@ export const WellKnownOrders: Record<WellKnownOrderKeys, TestOrder> = {
         lineItemId: 13807499542843,
         qty: 2,
         qtyFulfilled: 2,
+        fullfillmentStatus: "FULFILLED",
         imageSrc:
           "https://cdn.shopify.com/s/files/1/0733/2030/0859/products/173536198.png?v=1681492715",
         shop: {
@@ -73,6 +75,7 @@ export const WellKnownOrders: Record<WellKnownOrderKeys, TestOrder> = {
           name: "Myti BigC Games",
           address: "50 Lakeside Avenue, Burlington, VT 05401",
         },
+        fullfillmentStatus: "CANCELLED",
       },
       {
         // title: "ATAT Darth Vader Earbuds",
@@ -87,6 +90,7 @@ export const WellKnownOrders: Record<WellKnownOrderKeys, TestOrder> = {
           name: "Mytify Audio",
           address: "50 Lakeside Avenue, Burlington, VT 05401",
         },
+        fullfillmentStatus: "PARTIALLY_FULFILLED",
       },
     ],
   },
