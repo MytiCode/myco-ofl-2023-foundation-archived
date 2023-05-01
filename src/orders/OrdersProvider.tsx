@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Myco, MycoClient } from ":api/client";
+import { Myco } from ":api/client";
 import { APIContext } from ":pages/_app";
 
 export type OrdersState = {
@@ -23,7 +23,7 @@ export function OrdersProvider({ children, includeStatus = [] }: OrdersProviderP
     (async () => {
       setState({ status: 'loading' });
 
-      const result = await api.getOrders();
+      const result = await api.getOrders({ open: true });
       if (result.err) {
         // TODO(benglass): error handling
         console.log('error getting orders', result.val);

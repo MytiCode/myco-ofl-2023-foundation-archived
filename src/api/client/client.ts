@@ -11,7 +11,9 @@ function errorFromCaught(caught: unknown): Error {
     if (typeof caught === "string") {
       error = new Error(caught);
     } else {
-      error = new Error(`caught unexpected error, its dump is: ${JSON.stringify(caught)}`);
+      error = new Error(
+        `caught unexpected error, its dump is: ${JSON.stringify(caught)}`
+      );
     }
   } else {
     error = caught;
@@ -19,10 +21,21 @@ function errorFromCaught(caught: unknown): Error {
   return error;
 }
 
+type GetOrdersParams = {
+  open?: boolean;
+};
+
+type RequestParams = {
+  query?: Record<string, string>;
+};
+
 export class MycoClientConfig {
   // TODO(benglass): Make accessToken required?
   // Its not required right now to allow testing  NOT sending it, this might be a bad reason
-  constructor(public readonly apiUrl: string, public readonly accessToken?: string) {}
+  constructor(
+    public readonly apiUrl: string,
+    public readonly accessToken?: string
+  ) {}
 }
 
 export class MycoClient {
@@ -32,7 +45,10 @@ export class MycoClient {
     return this.config.apiUrl + path;
   }
 
-  private async request(url: string): Promise<Result<AxiosResponse, Error>> {
+  private async request(
+    url: string,
+    params: RequestParams = {}
+  ): Promise<Result<AxiosResponse, Error>> {
     try {
       const headers: Record<string, string> = {};
       if (this.config.accessToken) {
@@ -41,7 +57,9 @@ export class MycoClient {
         headers["Authorization"] = `JWT ${this.config.accessToken}`;
       }
       const absoluteURL = this.apiPath(url);
-      return Ok(await axios.get(absoluteURL, { headers }));
+      return Ok(
+        await axios.get(absoluteURL, { headers, params: params.query })
+      );
     } catch (e) {
       return Err(errorFromCaught(e));
     }
@@ -58,14 +76,24 @@ export class MycoClient {
     return Ok(undefined);
   }
 
-  async getOrders(): Promise<Result<MycoTypes.OrdersResponse, Error>> {
-    const encodedResult = await this.request("/orders?open=1");
+  async getOrders(
+    params: GetOrdersParams = {}
+  ): Promise<Result<MycoTypes.OrdersResponse, Error>> {
+    let query: Record<string, string> = {};
+    if (params.open) {
+      query.open = "1";
+    }
+
+    const encodedResult = await this.request("/orders", { query });
     if (encodedResult.err) {
       return encodedResult;
     }
 
     const encoded = encodedResult.val;
-    const decodeResult = MycoCodecs.safeDecode(encoded, MycoCodecs.OrdersResponsePayload);
+    const decodeResult = MycoCodecs.safeDecode(
+      encoded,
+      MycoCodecs.OrdersResponsePayload
+    );
     if (decodeResult.err) {
       return decodeResult;
     }
