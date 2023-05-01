@@ -18,7 +18,7 @@ export default function Nav() {
         <Link
           key={navItem.label}
           href={navItem.href}
-          className={`p-4 py-2 mr-2 text-lg ${router.pathname === navItem.href ? 'bg-teal-950 text-white rounded-md' : 'text-slate-100'}`}
+          className={`p-4 py-2 mr-2 text-base ${router.pathname === navItem.href ? 'bg-teal-950 text-white rounded-md' : 'text-slate-200'}`}
           data-type={navItem.type}
         >
           {navItem.label}
