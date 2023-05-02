@@ -6,6 +6,7 @@ import { Order } from "../orders/model";
 import data from ':data/pilot2-dummy-orders.json';
 import { OrdersProvider } from ":orders/OrdersProvider";
 import { Myco } from ":api/client";
+import { isLast } from ":util";
 
 export type OrderViewModel = Pick<Myco.Order, 'orderId' | 'orderNumber' | 'shippingAddress'>
 
@@ -25,7 +26,7 @@ export default function DeliveryLabelsPage() {
           return (
             <>
               {pages.map((orders, index) => (
-                <div key={index} className={`${index + 1 !== pages.length ? "print:break-after-page" : ''} print:p-16 print:pb-0`}>
+                <div key={index} className={`${!isLast(pages, index) ? "print:break-after-page" : ''} print:p-16 print:pb-0`}>
                   {orders.map(o => (
                     <DeliveryLabel key={o.orderId} order={o} />
                   ))}

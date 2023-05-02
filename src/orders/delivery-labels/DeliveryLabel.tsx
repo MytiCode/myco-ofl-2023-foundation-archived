@@ -14,12 +14,12 @@ export function DeliveryLabel({ order }: { order: OrderViewModel }) {
   const { shippingAddress: address } = order;
   return (
       <div aria-labelledby={labelIds.label(order)} className="flex items-center mb-20">
-        <div className="w-40 mr-4">
+        <div className="w-40 mr-6">
           <Image src={mytiLogo} alt="Myti: Local is Mighty" />
         </div>
         <div>
           <h2
-            className="text-2xl text-slate-600 font-bold mb-2"
+            className="text-2xl text-teal-900 font-bold mb-2"
             id={labelIds.label(order)}
           >
             Order {order.orderNumber}

@@ -2,6 +2,7 @@ import Layout from ":components/Layout";
 import { PickupSheet } from ":orders/pickup-sheets/PickupSheet";
 import { Myco } from ":api/client";
 import { OrdersProvider } from ":orders/OrdersProvider";
+import { isLast } from ":util";
 
 function createShopViewModels({ shops, orders }: { shops: Myco.Shop[], orders: Myco.Order[] }): ShopViewModel[] {
   return shops.map((shop): ShopViewModel => ({
@@ -48,7 +49,7 @@ export default function PickupSheetsPage() {
                 <PickupSheet
                   key={shop.shopId}
                   shop={shop}
-                  className={index + 1 !== shopsVM.length ? 'break-after-page' : ''}
+                  className={!isLast(shopsVM, index) ? 'break-after-page' : ''}
                 />
               ))}
             </>

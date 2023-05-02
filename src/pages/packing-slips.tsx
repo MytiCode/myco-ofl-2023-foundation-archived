@@ -2,6 +2,7 @@ import Layout from ":components/Layout";
 import PackingSlip from ":orders/packing-slips/PackingSlip";
 import { OrdersProvider } from ":orders/OrdersProvider";
 import { Myco } from ":api/client";
+import { isLast } from ":util";
 
 function createOrderViewModels({ orders, shops }: { orders: Myco.Order[], shops: Myco.Shop[] }) {
   return orders
@@ -45,8 +46,12 @@ export default function PackingSlipsPage() {
           const orderVMs = createOrderViewModels({ orders, shops });
           return (
             <>
-              {orderVMs.map(o => (
-                <PackingSlip key={o.orderId} order={o} />
+              {orderVMs.map((o, index) => (
+                <PackingSlip
+                  key={o.orderId}
+                  order={o}
+                  className={!isLast(orderVMs, index) ? 'break-after-page' : undefined}
+                />
               ))}
             </>
           );
