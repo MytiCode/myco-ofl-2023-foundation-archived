@@ -43,3 +43,7 @@ test("Can view delivery labels", async ({ auth, deliveryLabelsPage }) => {
 
   await expect(label.el).toContainText("Delivered By");
 });
+
+// All other status orders (Awaiting fulfillment, cancelled, delivered, out for delivery, etc.) should not be shown
+// TODO(benglass): We should use the existing well known orders in this state and implement this test, but ran out of time
+test.skip("Only orders that are ready for pickup are included", () => {});

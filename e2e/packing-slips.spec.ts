@@ -123,3 +123,7 @@ test.describe("Printing", () => {
 // Chose not to invest effort in verifying in the web that the images are resized and not too large
 // Could probably download the image and ensure the dimensions are not larger than X or the filesize isn't larger than X
 test.skip("Packing slip images are a reasonable size", () => {});
+
+// All other status orders (Awaiting fulfillment, cancelled, delivered, out for delivery, etc.) should not be shown
+// TODO(benglass): We should use the existing well known orders in this state and implement this test, but ran out of time
+test.skip("Only orders that are ready for pickup are included", () => {});

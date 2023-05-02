@@ -123,3 +123,6 @@ test("Can download order tracking sheet", async ({
     }
   }
 });
+
+// Cancelled, delivered and archived orders should not show up
+test.skip("Only open orders are included in the tracking sheet", () => {});
