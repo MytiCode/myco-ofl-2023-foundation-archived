@@ -10,7 +10,7 @@ export function OrderTrackingSheet({ shopOrders }: { shopOrders: ShopOrder[] }) 
     ]);
 
     const lineItems = shopOrders.flatMap(({ shop, order }) => order.lineItems.map(li => [
-      order.orderNumber, shop.name, li.title, li.qty, li.qtyFulfilled, li.lineItemId
+      order.orderNumber, shop.name, li.title, li.fulfillmentStatus, li.qty, li.qtyFulfilled, li.lineItemId
     ]));
 
     const humanDateTime = DateTime.now().toFormat('yyyy-LL-dd-hh-mm-a');
