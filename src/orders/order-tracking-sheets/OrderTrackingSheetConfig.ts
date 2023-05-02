@@ -20,6 +20,7 @@ export class OrderTrackingSheetConfig {
     { headerLabel: "Order #", name: "orderNumber" },
     { headerLabel: "Shop Name", name: "shopName" },
     { headerLabel: "Item Name", name: "title" },
+    { headerLabel: "Status", name: "fulfillmentStatus" },
     { headerLabel: "QTY Ordered", name: "qty" },
     { headerLabel: "QTY Fulfilled", name: "qtyFulfilled" },
     { headerLabel: "Line Item ID", name: "lineItemId" },

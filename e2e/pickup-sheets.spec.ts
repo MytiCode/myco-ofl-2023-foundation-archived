@@ -70,13 +70,13 @@ test("Partially fulfilled items show an explanatory note", async ({
     shop,
     qty,
     qtyFulfilled,
-    fullfillmentStatus,
+    fulfillmentStatus,
   } of expectedLineItems) {
     const partiallyUnfulfilledOrder = pickupSheetsPage
       .getShop(shop.name)
       .getOrder(expectedOrder.orderNumber);
 
-    if (fullfillmentStatus === "CANCELLED") {
+    if (fulfillmentStatus === "CANCELLED") {
       await expect(partiallyUnfulfilledOrder.el).not.toBeVisible();
       continue;
     }

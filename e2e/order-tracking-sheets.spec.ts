@@ -115,6 +115,9 @@ test("Can download order tracking sheet", async ({
       expect(lineItem.orderNumber).toEqual(expectedOrder.orderNumber);
       expect(lineItem.shopName).toEqual(expectedItem.shop.name);
       expect(lineItem.title).toEqual(expectedItem.title);
+      expect(lineItem.fulfillmentStatus).toEqual(
+        expectedItem.fulfillmentStatus
+      );
       expect(lineItem.qty).toEqual(String(expectedItem.qty));
       expect(lineItem.qtyFulfilled).toEqual(String(expectedItem.qtyFulfilled));
     }
