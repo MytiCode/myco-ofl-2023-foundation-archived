@@ -31,3 +31,16 @@ test("If I have a remembered token that is not expired, I'm asked to login", asy
   await login.goto();
   await expect(login.invalidTokenMessage).toBeVisible();
 });
+
+test("Can logout", async ({ page, auth }) => {
+  const userId = `trevor-testeroni`;
+  await auth.forceLogin({ userId });
+  await page.goto("/");
+
+  await expect(page.getByText(userId)).toBeVisible();
+
+  await page.getByRole("button", { name: "Logout" }).click();
+
+  await expect(page).toHaveURL("/");
+  await expect(page.getByRole("button", { name: "Logout" })).not.toBeVisible();
+});

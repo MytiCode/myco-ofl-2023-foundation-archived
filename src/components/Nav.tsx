@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from 'next/router';
+import { ACCESS_TOKEN_SESSION_KEY } from ":pages/_app"
 
 const navItems = [
   { href: '/', type: 'nav-home', label: 'Home' },
@@ -8,6 +9,11 @@ const navItems = [
   { href: '/delivery-labels', type: 'nav-delivery-labels', label: 'Delivery Labels' },
   { href: '/order-tracking-sheets', type: 'nav-order-tracking-sheets', label: 'Order Tracking Sheets' },
 ];
+
+function handleLogout() {
+  delete window.localStorage[ACCESS_TOKEN_SESSION_KEY];
+  window.location.reload();
+}
 
 export default function Nav() {
   const router = useRouter();
@@ -24,6 +30,12 @@ export default function Nav() {
           {navItem.label}
         </Link>
       ))}
+      <button
+        onClick={handleLogout}
+        className="p-4 py-2 text-base bg-teal-700 text-white rounded-md hover:bg-teal-600 ml-auto"
+      >
+        Logout
+      </button>
     </nav>
   );
 }
