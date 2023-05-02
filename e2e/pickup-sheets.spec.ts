@@ -48,8 +48,6 @@ test("Can view pickup sheets", async ({ auth, pickupSheetsPage }) => {
     await expect(lineItem.el).toBeVisible();
     await expect(lineItem.el).toContainText(`Line Item ID: ${lineItemId}`);
 
-    // TODO(benglass): This is failing b/c API is returning the wrong value here
-    // skip til we get a fix so we aren't blocked on adopting API
     await expect(lineItem.qty).toHaveText(String(qtyFulfilled));
 
     await expect(lineItem.img).toHaveAttribute("src", imageSrc);

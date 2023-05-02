@@ -1,7 +1,6 @@
 import { expect } from "@playwright/test";
 import { test } from "./util";
 
-// TODO(benglass): Encapsulate in a LoginPage but this is the only user atm
 test("Can login", async ({ page, login }) => {
   const userId = `trevor-testeroni`;
 

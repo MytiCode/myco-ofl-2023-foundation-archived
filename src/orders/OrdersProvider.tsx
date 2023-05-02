@@ -50,6 +50,7 @@ export function OrdersProvider({ children, includeStatus = [] }: OrdersProviderP
         setState({ status: 'loaded', orders, shops });
       }
     })();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return children(state);

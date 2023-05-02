@@ -10,15 +10,10 @@ import { Login } from ':auth/Login';
 export const ACCESS_TOKEN_SESSION_KEY = 'myti-auth';
 
 /**
- * TODO(benglass) Figure out how to make dynamic values in a context non-option
  * Here we know for the rest of the app if they useContext(APIContext) they are guaranteed to get it
  * Because we don't mount the rest of the app until we ensure the value is set
- * But react's hook-based createContext/useContext API doesn't seem to provide a way to describe that type
- * What to do?
- * Maybe there is a way I just don't know it?
- * Default value is a proxy object with the right interface that explodes if you call any method?
- * Use the legacy context API that didn't have this problem? Or maybe it does too once you use ts?
- * Don't use context api?
+ * But react's hook-based createContext/useContext API doesn't provide a way to describe that
+ * So just override the compiler and make sure we know what we're doing :)
  */
 export const APIContext = createContext<MycoClient>(null as unknown as MycoClient);
 export const UserContext = createContext<User>(null as unknown as User);

@@ -13,6 +13,7 @@ export function Login({ onLogin, error }: { onLogin: (token: string) => void, er
           onLogin(token);
         } else {
           // TODO(benglass): its required dude
+          // There is only one field, not worth investing in validation
           console.log('naw dude, its required');
         }
       }}
