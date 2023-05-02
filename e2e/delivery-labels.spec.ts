@@ -1,10 +1,14 @@
 import { expect } from "@playwright/test";
 import { test } from "./util";
+import { WellKnownOrders } from "./fixtures";
 
 test("Can navigate to delivery labels", async ({
+  auth,
   page,
   deliveryLabelsPage,
 }) => {
+  await auth.forceLogin();
+
   await page.goto("/");
 
   await deliveryLabelsPage.nav.click("delivery-labels");
@@ -12,19 +16,30 @@ test("Can navigate to delivery labels", async ({
   await expect(deliveryLabelsPage.page).toHaveTitle(/Delivery Labels/);
 });
 
-test("Can view delivery labels", async ({ deliveryLabelsPage }) => {
+test("Can view delivery labels", async ({ auth, deliveryLabelsPage }) => {
+  await auth.forceLogin();
+
+  const expectedOrder = WellKnownOrders.fulfilled;
+
   await deliveryLabelsPage.goto();
 
   await expect(deliveryLabelsPage.page).toHaveTitle(/Delivery Labels/);
 
-  const label = deliveryLabelsPage.getLabel("#1226-2");
+  const label = deliveryLabelsPage.getLabel(expectedOrder.orderNumber);
   await expect(label.el).toBeVisible();
 
   await expect(label.logo).toBeVisible();
 
-  await expect(label.el).toContainText("Nobody Jones");
-  await expect(label.el).toContainText("9999 Excellent Drive, Apt 1");
-  await expect(label.el).toContainText("Burlington, VT 05401");
+  const { shippingAddress: expectedAddress } = expectedOrder;
+  await expect(label.el).toContainText(
+    `${expectedAddress.firstName} ${expectedAddress.lastName}`
+  );
+
+  // Not stressing address2, forgot to populate when creating order
+  await expect(label.el).toContainText(`${expectedAddress.address1}`);
+  await expect(label.el).toContainText(
+    `${expectedAddress.city}, ${expectedAddress.state} ${expectedAddress.zip}`
+  );
 
   await expect(label.el).toContainText("Delivered By");
 });

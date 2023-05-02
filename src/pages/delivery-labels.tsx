@@ -4,25 +4,38 @@ import { chunk } from "lodash";
 
 import { Order } from "../orders/model";
 import data from ':data/pilot2-dummy-orders.json';
+import { OrdersProvider } from ":orders/OrdersProvider";
+import { Myco } from ":api/client";
+import { isLast } from ":util";
 
-const orders = (data.orders as unknown as Order[]);
-
-export type OrderViewModel = Pick<Order, 'orderId' | 'orderNumber' | 'shippingAddress'>
+export type OrderViewModel = Pick<Myco.Order, 'orderId' | 'orderNumber' | 'shippingAddress'>
 
 const labelsPerPage = 4;
 
 export default function DeliveryLabelsPage() {
-  const pages = chunk(orders, labelsPerPage);
 
   return (
     <Layout title="Delivery Labels">
-      {pages.map((orders, index) => (
-        <div key={index} className="print:break-after-page print:p-10">
-          {orders.map(order => (
-            <DeliveryLabel key={order.orderId} order={order} />
-          ))}
-        </div>
-      ))}
+      <OrdersProvider includeStatus={["READY_FOR_PICKUP"]}>
+        {({ orders }) => {
+          if (!orders) {
+            return <p>Loading...</p>
+          }
+
+          const pages = chunk(orders, labelsPerPage);
+          return (
+            <>
+              {pages.map((orders, index) => (
+                <div key={index} className={`${!isLast(pages, index) ? "print:break-after-page" : ''} print:p-16 print:pb-0`}>
+                  {orders.map(o => (
+                    <DeliveryLabel key={o.orderId} order={o} />
+                  ))}
+                </div>
+              ))}
+            </>
+          );
+        }}
+      </OrdersProvider>
     </Layout>
   );
 }

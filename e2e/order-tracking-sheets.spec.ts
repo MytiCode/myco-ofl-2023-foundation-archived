@@ -7,6 +7,7 @@ import {
   OrderTrackingSheetConfig,
   OrderTrackingSheetLabel,
 } from ":orders/order-tracking-sheets/OrderTrackingSheetConfig";
+import { WellKnownOrders } from "./fixtures";
 
 class OrderTrackingSheetReader {
   constructor(
@@ -33,9 +34,12 @@ class OrderTrackingSheetReader {
 }
 
 test("Can navigate to order tracking sheets", async ({
+  auth,
   page,
   orderTrackingSheetsPage,
 }) => {
+  await auth.forceLogin();
+
   await page.goto("/");
 
   await orderTrackingSheetsPage.nav.click("order-tracking-sheets");
@@ -46,15 +50,21 @@ test("Can navigate to order tracking sheets", async ({
 });
 
 test("Can download order tracking sheet", async ({
+  auth,
   page,
   orderTrackingSheetsPage,
 }) => {
+  await auth.forceLogin();
+
   const downloadPromise = page.waitForEvent("download");
 
   await orderTrackingSheetsPage.goto();
 
   const download = await downloadPromise;
-  expect(download.suggestedFilename()).toEqual("Order Tracking Sheet.xlsx");
+
+  expect(download.suggestedFilename()).toMatch(
+    /Order Tracking Sheet - \d\d\d\d-\d\d-\d\d-\d\d-\d\d-[A|P]M.xlsx/
+  );
 
   // Is there some way to use download.createReadStream to avoid saving to disk?
   const tmpPath = path.join(os.tmpdir(), `doesnt-matter-${Date.now()}.xlsx`);
@@ -63,24 +73,50 @@ test("Can download order tracking sheet", async ({
   const sheets = new OrderTrackingSheetReader().read(tmpPath);
 
   // Orders
-  const orders = sheets.get("Orders");
-  if (!orders) throw new Error("Expected orders to exist");
-  expect(orders.length).toBeGreaterThan(0);
-  const order = orders[0];
-  expect(order).toBeDefined();
-  expect(order.orderNumber).toEqual("#1226-2");
-  expect(order.shopName).toEqual("Homeport");
-  expect(order.fulfillmentStatus).toEqual("placed");
+  const expectedOrders = [
+    WellKnownOrders.fulfilled,
+    WellKnownOrders.partiallyFulfilled,
+  ];
 
-  // Line items
+  const orders = sheets.get("Orders");
   const lineItems = sheets.get("Line Items");
-  if (!lineItems) throw new Error("Expected line items to exist");
+
+  // Throw to narrow to array
+  if (!orders) throw new Error("Expected orders sheet to exist");
+  if (!lineItems) throw new Error("Expected line items sheet to exist");
+
+  expect(orders.length).toBeGreaterThanOrEqual(expectedOrders.length);
   expect(lineItems.length).toBeGreaterThan(0);
-  const lineItem = lineItems[0];
-  expect(lineItem).toBeDefined();
-  expect(lineItem.orderNumber).toEqual("#1226-2");
-  expect(lineItem.title).toEqual("Auric Blends Perfume Oil - Moonlight");
-  expect(lineItem.qty).toEqual("1");
-  expect(lineItem.qtyFulfilled).toEqual("1");
-  expect(lineItem.lineItemId).toEqual("11352135467177");
+
+  for (const expectedOrder of expectedOrders) {
+    const orderRows = orders.filter(
+      (o) => o.orderNumber === expectedOrder.orderNumber
+    );
+    expect(orderRows.length).toBe(2);
+
+    for (const expectedItem of expectedOrder.lineItems) {
+      // Should be an order row for that item
+      // We don't need to assert this for each item but it doesn't hurt
+      const order = orderRows.find(
+        (o) => o.shopName === expectedItem.shop.name
+      );
+      expect(order).toBeDefined();
+      expect(order.fulfillmentStatus).toEqual("READY_FOR_PICKUP");
+
+      // Should be a line item row for that item
+      const lineItemRows = lineItems.filter(
+        (li) =>
+          li.orderNumber === expectedOrder.orderNumber &&
+          li.lineItemId === String(expectedItem.lineItemId)
+      );
+      expect(lineItemRows).toHaveLength(1);
+
+      const [lineItem] = lineItemRows;
+      expect(lineItem.orderNumber).toEqual(expectedOrder.orderNumber);
+      expect(lineItem.shopName).toEqual(expectedItem.shop.name);
+      expect(lineItem.title).toEqual(expectedItem.title);
+      expect(lineItem.qty).toEqual(String(expectedItem.qty));
+      expect(lineItem.qtyFulfilled).toEqual(String(expectedItem.qtyFulfilled));
+    }
+  }
 });

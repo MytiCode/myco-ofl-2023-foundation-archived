@@ -1,58 +1,61 @@
 import Layout from ":components/Layout";
 import { PickupSheet } from ":orders/pickup-sheets/PickupSheet";
-import { LineItem, Order, Shop } from ":orders/model";
-import data from ':data/pilot2-dummy-orders.json';
+import { Myco } from ":api/client";
+import { OrdersProvider } from ":orders/OrdersProvider";
+import { isLast } from ":util";
 
-const orders = (data.orders as unknown as Order[])
-  .map(order => {
-    const lineItemViewModels =
-      order.lineItems
-        .map(li => ({
-          ...li,
-          // TODO: This should be centralized? Or pushed down to image rendering
-          imageSrc: li.imageSrc ? li.imageSrc.replace('{MAX_WIDTH}', '400') : li.imageSrc,
-        }))
-        .sort((a, b) => a.title.localeCompare(b.title));
-
-    return {
-      ...order,
-      lineItems: lineItemViewModels,
-    };
-  })
-  // .slice(0, 10)
-  .sort((a, b) => a.createdAt.localeCompare(b.createdAt))
-
-// TODO: Do we need to sort here?
-const shops = (data.shops as unknown as Shop[])
-  .map((shop): ShopViewModel => ({
+function createShopViewModels({ shops, orders }: { shops: Myco.Shop[], orders: Myco.Order[] }): ShopViewModel[] {
+  return shops.map((shop): ShopViewModel => ({
     orders: orders
       .map(o => ({
         ...o,
-        lineItems: o.lineItems.filter(li => li.shopId === shop.shopId)
+        lineItems: o.lineItems
+          .filter(li => li.shopId === shop.shopId)
+          // Won't be picking up cancelled items
+          // We are only dealing with READY_FOR_PICKUP orders
+          // so awaiting fulfillment is already filtered out
+          .filter(li => li.fulfillmentStatus !== 'CANCELLED')
       }))
       .filter(o => o.lineItems.length),
-    ...shop,
+      ...shop,
   }))
   .filter(shop => shop.orders.length)
-  .sort((a, b) => a.name.localeCompare(b.name))
-
-export type LineItemViewModel = LineItem & {
 }
 
-export type ShopViewModel = Shop & {
+export type LineItemViewModel = Myco.OrderLineItem & {
+}
+
+export type ShopViewModel = Myco.Shop & {
   orders: OrderViewModel[];
 };
 
-export type OrderViewModel = Order & {
+export type OrderViewModel = Myco.Order & {
   lineItems: LineItemViewModel[];
 }
 
 export default function PickupSheetsPage() {
   return (
     <Layout title="Pickup Sheets">
-      {shops.map(shop => (
-        <PickupSheet key={shop.shopId} shop={shop} />
-      ))}
+      <OrdersProvider includeStatus={["READY_FOR_PICKUP"]}>
+        {({ orders, shops }) => {
+          if (!shops || !orders) {
+            return <p>Loading...</p>
+          }
+
+          const shopsVM = createShopViewModels({ orders, shops });
+          return (
+            <>
+              {shopsVM.map((shop, index) => (
+                <PickupSheet
+                  key={shop.shopId}
+                  shop={shop}
+                  className={!isLast(shopsVM, index) ? 'break-after-page' : ''}
+                />
+              ))}
+            </>
+          );
+        }}
+      </OrdersProvider>
     </Layout>
   );
 }

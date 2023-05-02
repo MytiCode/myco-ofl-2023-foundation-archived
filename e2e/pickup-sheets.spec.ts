@@ -1,8 +1,16 @@
 import { expect } from "@playwright/test";
 import { PickupSheetsPage } from "./pages";
 import { test } from "./util";
+import { WellKnownOrders } from "./fixtures";
+import { AuthDriver } from "./drivers/AuthDriver";
 
-test("Can navigate to pickup sheets", async ({ page, pickupSheetsPage }) => {
+test("Can navigate to pickup sheets", async ({
+  auth,
+  page,
+  pickupSheetsPage,
+}) => {
+  await auth.forceLogin();
+
   await page.goto("/");
 
   await pickupSheetsPage.nav.click("pickup-sheets");
@@ -10,60 +18,81 @@ test("Can navigate to pickup sheets", async ({ page, pickupSheetsPage }) => {
   await expect(pickupSheetsPage.page).toHaveTitle(/Pickup Sheets/);
 });
 
-test("Can view pickup sheets", async ({ pickupSheetsPage }) => {
+test("Can view pickup sheets", async ({ auth, pickupSheetsPage }) => {
+  await auth.forceLogin();
+
+  const expectedOrder = WellKnownOrders.fulfilled;
+
   await pickupSheetsPage.goto();
 
   await expect(pickupSheetsPage.page).toHaveTitle(/Pickup Sheets/);
 
-  // Shop data
-  const shop = pickupSheetsPage.getShop("Homeport");
-  await expect(shop.el).toBeVisible();
-  await expect(shop.el).toContainText("52 Church Street, Burlington, VT 05401");
+  for (const {
+    shop: expectedShop,
+    title,
+    lineItemId,
+    imageSrc,
+    qtyFulfilled,
+  } of expectedOrder.lineItems) {
+    // Shop data
+    const shop = pickupSheetsPage.getShop(expectedShop.name);
+    await expect(shop.el).toBeVisible();
+    await expect(shop.el).toContainText(expectedShop.address);
 
-  // Order
-  const order = shop.getOrder("#1226-2");
-  await expect(order.el).toBeVisible();
+    // Order
+    const order = shop.getOrder(expectedOrder.orderNumber);
+    await expect(order.el).toBeVisible();
 
-  // Line item: id, photo, qty, partial fulfillment note
-  const lineItem = order.getLineItem("Auric Blends Perfume Oil - Moonlight");
-  await expect(lineItem.el).toBeVisible();
-  await expect(lineItem.el).toContainText("Line Item ID: 11352135467177");
-  await expect(lineItem.qty).toHaveText("1");
-  await expect(lineItem.img).toHaveAttribute(
-    "src",
-    "https://cdn.shopify.com/s/files/1/0578/9899/1785/products/PerfumeArmy_grande__06524.1649704087.386.513.jpg?v=1653412449&width=400"
-  );
+    // Line item: id, photo, qty, partial fulfillment note
+    const lineItem = order.getLineItem(title);
+    await expect(lineItem.el).toBeVisible();
+    await expect(lineItem.el).toContainText(`Line Item ID: ${lineItemId}`);
+
+    await expect(lineItem.qty).toHaveText(String(qtyFulfilled));
+
+    await expect(lineItem.img).toHaveAttribute("src", imageSrc);
+  }
 });
 
 test("Partially fulfilled items show an explanatory note", async ({
+  auth,
   pickupSheetsPage,
 }) => {
+  await auth.forceLogin();
+
+  const expectedOrder = WellKnownOrders.partiallyFulfilled;
+  const expectedLineItems = expectedOrder.lineItems;
+
   await pickupSheetsPage.goto();
 
-  const partiallyUnfulfilledOrder = pickupSheetsPage
-    .getShop("Homeport")
-    .getOrder("#1514-3");
+  for (const {
+    title,
+    shop,
+    qty,
+    qtyFulfilled,
+    fullfillmentStatus,
+  } of expectedLineItems) {
+    const partiallyUnfulfilledOrder = pickupSheetsPage
+      .getShop(shop.name)
+      .getOrder(expectedOrder.orderNumber);
 
-  await expect(partiallyUnfulfilledOrder.el).toBeVisible();
+    if (fullfillmentStatus === "CANCELLED") {
+      await expect(partiallyUnfulfilledOrder.el).not.toBeVisible();
+      continue;
+    }
 
-  const partialLineItem = partiallyUnfulfilledOrder.getLineItem(
-    "Any Occasion - Whatever"
-  );
-  expect(partialLineItem.qty).toHaveText("1");
+    await expect(partiallyUnfulfilledOrder.el).toBeVisible();
 
-  // TODO: Consider asterisk here to note at bottom saying we'll email to communicate refunds for items that were not fulfillable
-  // Lengthen the line length
-  await expect(partialLineItem.el).toContainText(
-    "QTY Ordered: 2 (Only 1 available)"
-  );
+    const lineItem = partiallyUnfulfilledOrder.getLineItem(title);
 
-  const unavailableLineItem = partiallyUnfulfilledOrder.getLineItem(
-    "Cocktail Bomb Lovely Spritzer"
-  );
-  expect(unavailableLineItem.qty).toHaveText("0");
-  await expect(unavailableLineItem.el).toContainText(
-    "QTY Ordered: 2 (None available)"
-  );
+    await expect(lineItem.qty).toHaveText(String(qtyFulfilled));
+
+    await expect(lineItem.el).toContainText(
+      `QTY Ordered: ${qty} (${
+        qtyFulfilled === 0 ? "None available" : `Only ${qtyFulfilled} available`
+      })`
+    );
+  }
 });
 
 // We may want to test this in a view model test
@@ -81,9 +110,11 @@ test.describe("Filter", () => {
 
 test.describe("Printing", () => {
   let pickupSheetsPage: PickupSheetsPage, afterAll: () => Promise<void>;
-  test.beforeAll(async ({ browser }) => {
+  test.beforeAll(async ({ tokenSigner, browser }) => {
     const page = await browser.newPage();
+    const auth = new AuthDriver(page, tokenSigner);
     pickupSheetsPage = new PickupSheetsPage(page);
+    await auth.forceLogin();
     await pickupSheetsPage.goto();
     await pickupSheetsPage.forPrint();
     afterAll = () => page.close();

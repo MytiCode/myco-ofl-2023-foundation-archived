@@ -1,4 +1,4 @@
-import { LineItemViewModel } from ":pages/packing-slips";
+import { LineItemViewModel } from ":pages/pickup-sheets";
 import { OrderViewModel, ShopViewModel } from ":pages/pickup-sheets";
 
 const labelIds = {
@@ -7,16 +7,16 @@ const labelIds = {
   lineItem: (lineItem: LineItemViewModel) => `pickup-sheet-line-item-label-${lineItem.lineItemId}`,
 }
 
-export function PickupSheet({ shop }: { shop: ShopViewModel }) {
+export function PickupSheet({ shop, className = '' }: { shop: ShopViewModel, className?: string }) {
   return (
-    <div className="p-6 my-4 break-after-page print:m-10" aria-labelledby={labelIds.shop(shop)}>
+    <div className={`p-6 my-4 print:m-10 ${className}`} aria-labelledby={labelIds.shop(shop)}>
       <div className="mb-6 flex">
         <div>
           <h2 className="text-2xl font-bold my-0 mb-2 leading-4" id={labelIds.shop(shop)}>
             {shop.name}
           </h2>
           <p className="text-base m-0 text-teal-700 leading-5 font-bold cursor-pointer">
-            {shop.address1}{shop.address2 ? ` ${shop.address2}` : ''}, {shop.city}, {shop.state} {shop.zip}
+            {shop.address.address1}{shop.address.address2 ? ` ${shop.address.address2}` : ''}, {shop.address.city}, {shop.address.state} {shop.address.zip}
           </p>
         </div>
         <div className="ml-auto pl-8 hidden print:flex">
@@ -53,7 +53,7 @@ export function PickupSheet({ shop }: { shop: ShopViewModel }) {
           </tr>
         </thead>
         {shop.orders.map(o => (
-          <tbody aria-labelledby={labelIds.order(o)} key={o.orderId}>
+          <tbody aria-labelledby={labelIds.order(o)} key={o.orderId} className="print:break-inside-avoid-page">
             <tr>
               <td colSpan={3}>
                 <h3 className="text-xl font-bold mt-4 my-0 text-slate-500 leading-4" id={labelIds.order(o)}>
@@ -96,7 +96,7 @@ export function PickupSheet({ shop }: { shop: ShopViewModel }) {
                   <div className="flex justify-end">
                     <div className="border w-12" />
                     <span className="font-normal mx-2">/</span>
-                    <span aria-label="Quantity Fulfulled">{li.qtyFulfilled}</span>
+                    <span aria-label="Quantity Fulfilled">{li.qtyFulfilled}</span>
                   </div>
                 </td>
               </tr>

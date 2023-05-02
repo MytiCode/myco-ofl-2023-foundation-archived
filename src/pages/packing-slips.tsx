@@ -1,58 +1,62 @@
 import Layout from ":components/Layout";
-
-import { LineItem, Order, Shop } from "../orders/model";
-import data from ':data/pilot2-dummy-orders.json';
 import PackingSlip from ":orders/packing-slips/PackingSlip";
+import { OrdersProvider } from ":orders/OrdersProvider";
+import { Myco } from ":api/client";
+import { isLast } from ":util";
 
-// TODO: Do we need to sort here?
-const shops = (data.shops as unknown as Shop[]).sort((a, b) => a.name.localeCompare(b.name));
-
-const orders = (data.orders as unknown as Order[])
-  .map(order => {
-    const lineItemViewModels =
-      order.lineItems
-        .map(li => ({
-          ...li,
-          imageSrc: li.imageSrc ? li.imageSrc.replace('{MAX_WIDTH}', '400') : li.imageSrc,
-        }))
-        .sort((a, b) => a.title.localeCompare(b.title));
-
-    const shopViewModels = shops
-      .map(shop => ({
-        ...shop,
-        lineItems:
-          lineItemViewModels
+function createOrderViewModels({ orders, shops }: { orders: Myco.Order[], shops: Myco.Shop[] }) {
+  return orders
+    .map(order => {
+      const { lineItems } = order;
+      const shopViewModels = shops
+        .map(shop => ({
+          ...shop,
+          lineItems: lineItems
             .filter(li => li.shopId === shop.shopId)
-      }))
-      .filter(shop => shop.lineItems.length);
+        }))
+        .filter(shop => shop.lineItems.length);
 
-    return {
-      ...order,
-      lineItems: lineItemViewModels,
-      shops: shopViewModels
-    };
-  })
-  .sort((a, b) => a.createdAt.localeCompare(b.createdAt))
-
-export type LineItemViewModel = LineItem & {
-  // shop: ShopViewModel
+      return {
+        ...order,
+        shops: shopViewModels
+      };
+    });
 }
 
-type ShopViewModel = Shop & {
+export type LineItemViewModel = Myco.OrderLineItem & {
+}
+
+type ShopViewModel = Myco.Shop & {
   lineItems: LineItemViewModel[];
 };
 
-// TODO: Rename these view models specifically to packing slips
-export type OrderViewModel = Order & {
+export type OrderViewModel = Myco.Order & {
   shops: ShopViewModel[];
 }
 
 export default function PackingSlipsPage() {
   return (
     <Layout title="Packing Slips">
-      {orders.map(o => (
-        <PackingSlip key={o.orderId} order={o} />
-      ))}
+      <OrdersProvider includeStatus={["READY_FOR_PICKUP"]}>
+        {({ orders, shops }) => {
+          if (!shops || !orders) {
+            return <p>Loading...</p>
+          }
+
+          const orderVMs = createOrderViewModels({ orders, shops });
+          return (
+            <>
+              {orderVMs.map((o, index) => (
+                <PackingSlip
+                  key={o.orderId}
+                  order={o}
+                  className={!isLast(orderVMs, index) ? 'break-after-page' : undefined}
+                />
+              ))}
+            </>
+          );
+        }}
+      </OrdersProvider>
     </Layout>
   );
 }

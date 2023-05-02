@@ -21,7 +21,10 @@ jobs:
     - name: Run Playwright tests
       run: npm run e2e
       env:
-        CI: 1
+        NEXT_PUBLIC_API_URL: "https://myco-api-staging.herokuapp.com"
+        TEST_AUTH_KEY_ID: ${{ secrets.TEST_AUTH_KEY_ID }}
+        TEST_AUTH_PRIVATE_KEY: ${{ secrets.TEST_AUTH_PRIVATE_KEY }}
+        TEST_AUTH_PUBLIC_KEY: ${{ secrets.TEST_AUTH_PUBLIC_KEY }}
     - uses: actions/upload-artifact@v3
       if: always()
       with:

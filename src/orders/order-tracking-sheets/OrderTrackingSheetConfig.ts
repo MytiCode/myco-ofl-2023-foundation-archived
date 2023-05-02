@@ -18,6 +18,7 @@ export class OrderTrackingSheetConfig {
 
   LINE_ITEM_COLUMNS = [
     { headerLabel: "Order #", name: "orderNumber" },
+    { headerLabel: "Shop Name", name: "shopName" },
     { headerLabel: "Item Name", name: "title" },
     { headerLabel: "QTY Ordered", name: "qty" },
     { headerLabel: "QTY Fulfilled", name: "qtyFulfilled" },
