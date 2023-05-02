@@ -1,7 +1,7 @@
 import ':styles/globals.css';
 import { MycoClient } from ':api/client';
 import type { AppProps } from 'next/app'
-import { ReactElement, createContext, useEffect, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import jwt from 'jsonwebtoken';
 import { z } from 'zod';
 import { User } from ':auth';
@@ -25,7 +25,7 @@ export const UserContext = createContext<User>(null as unknown as User);
 
 type AppState = 'sandbox' | 'verify-token' | 'no-token' | 'invalid-token' | 'booted';
 
-function App({ children }: { children: ReactElement}) {
+export default function App({ Component, pageProps }: AppProps) {
   const [appState, setAppState] = useState<AppState>('verify-token');
   const [apiClient, setAPIClient] = useState<MycoClient>();
   const [user, setUser] = useState<User>();
@@ -91,19 +91,9 @@ function App({ children }: { children: ReactElement}) {
     return (
       <APIContext.Provider value={apiClient}>
         <UserContext.Provider value={user}>
-          {children}
+          <Component pageProps={pageProps} />
         </UserContext.Provider>
       </APIContext.Provider>
     );
   }
-
-  return null;
-}
-
-export default function AnonymousApp({ Component, pageProps }: AppProps) {
-  return (
-    <App>
-      <Component pageProps={pageProps} />
-    </App>
-  );
 }
