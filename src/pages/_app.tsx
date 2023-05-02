@@ -69,31 +69,36 @@ export default function App({ Component, pageProps }: AppProps) {
     })();
   }, [appState]);
 
-  if (appState === 'sandbox') {
-    return null;
-  }
+  switch (appState) {
+    case 'sandbox':
+      return null;
 
-  if (appState === 'no-token' || appState === 'invalid-token') {
-    return (
-      <div>
-        <Login
-          error={appState === 'invalid-token' ? "Invalid token, please try again or ask for a fresh one, this one my be expired." : undefined}
-          onLogin={async (token) => {
-            localStorage.setItem(ACCESS_TOKEN_SESSION_KEY, token);
-            setAppState('verify-token');
-          }}
-        />
-      </div>
-    );
-  }
+    case 'no-token':
+    case 'invalid-token':
+      return (
+        <div>
+          <Login
+            error={appState === 'invalid-token' ? "Invalid token, please try again or ask for a fresh one, this one my be expired." : undefined}
+            onLogin={async (token) => {
+              localStorage.setItem(ACCESS_TOKEN_SESSION_KEY, token);
+              setAppState('verify-token');
+            }}
+          />
+        </div>
+      );
 
-  if (appState === 'booted' && apiClient && user) {
-    return (
-      <APIContext.Provider value={apiClient}>
-        <UserContext.Provider value={user}>
-          <Component pageProps={pageProps} />
-        </UserContext.Provider>
-      </APIContext.Provider>
-    );
+    case 'booted':
+      // Shouldn't really happen, but if somew
+      if (!apiClient || !user) {
+        return null;
+      }
+
+      return (
+        <APIContext.Provider value={apiClient}>
+          <UserContext.Provider value={user}>
+            <Component pageProps={pageProps} />
+          </UserContext.Provider>
+        </APIContext.Provider>
+      );
   }
 }
