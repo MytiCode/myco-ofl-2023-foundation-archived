@@ -121,7 +121,7 @@ export default function PackingSlip({ order, className }: PackingSlipProps) {
       </table>
       <div className="mt-6">
         <p className="text-slate-400">
-          Thank you for your order! If you would like to return any item(s) please email <a href="mailto:buy@myti.com" className="text-teal-700 underline">buy@myti.com</a> with your order number and the name of the item(s) you would like to return and we will get back to you quickly.
+          Thank you for your order! If you would like to return any item(s) please email <a href="mailto:buy@myti.com" className="text-teal-700 underline">buy@myti.com</a> with your <strong>order number</strong> and the <strong>name of the item(s)</strong> you would like to return and we will get back to you quickly.
         </p>
       </div>
     </div>
