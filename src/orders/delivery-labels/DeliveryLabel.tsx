@@ -25,13 +25,14 @@ export function DeliveryLabel({ order }: { order: OrderViewModel }) {
             Order {order.orderNumber}
           </h2>
           {address &&
-            <p>
+            <p className="leading-5">
               {address.firstName} {address.lastName}<br />
               {address.address1}{address.address2 ? ', ' + address.address2 : ''},<br />
               {address.city}, {address.state} {address.zip}
             </p>
           }
-          <p className="mt-3">
+          <p className="mt-3 leading-5">
+            <strong className="font-bold uppercase">Packaged By:</strong><br />
             <strong className="font-bold uppercase">Delivered By:</strong>
           </p>
         </div>
