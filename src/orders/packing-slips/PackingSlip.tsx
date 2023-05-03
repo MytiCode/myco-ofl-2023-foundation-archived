@@ -21,7 +21,7 @@ export default function PackingSlip({ order, className }: PackingSlipProps) {
             alt="Myti"
             priority
             className="pr-4"
-            width="100"
+            width="135"
           />
           <div>
             <h2 className="text-2xl font-bold my-0 mb-2 leading-4" id={`packing-slip-heading-${order.orderId}`}>
