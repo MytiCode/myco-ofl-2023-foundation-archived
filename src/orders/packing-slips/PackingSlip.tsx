@@ -122,13 +122,13 @@ export default function PackingSlip({ order, className }: PackingSlipProps) {
       </table>
       <div className="mt-4 flex items-center">
         <p className="text-slate-400">
-          Thank you for your order! If you would like a return, please visit <span className="text-teal-700">myti.com/return</span> to read our policy and initiate a return or scan here:
+          Thank you for your order! For returns, please visit <span className="text-teal-700">myti.com/return</span><br />to read our policy and initiate a return, or scan here:
         </p>
         <Image
           src={returnQRCode}
           alt="Scan QR Code to initial a return"
           priority
-          className="pl-4"
+          className="pl-4 ml-auto"
           width="125"
         />
       </div>
