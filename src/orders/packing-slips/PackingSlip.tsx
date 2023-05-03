@@ -3,6 +3,7 @@ import { formatDate } from ":util";
 import React from "react";
 import Image from 'next/image'
 import mytiLogo from '../../../public/myti-logo-delivery-labels.png';
+import returnQRCode from '../../../public/return-qr-code.png';
 
 type PackingSlipProps = {
   order: OrderViewModel;
@@ -119,10 +120,17 @@ export default function PackingSlip({ order, className }: PackingSlipProps) {
           </tbody>
         ))}
       </table>
-      <div className="mt-6">
+      <div className="mt-4 flex items-center">
         <p className="text-slate-400">
-          Thank you for your order! If you would like to return any item(s) please email <a href="mailto:buy@myti.com" className="text-teal-700 underline">buy@myti.com</a> with your <strong>order number</strong> and the <strong>name of the item(s)</strong> you would like to return and we will get back to you quickly.
+          Thank you for your order! If you would like a return, please visit <span className="text-teal-700">myti.com/return</span> to read our policy and initiate a return or scan here:
         </p>
+        <Image
+          src={returnQRCode}
+          alt="Scan QR Code to initial a return"
+          priority
+          className="pl-4"
+          width="125"
+        />
       </div>
     </div>
   );
