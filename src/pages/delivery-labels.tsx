@@ -18,10 +18,6 @@ export default function DeliveryLabelsPage() {
     <Layout title="Delivery Labels">
       <OrdersProvider includeStatus={["READY_FOR_PICKUP"]}>
         {({ orders }) => {
-          if (!orders) {
-            return <p>Loading...</p>
-          }
-
           const pages = chunk(orders, labelsPerPage);
           return (
             <>

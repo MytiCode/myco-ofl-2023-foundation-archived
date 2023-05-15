@@ -38,10 +38,6 @@ export default function PickupSheetsPage() {
     <Layout title="Pickup Sheets">
       <OrdersProvider includeStatus={["READY_FOR_PICKUP"]}>
         {({ orders, shops }) => {
-          if (!shops || !orders) {
-            return <p>Loading...</p>
-          }
-
           const shopsVM = createShopViewModels({ orders, shops });
           return (
             <>

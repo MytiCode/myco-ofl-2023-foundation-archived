@@ -2,14 +2,20 @@ import { useContext, useEffect, useState } from "react";
 import { Myco } from ":api/client";
 import { APIContext } from ":pages/_app";
 
-export type OrdersState = {
-  status: 'idle' | 'loading' | 'loaded';
-  orders?: Myco.Order[];
-  shops?: Myco.Shop[];
+type OrdersLoadingState = {
+  status: 'idle' | 'loading';
 }
 
+type OrdersLoadedState = {
+  status: 'loaded';
+  orders: Myco.Order[];
+  shops: Myco.Shop[];
+}
+
+export type OrdersState = OrdersLoadingState | OrdersLoadedState;
+
 type OrdersProviderProps = {
-  children: (state: OrdersState) => JSX.Element,
+  children: (state: OrdersLoadedState) => JSX.Element,
   includeStatus?: Array<Myco.Order["status"]>
 }
 
@@ -53,5 +59,15 @@ export function OrdersProvider({ children, includeStatus = [] }: OrdersProviderP
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return children(state);
+  switch (state.status) {
+    case 'idle':
+    case 'loading':
+      return <p>Loading...</p>
+    case 'loaded':
+      if (!state.orders.length) {
+        return <p>There are no open orders.</p>
+      }
+
+      return children(state);
+  }
 }

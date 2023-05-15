@@ -42,10 +42,6 @@ export default function OrderTrackingSheetsPage() {
     <Layout title="Order Tracking Sheets">
       <OrdersProvider>
         {({ orders, shops }) => {
-          if (!shops || !orders) {
-            return <p>Loading...</p>
-          }
-
           const shopOrdersVM = createShopOrderViewModels({ orders, shops });
           return <OrderTrackingSheet shopOrders={shopOrdersVM} />
         }}
