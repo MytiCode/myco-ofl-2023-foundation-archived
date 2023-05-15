@@ -39,10 +39,6 @@ export default function PackingSlipsPage() {
     <Layout title="Packing Slips">
       <OrdersProvider includeStatus={["READY_FOR_PICKUP"]}>
         {({ orders, shops }) => {
-          if (!shops || !orders) {
-            return <p>Loading...</p>
-          }
-
           const orderVMs = createOrderViewModels({ orders, shops });
           return (
             <>
