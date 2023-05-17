@@ -43,7 +43,7 @@ export default function OrderTrackingSheetsPage() {
       <OrdersProvider>
         {({ orders, shops }) => {
           const shopOrdersVM = createShopOrderViewModels({ orders, shops });
-          return <OrderTrackingSheet shopOrders={shopOrdersVM} />
+          return <OrderTrackingSheet shopOrders={shopOrdersVM} shops={shops} />
         }}
       </OrdersProvider>
     </Layout>

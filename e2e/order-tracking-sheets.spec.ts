@@ -80,13 +80,16 @@ test("Can download order tracking sheet", async ({
 
   const orders = sheets.get("Orders");
   const lineItems = sheets.get("Line Items");
+  const shops = sheets.get("Shops");
 
   // Throw to narrow to array
   if (!orders) throw new Error("Expected orders sheet to exist");
   if (!lineItems) throw new Error("Expected line items sheet to exist");
+  if (!shops) throw new Error("Expected shops sheet to exist");
 
   expect(orders.length).toBeGreaterThanOrEqual(expectedOrders.length);
   expect(lineItems.length).toBeGreaterThan(0);
+  expect(shops.length).toBeGreaterThan(0);
 
   for (const expectedOrder of expectedOrders) {
     const orderRows = orders.filter(
@@ -121,6 +124,16 @@ test("Can download order tracking sheet", async ({
       expect(lineItem.qty).toEqual(String(expectedItem.qty));
       expect(lineItem.qtyFulfilled).toEqual(String(expectedItem.qtyFulfilled));
     }
+  }
+
+  const expectedShopNames = Array.from(
+    new Set(lineItems.map((li) => li.shopName))
+  );
+  for (const expectedShopName of expectedShopNames) {
+    const shop = shops.find((s) => s.name === expectedShopName);
+    expect(shop).toBeDefined();
+    expect(shop.address).toBeDefined();
+    console.log(shop.address);
   }
 });
 
