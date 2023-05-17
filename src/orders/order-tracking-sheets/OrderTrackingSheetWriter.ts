@@ -13,10 +13,12 @@ export class OrderTrackingSheetWriter {
   // TODO: Better types
   write({
     orders,
+    shops,
     lineItems,
     filename,
   }: {
     orders: any[];
+    shops: any[];
     lineItems: any[];
     filename: string;
   }) {
@@ -25,6 +27,7 @@ export class OrderTrackingSheetWriter {
     const rowsByLabel = new Map<OrderTrackingSheetLabel, any[]>([
       ["Orders", orders],
       ["Line Items", lineItems],
+      ["Shops", shops],
     ]);
     this.config.sheets.forEach(({ label, headers }) => {
       const rows = rowsByLabel.get(label);

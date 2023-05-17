@@ -1,4 +1,4 @@
-export type OrderTrackingSheetLabel = "Orders" | "Line Items";
+export type OrderTrackingSheetLabel = "Orders" | "Line Items" | "Shops";
 
 export class OrderTrackingSheetConfig {
   ORDER_COLUMNS = [
@@ -28,6 +28,11 @@ export class OrderTrackingSheetConfig {
     { headerLabel: "Notes", name: "notes" },
   ];
 
+  SHOP_COLUMNS = [
+    { headerLabel: "Name", name: "name" },
+    { headerLabel: "Address", name: "address" },
+  ];
+
   get sheets(): Array<{
     label: OrderTrackingSheetLabel;
     headers: string[];
@@ -43,6 +48,11 @@ export class OrderTrackingSheetConfig {
         label: "Line Items",
         headers: this.LINE_ITEM_COLUMNS.map((c) => c.headerLabel),
         columnNames: this.LINE_ITEM_COLUMNS.map((c) => c.name),
+      },
+      {
+        label: "Shops",
+        headers: this.SHOP_COLUMNS.map((c) => c.headerLabel),
+        columnNames: this.SHOP_COLUMNS.map((c) => c.name),
       },
     ];
   }
