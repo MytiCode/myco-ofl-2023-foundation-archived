@@ -1,8 +1,15 @@
-# MyCo OFL 2023 - Order Fulfillment & Logistics
+# MyCo OFL 2023 Foundation (Archived)
 
-**MyCo OFL 2023** is a Next.js web application for Myti's **Order Fulfillment & Logistics (OFL)** operations. This is the internal tool used by drivers and fulfillment staff to manage and process orders through the Myti delivery service.
+> **⚠️ ARCHIVED REPOSITORY**
+> This repository contains the **clean, working foundation** from April-May 2023.
+> It represents the original OFL system before subsequent development attempts.
+> Preserved as a reference and potential starting point for future development.
+>
+> **Related:** See [myco-ofl-2025-abandoned](https://github.com/MytiCode/myco-ofl-2025-abandoned) for the later iteration that was abandoned.
 
-> **Note:** This repository was originally named `myco-web`. Consider renaming to `myco-ofl-2023` for better clarity.
+---
+
+**MyCo OFL 2023 Foundation** is a Next.js web application for Myti's **Order Fulfillment & Logistics (OFL)** operations. This is the internal tool used by drivers and fulfillment staff to manage and process orders through the Myti delivery service.
 
 ## What This Does
 
