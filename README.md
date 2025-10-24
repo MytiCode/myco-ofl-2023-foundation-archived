@@ -1,41 +1,109 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MyCo OFL 2023 - Order Fulfillment & Logistics
+
+**MyCo OFL 2023** is a Next.js web application for Myti's **Order Fulfillment & Logistics (OFL)** operations. This is the internal tool used by drivers and fulfillment staff to manage and process orders through the Myti delivery service.
+
+> **Note:** This repository was originally named `myco-web`. Consider renaming to `myco-ofl-2023` for better clarity.
+
+## What This Does
+
+This application generates printable fulfillment documents and provides order management interfaces for the Myti platform's operations team.
+
+### Key Features
+
+**Document Generation:**
+- **Pickup Sheets** - Instructions for picking up items from vendor shops
+- **Packing Slips** - Order contents and shipping information for customers
+- **Delivery Labels** - Address labels for delivery routing
+- **Order Tracking Sheets** - Comprehensive tracking and logistics information
+
+**Order Management:**
+- Multi-shop order handling with line item tracking
+- Order status management (placed, cancelled, out-for-delivery, delivered)
+- Line item fulfillment tracking (fulfilled/unfulfilled)
+- Status-based filtering (e.g., READY_FOR_PICKUP orders)
+
+### Data Model
+
+- **Orders** - Customer orders with billing/shipping addresses, pricing, and line items
+- **Line Items** - Individual products with SKU, price, quantity, and shop association
+- **Shops** - Vendor locations where items are picked up
+- **Fulfillment Status** - Granular tracking for each line item
+
+## Tech Stack
+
+- **Next.js 13.2.4** - React framework
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first styling
+- **JWT** - Authentication
+- **Playwright** - E2E testing
+- **Axios** - API communication
+
+## Development Timeline
+
+- **Built:** April 2023
+- **Last Updated:** May 17, 2023
+- **Status:** Stable, no recent activity since May 2023
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js >= 18.7.0 < 19.0.0
+- npm >= 8.15.0 < 10.0.0
 
+### Setup
+
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Configure environment variables:
+```bash
+cp .env.dist .env
+# Edit .env with your authentication keys:
+# - TEST_AUTH_KEY_ID
+# - TEST_AUTH_PUBLIC_KEY
+# - TEST_AUTH_PRIVATE_KEY
+```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Available Commands
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run dev          # Start development server
+npm run build        # Production build
+npm start            # Start production server (requires PORT env var)
+npm run lint         # Run ESLint
+npm run e2e          # Run Playwright E2E tests
+npm run e2e:watch    # Run Playwright in debug mode
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+src/
+├── pages/           # Next.js pages and routing
+│   ├── index.tsx                    # Home/welcome page
+│   ├── pickup-sheets.tsx            # Pickup sheet generator
+│   ├── packing-slips.tsx            # Packing slip generator
+│   ├── delivery-labels.tsx          # Delivery label generator
+│   └── order-tracking-sheets.tsx    # Tracking sheet generator
+├── orders/          # Order domain logic
+│   ├── model.ts                     # Core type definitions
+│   ├── OrdersProvider.tsx           # Order data provider
+│   └── [feature]/                   # Feature-specific components
+├── components/      # Shared UI components
+│   ├── Layout.tsx                   # Main layout wrapper
+│   └── Nav.tsx                      # Navigation component
+├── api/            # API client logic
+└── auth/           # Authentication utilities
+```
 
 ## Sanitizing orders
 
